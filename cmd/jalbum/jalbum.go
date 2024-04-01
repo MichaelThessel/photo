@@ -57,6 +57,9 @@ func (ap AlbumParser) ParseDir() {
 					indexPath := ap.importPath + "/" + albumPath + "/index.html"
 					ap.ParseIndex(indexPath, album)
 
+					// Create the album data file
+					album.CreateDataJSON(basePath)
+
 					// Copy the images
 					ap.CopyImages(album, folder)
 				}
@@ -74,8 +77,8 @@ func (ap AlbumParser) CopyImages(album *model.Album, folder *model.Folder) {
 			log.Println("Couldn't open image source file", err)
 			return
 		}
-
 		defer r.Close()
+
 		w, err := os.Create(ap.exportPath + "/" + folder.Name + "/" + album.Name + "/slides/" + s.ImagePath)
 		if err != nil {
 			log.Println("Couldn't create image destination file", err)
