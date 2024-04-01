@@ -56,8 +56,36 @@ func (ap AlbumParser) ParseDir() {
 					// Parse album index files
 					indexPath := ap.importPath + "/" + albumPath + "/index.html"
 					ap.ParseIndex(indexPath, album)
+
+					// Copy the images
+					ap.CopyImages(album, folder)
 				}
 			}
+		}
+	}
+}
+
+// CopyImages copies the images from the JAlbum slide directory to the
+// appropriate place in the new folder structure
+func (ap AlbumParser) CopyImages(album *model.Album, folder *model.Folder) {
+	for _, s := range album.Slides {
+		r, err := os.Open(ap.importPath + "/" + folder.Name + "/" + album.Name + "/slides/" + s.ImagePath)
+		if err != nil {
+			log.Println("Couldn't open image source file", err)
+			return
+		}
+
+		defer r.Close()
+		w, err := os.Create(ap.exportPath + "/" + folder.Name + "/" + album.Name + "/slides/" + s.ImagePath)
+		if err != nil {
+			log.Println("Couldn't create image destination file", err)
+			return
+		}
+		defer w.Close()
+
+		_, err = w.ReadFrom(r)
+		if err != nil {
+			log.Println("Couldn't write image destination file", err)
 		}
 	}
 }
@@ -82,7 +110,7 @@ func (ap AlbumParser) ParseIndex(path string, album *model.Album) {
 		if n.Type == html.ElementNode && n.Data == "a" {
 			if n.Attr[0].Key == "href" && strings.HasPrefix(n.Attr[0].Val, "slides/") {
 				slide := model.Slide{}
-				slide.ImagePath = n.Attr[0].Val
+				slide.ImagePath = strings.TrimPrefix(n.Attr[0].Val, "slides/")
 				if n.NextSibling != nil && n.NextSibling.LastChild != nil && n.NextSibling.LastChild.LastChild != nil {
 					slide.Description = n.NextSibling.LastChild.LastChild.Data
 				}
