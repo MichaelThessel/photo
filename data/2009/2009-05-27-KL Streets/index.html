@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photos</title>
+  </head>
+
+  <body>
+
+2009-05-27-KL Streets
+
+<div id="lightgallery">
+
+  <a data-src="slides/DSCN0742.jpg" data-sub-html="Durian"></a>
+
+  <a data-src="slides/DSCN0757.jpg" data-sub-html="Schneider | Tailor"></a>
+
+  <a data-src="slides/DSCN0767.jpg" data-sub-html="Typ mit Hut | Dude with hat"></a>
+
+  <a data-src="slides/DSCN0771.jpg" data-sub-html="Zeitungsverkauefer | Newspaper man"></a>
+
+  <a data-src="slides/DSCN0792.jpg" data-sub-html="Klimaanlagen | ACs"></a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  galleryElement = document.getElementById('lightgallery');
+  gallery = lightGallery(galleryElement, {
+    plugins: [],
+    speed: 500,
+    closable: false,
+    download: false,
+  });
+  galleryElement.addEventListener('click', function () {
+    gallery.openGallery(0);
+  });
+  galleryElement.click();
+</script>
+
+  </body>
+</html>
+

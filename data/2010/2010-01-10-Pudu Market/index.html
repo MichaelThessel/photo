@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photos</title>
+  </head>
+
+  <body>
+
+2010-01-10-Pudu Market
+
+<div id="lightgallery">
+
+  <a data-src="slides/20100110_1146-_DSC0015.jpg" data-sub-html="Pudu Wet Market"></a>
+
+  <a data-src="slides/20100110_1148-_DSC0020.jpg" data-sub-html="Huhn | Chicken"></a>
+
+  <a data-src="slides/20100110_1155-_DSC0039.jpg" data-sub-html="Frau auf Fahrrad | Lady on Bike"></a>
+
+  <a data-src="slides/20100110_1156-_DSC0045.jpg" data-sub-html="Huhn und Verkauefer | Chicken and Vendor"></a>
+
+  <a data-src="slides/20100110_1204-_DSC0065.jpg" data-sub-html="Blutgeld | Blodmoney"></a>
+
+  <a data-src="slides/20100110_1206-_DSC0070.jpg" data-sub-html="Frau | Women"></a>
+
+  <a data-src="slides/20100110_1206-_DSC0071.jpg" data-sub-html="Kerl | Dude"></a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  galleryElement = document.getElementById('lightgallery');
+  gallery = lightGallery(galleryElement, {
+    plugins: [],
+    speed: 500,
+    closable: false,
+    download: false,
+  });
+  galleryElement.addEventListener('click', function () {
+    gallery.openGallery(0);
+  });
+  galleryElement.click();
+</script>
+
+  </body>
+</html>
+

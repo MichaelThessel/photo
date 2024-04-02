@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photos</title>
+  </head>
+
+  <body>
+
+2015-05-27-Germany
+
+<div id="lightgallery">
+
+  <a data-src="slides/20150526_0541-_GWR1949.jpg" data-sub-html="Lianne"></a>
+
+  <a data-src="slides/20150531_0426-R0000976.jpg" data-sub-html="Old Shatterhand and Winnetou"></a>
+
+  <a data-src="slides/20150605_2227-R0000977.jpg" data-sub-html="The fam"></a>
+
+  <a data-src="slides/20150605_2329-R0000979.jpg" data-sub-html="Rolling German hills"></a>
+
+  <a data-src="slides/20150606_0019-R0000985.jpg" data-sub-html="Playing"></a>
+
+  <a data-src="slides/20150606_0020-R0000987.jpg" data-sub-html="Ready for the apocalypse"></a>
+
+  <a data-src="slides/20150620_0306-R0000989.jpg" data-sub-html="Kamenzer"></a>
+
+  <a data-src="slides/20150620_0348-R0000992.jpg" data-sub-html="BRN"></a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  galleryElement = document.getElementById('lightgallery');
+  gallery = lightGallery(galleryElement, {
+    plugins: [],
+    speed: 500,
+    closable: false,
+    download: false,
+  });
+  galleryElement.addEventListener('click', function () {
+    gallery.openGallery(0);
+  });
+  galleryElement.click();
+</script>
+
+  </body>
+</html>
+

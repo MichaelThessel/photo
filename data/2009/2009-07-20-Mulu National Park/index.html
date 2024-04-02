@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photos</title>
+  </head>
+
+  <body>
+
+2009-07-20-Mulu National Park
+
+<div id="lightgallery">
+
+  <a data-src="slides/_DSC0216.jpg" data-sub-html="Bootsfahrt | Boat ride"></a>
+
+  <a data-src="slides/_DSC0235.jpg" data-sub-html="Boot | Boat"></a>
+
+  <a data-src="slides/_DSC0245.jpg" data-sub-html="Boote | Boats"></a>
+
+  <a data-src="slides/_DSC0251.jpg" data-sub-html="Huhn | Chicken"></a>
+
+  <a data-src="slides/_DSC0257.jpg" data-sub-html="Dorf | Village"></a>
+
+  <a data-src="slides/_DSC0267.jpg" data-sub-html="Berge | Mountains"></a>
+
+  <a data-src="slides/_DSC0277.jpg" data-sub-html="Hund | Dog"></a>
+
+  <a data-src="slides/_DSC0341.jpg" data-sub-html="Hoehle | Cave"></a>
+
+  <a data-src="slides/_DSC0430.jpg" data-sub-html="Hoehle | Cave"></a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  galleryElement = document.getElementById('lightgallery');
+  gallery = lightGallery(galleryElement, {
+    plugins: [],
+    speed: 500,
+    closable: false,
+    download: false,
+  });
+  galleryElement.addEventListener('click', function () {
+    gallery.openGallery(0);
+  });
+  galleryElement.click();
+</script>
+
+  </body>
+</html>
+

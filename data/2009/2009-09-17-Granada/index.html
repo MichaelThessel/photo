@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photos</title>
+  </head>
+
+  <body>
+
+2009-09-17-Granada
+
+<div id="lightgallery">
+
+  <a data-src="slides/_DSC0004.jpg" data-sub-html="War ja auch ran | Was about time"></a>
+
+  <a data-src="slides/_DSC0008.jpg" data-sub-html="Hamsters stink anyways"></a>
+
+  <a data-src="slides/_DSC0017.jpg" data-sub-html="Shell"></a>
+
+  <a data-src="slides/_DSC0018.jpg" data-sub-html="Jesus"></a>
+
+  <a data-src="slides/_DSC0019.jpg" data-sub-html="Jesus?"></a>
+
+  <a data-src="slides/_DSC0023.jpg" data-sub-html="Jesus"></a>
+
+  <a data-src="slides/_DSC0027.jpg" data-sub-html="Monsterwolke | Monster cloud"></a>
+
+  <a data-src="slides/_DSC0032.jpg" data-sub-html="AILIMAFAL - Spanish werde ich wohl nie verstehen | AILIMAFAL - I never gonna understand Spanish"></a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  galleryElement = document.getElementById('lightgallery');
+  gallery = lightGallery(galleryElement, {
+    plugins: [],
+    speed: 500,
+    closable: false,
+    download: false,
+  });
+  galleryElement.addEventListener('click', function () {
+    gallery.openGallery(0);
+  });
+  galleryElement.click();
+</script>
+
+  </body>
+</html>
+

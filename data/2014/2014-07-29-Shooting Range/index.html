@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photos</title>
+  </head>
+
+  <body>
+
+2014-07-29-Shooting Range
+
+<div id="lightgallery">
+
+  <a data-src="slides/20140729_1752-_GWR9306.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1705-_GWR9278.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1708-_GWR9283.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1732-_GWR9293.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1738-_GWR9299.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1813-_GWR9329.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1814-_GWR9331.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1809-_GWR9326.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1815-_GWR9332.jpg" data-sub-html="Kaboooom"></a>
+
+  <a data-src="slides/20140729_1816-_GWR9335.jpg" data-sub-html="Kaboooom"></a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  galleryElement = document.getElementById('lightgallery');
+  gallery = lightGallery(galleryElement, {
+    plugins: [],
+    speed: 500,
+    closable: false,
+    download: false,
+  });
+  galleryElement.addEventListener('click', function () {
+    gallery.openGallery(0);
+  });
+  galleryElement.click();
+</script>
+
+  </body>
+</html>
+

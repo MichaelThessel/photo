@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Photos</title>
+  </head>
+
+  <body>
+
+2009-07-15-Miri
+
+<div id="lightgallery">
+
+  <a data-src="slides/_DSC0018.jpg" data-sub-html="Moschee | Mosque"></a>
+
+  <a data-src="slides/_DSC0073.jpg" data-sub-html="Cinesischer Temple | Chinese Temple"></a>
+
+  <a data-src="slides/_DSC0074.jpg" data-sub-html="Gebet | Prayer"></a>
+
+  <a data-src="slides/_DSC0095.jpg" data-sub-html="Tiger | Tiger"></a>
+
+  <a data-src="slides/_DSC0101.jpg" data-sub-html="Lampen | Lights"></a>
+
+  <a data-src="slides/_DSC0103.jpg" data-sub-html="Statue"></a>
+
+  <a data-src="slides/_DSC0121.jpg" data-sub-html="Fisch Verkaeufer | Fish dealer"></a>
+
+  <a data-src="slides/_DSC0125.jpg" data-sub-html="Fische | Fish"></a>
+
+  <a data-src="slides/_DSC0139.jpg" data-sub-html="Steg | Dock"></a>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+  galleryElement = document.getElementById('lightgallery');
+  gallery = lightGallery(galleryElement, {
+    plugins: [],
+    speed: 500,
+    closable: false,
+    download: false,
+  });
+  galleryElement.addEventListener('click', function () {
+    gallery.openGallery(0);
+  });
+  galleryElement.click();
+</script>
+
+  </body>
+</html>
+
