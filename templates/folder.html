@@ -1,5 +1,9 @@
 {{template "header" .Page}}
 
+<a href="../../index.html">Home</a> &gt;
+<strong>{{.Folder.Name}}</strong>
+<br /><br />
+
 {{range .Folder.Albums}}
 <a href="{{.Name}}/index.html">{{.Name}}</a><br />
 {{end}}

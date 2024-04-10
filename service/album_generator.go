@@ -33,13 +33,15 @@ func (ag *AlbumGenerator) GenerateHTML(folder model.Folder, album model.Album) {
 	}
 
 	templateData := struct {
-		Page  model.Page
-		Album model.Album
+		Page   model.Page
+		Album  model.Album
+		Folder model.Folder
 	}{
 		Page: model.Page{
 			Title: album.Name,
 		},
-		Album: album,
+		Album:  album,
+		Folder: folder,
 	}
 	err = tmpl.Execute(f, templateData)
 	if err != nil {

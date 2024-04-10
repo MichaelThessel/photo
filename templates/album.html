@@ -1,8 +1,10 @@
 {{template "header" .Page}}
 
-<h1>{{.Album.Name}}</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">{{.Folder.Name}}</a> &gt;
+<strong>{{.Album.Name}}</strong>
+<br /><br />
 
 <div id="lightgallery">
 {{range .Album.Slides}}
