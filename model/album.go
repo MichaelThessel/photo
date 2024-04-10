@@ -17,19 +17,28 @@ type Album struct {
 // thumbs
 func (a Album) CreateAlbumDirectories(basePath string) {
 	// Create album directories
-	err := os.Mkdir(basePath+"/"+a.Name, 0744)
-	if err != nil {
-		log.Println("Error creating album directory", err)
+	albumPath := basePath + "/" + a.Name
+	if _, err := os.Stat(albumPath); err != nil {
+		err := os.Mkdir(albumPath, 0744)
+		if err != nil {
+			log.Fatalln("Error creating album directory", err)
+		}
 	}
 
-	err = os.Mkdir(basePath+"/"+a.Name+"/slides", 0744)
-	if err != nil {
-		log.Println("Error creating slide directory", err)
+	slidePath := basePath + "/" + a.Name + "/slides"
+	if _, err := os.Stat(slidePath); err != nil {
+		err := os.Mkdir(slidePath, 0744)
+		if err != nil {
+			log.Fatalln("Error creating slide directory", err)
+		}
 	}
 
-	err = os.Mkdir(basePath+"/"+a.Name+"/thumbs", 0744)
-	if err != nil {
-		log.Println("Error creating thumb directory", err)
+	thumbPath := basePath + "/" + a.Name + "/thumbs"
+	if _, err := os.Stat(thumbPath); err != nil {
+		err := os.Mkdir(thumbPath, 0744)
+		if err != nil {
+			log.Fatalln("Error creating thumb directory", err)
+		}
 	}
 }
 

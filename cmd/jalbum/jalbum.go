@@ -7,6 +7,8 @@ import (
 	"strings"
 
 	"github.com/MichaelThessel/photo/model"
+	"github.com/MichaelThessel/photo/service"
+
 	"golang.org/x/net/html"
 )
 
@@ -18,15 +20,19 @@ func main() {
 		},
 		importPath: "./import",
 		exportPath: "./data",
+		thumbnailGenerator: &service.ThumbnailGenerator{
+			Size: 400,
+		},
 	}
 
 	ap.ParseDir()
 }
 
 type AlbumParser struct {
-	excluded   []string
-	importPath string
-	exportPath string
+	excluded           []string
+	importPath         string
+	exportPath         string
+	thumbnailGenerator *service.ThumbnailGenerator
 }
 
 // ParseDir parses the album directory tree and finds almbum subdirectories
@@ -72,14 +78,18 @@ func (ap AlbumParser) ParseDir() {
 // appropriate place in the new folder structure
 func (ap AlbumParser) CopyImages(album *model.Album, folder *model.Folder) {
 	for _, s := range album.Slides {
-		r, err := os.Open(ap.importPath + "/" + folder.Name + "/" + album.Name + "/slides/" + s.ImagePath)
+		r, err := os.Open(
+			ap.importPath + "/" + folder.Name + "/" + album.Name + "/slides/" + s.ImagePath,
+		)
 		if err != nil {
 			log.Println("Couldn't open image source file", err)
 			return
 		}
 		defer r.Close()
 
-		w, err := os.Create(ap.exportPath + "/" + folder.Name + "/" + album.Name + "/slides/" + s.ImagePath)
+		w, err := os.Create(
+			ap.exportPath + "/" + folder.Name + "/" + album.Name + "/slides/" + s.ImagePath,
+		)
 		if err != nil {
 			log.Println("Couldn't create image destination file", err)
 			return
@@ -90,6 +100,12 @@ func (ap AlbumParser) CopyImages(album *model.Album, folder *model.Folder) {
 		if err != nil {
 			log.Println("Couldn't write image destination file", err)
 		}
+
+		ap.thumbnailGenerator.GenerateThumbnail(
+			w,
+			ap.exportPath+"/"+folder.Name+"/"+album.Name+"/thumbs/"+s.ImagePath,
+			false,
+		)
 	}
 }
 

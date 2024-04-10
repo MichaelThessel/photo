@@ -6,7 +6,7 @@
 
 <div id="lightgallery">
 {{range .Album.Slides}}
-  <a href="slides/{{.ImagePath}}" data-sub-html="{{.Description}}"><img src="slides/{{.ImagePath}}" style="max-width: 200px" /></a>
+  <a href="slides/{{.ImagePath}}" data-sub-html="{{.Description}}"><img class="thumb" src="thumbs/{{.ImagePath}}" /></a>
 {{end}}
 </div>
 
