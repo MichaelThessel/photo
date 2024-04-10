@@ -47,8 +47,17 @@ func (ag *AlbumGenerator) GenerateAlbumHTML(folder model.Folder, album model.Alb
 		log.Panic("Coudn't open template files", err)
 	}
 
-	err = tmpl.Execute(f, album)
+	templateData := struct {
+		Page  model.Page
+		Album model.Album
+	}{
+		Page: model.Page{
+			Title: album.Name,
+		},
+		Album: album,
+	}
+	err = tmpl.Execute(f, templateData)
 	if err != nil {
-		log.Panic("Coudn't write template file", err)
+		log.Panic("Coudn't compile template", err)
 	}
 }

@@ -1,7 +1,7 @@
-{{template "header"}}
+{{template "header" .Page}}
 
 <div id="lightgallery">
-{{range .Slides}}
+{{range .Album.Slides}}
   <a data-src="slides/{{.ImagePath}}" data-sub-html="{{.Description}}"></a>
 {{end}}
 </div>
