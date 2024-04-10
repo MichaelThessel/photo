@@ -8,6 +8,7 @@ import (
 type Folder struct {
 	Name      string
 	ThumbPath string
+	Albums    []Album
 }
 
 // CreateFolderDirectory creates directories for base folders
