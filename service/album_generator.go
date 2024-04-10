@@ -24,6 +24,7 @@ func (ag *AlbumGenerator) GenerateHTML(folder model.Folder, album model.Album) {
 	tmpl, err := template.ParseFiles(
 		"templates/album.html",
 		"templates/head.html",
+		"templates/styles.html",
 		"templates/header.html",
 		"templates/footer.html",
 	)

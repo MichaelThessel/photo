@@ -24,6 +24,7 @@ func (ag *FolderGenerator) GenerateHTML(folder model.Folder) {
 	tmpl, err := template.ParseFiles(
 		"templates/folder.html",
 		"templates/head.html",
+		"templates/styles.html",
 		"templates/header.html",
 		"templates/footer.html",
 	)
