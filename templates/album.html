@@ -10,16 +10,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
   galleryElement = document.getElementById('lightgallery');
+
   gallery = lightGallery(galleryElement, {
     plugins: [],
     speed: 500,
-    closable: false,
+    closable: true,
     download: false,
   });
+
+  // Automatically open
   galleryElement.addEventListener('click', function () {
     gallery.openGallery(0);
   });
   galleryElement.click();
+
+  // Redirect back on close
+  galleryElement.addEventListener('lgAfterClose', function () {
+    document.location.href = '../';
+  });
 </script>
 
 {{template "footer"}}
