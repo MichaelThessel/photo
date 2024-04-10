@@ -4,12 +4,10 @@
     "Slides": [
         {
             "ImagePath": "Sushi-Bar.jpg",
-            "ThumbPath": "",
             "Description": "1"
         },
         {
             "ImagePath": "Untitled.jpg",
-            "ThumbPath": "",
             "Description": "2"
         }
     ]
