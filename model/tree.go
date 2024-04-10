@@ -32,6 +32,9 @@ func (t *Tree) Parse() {
 
 			entries, _ = os.ReadDir(basePath)
 			for _, e2 := range entries {
+				if !e2.IsDir() {
+					continue
+				}
 				albumDataRaw, err := os.ReadFile(basePath + "/" + e2.Name() + "/data.json")
 				if err != nil {
 					log.Println("Coudn't read album data file", err)

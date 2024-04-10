@@ -1,2 +1,7 @@
-{{define "folder"}}
+{{template "header" .Page}}
+
+{{range .Folder.Albums}}
+<a href="{{.Name}}/index.html">{{.Name}}</a><br />
 {{end}}
+
+{{template "footer"}}

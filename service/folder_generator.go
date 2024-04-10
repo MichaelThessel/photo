@@ -8,21 +8,21 @@ import (
 	"github.com/MichaelThessel/photo/model"
 )
 
-type AlbumGenerator struct {
+type FolderGenerator struct {
 	ExportPath string
 }
 
-func (ag *AlbumGenerator) GenerateHTML(folder model.Folder, album model.Album) {
-	albumPath := ag.ExportPath + "/" + folder.Name + "/" + album.Name
+func (ag *FolderGenerator) GenerateHTML(folder model.Folder) {
+	folderPath := ag.ExportPath + "/" + folder.Name
 
-	f, err := os.Create(albumPath + "/index.html")
+	f, err := os.Create(folderPath + "/index.html")
 	if err != nil {
-		log.Println("Coudn't open album index file", err)
+		log.Println("Coudn't open folder index file", err)
 	}
 	defer f.Close()
 
 	tmpl, err := template.ParseFiles(
-		"templates/album.html",
+		"templates/folder.html",
 		"templates/head.html",
 		"templates/header.html",
 		"templates/footer.html",
@@ -32,13 +32,13 @@ func (ag *AlbumGenerator) GenerateHTML(folder model.Folder, album model.Album) {
 	}
 
 	templateData := struct {
-		Page  model.Page
-		Album model.Album
+		Page   model.Page
+		Folder model.Folder
 	}{
 		Page: model.Page{
-			Title: album.Name,
+			Title: folder.Name,
 		},
-		Album: album,
+		Folder: folder,
 	}
 	err = tmpl.Execute(f, templateData)
 	if err != nil {
