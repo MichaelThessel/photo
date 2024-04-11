@@ -68,6 +68,9 @@ func (ap AlbumParser) ParseDir() {
 
 					// Copy the images
 					ap.CopyImages(album, folder)
+
+					// Copy the folder thumbnails
+					ap.CopyFolderThumbnail(album, folder)
 				}
 			}
 		}
@@ -101,12 +104,30 @@ func (ap AlbumParser) CopyImages(album *model.Album, folder *model.Folder) {
 			log.Println("Couldn't write image destination file", err)
 		}
 
-		ap.thumbnailGenerator.GenerateThumbnail(
+		ap.thumbnailGenerator.GenerateAlbumThumbnail(
 			w,
 			ap.exportPath+"/"+folder.Name+"/"+album.Name+"/thumbs/"+s.ImagePath,
 			false,
 		)
 	}
+}
+
+// CopyFolderThumbnail copies the thumbnail for the folder image from JAlbum
+func (ap AlbumParser) CopyFolderThumbnail(album *model.Album, folder *model.Folder) {
+	thumbnail, err := os.Open(
+		ap.importPath + "/" + folder.Name + "/" + album.Name + "/folderthumb.jpg",
+	)
+	if err != nil {
+		log.Println("Couldn't open folder thumbnail source file", err)
+		return
+	}
+	defer thumbnail.Close()
+
+	ap.thumbnailGenerator.GenerateFolderThumbnail(
+		thumbnail,
+		ap.exportPath+"/"+folder.Name+"/"+album.Name+"/thumb.jpg",
+		true,
+	)
 }
 
 // ParseIndex parses the index.html files from the albums and extracts the slide

@@ -4,8 +4,17 @@
 <strong>{{.Folder.Name}}</strong>
 <br /><br />
 
+<div class="folder">
 {{range .Folder.Albums}}
-<a href="{{.Name}}/index.html">{{.Name}}</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="{{.Name}}/index.html">
+        <img src="{{.Name}}/thumb.jpg" alt="" />
+        <strong class="title">{{.Name}}</strong>
+      </a>
+    </div>
+  </div>
 {{end}}
+</div>
 
 {{template "footer"}}

@@ -8,9 +8,9 @@ import (
 )
 
 type Album struct {
-	Name      string
-	ThumbPath string
-	Slides    []Slide
+	Name       string
+	ThumbIndex int
+	Slides     []Slide
 }
 
 // CreateAlbumDirectories creates directories for an album to store images and

@@ -8,7 +8,49 @@ body {
 
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+/* Large Screen */
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
+}
 </style>
 {{end}}
