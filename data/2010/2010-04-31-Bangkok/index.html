@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2010-04-31-Bangkok</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,74 +85,79 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2010-04-31-Bangkok</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2010</a> &gt;
+<strong>2010-04-31-Bangkok</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20100501_0046-29.jpg" data-sub-html="Mandy &amp; Thes"><img class="thumb" src="thumbs/20100501_0046-29.jpg" /></a>
+  <a href="slides/20100501_0046-29.jpg" data-sub-html="Mandy &amp; Thes"><img class="thumb" alt="Mandy &amp; Thes" src="thumbs/20100501_0046-29.jpg" /></a>
 
-  <a href="slides/20100501_0150-36.jpg" data-sub-html="Mandy"><img class="thumb" src="thumbs/20100501_0150-36.jpg" /></a>
+  <a href="slides/20100501_0150-36.jpg" data-sub-html="Mandy"><img class="thumb" alt="Mandy" src="thumbs/20100501_0150-36.jpg" /></a>
 
-  <a href="slides/20100501_0349-43.jpg" data-sub-html="Typen auf der Strasse | Dudes on the street"><img class="thumb" src="thumbs/20100501_0349-43.jpg" /></a>
+  <a href="slides/20100501_0349-43.jpg" data-sub-html="Typen auf der Strasse | Dudes on the street"><img class="thumb" alt="Typen auf der Strasse | Dudes on the street" src="thumbs/20100501_0349-43.jpg" /></a>
 
-  <a href="slides/20100501_0443-49.jpg" data-sub-html="Mandy"><img class="thumb" src="thumbs/20100501_0443-49.jpg" /></a>
+  <a href="slides/20100501_0443-49.jpg" data-sub-html="Mandy"><img class="thumb" alt="Mandy" src="thumbs/20100501_0443-49.jpg" /></a>
 
-  <a href="slides/20100501_1356-52.jpg" data-sub-html="Fahrradweg | Bicycle lane"><img class="thumb" src="thumbs/20100501_1356-52.jpg" /></a>
+  <a href="slides/20100501_1356-52.jpg" data-sub-html="Fahrradweg | Bicycle lane"><img class="thumb" alt="Fahrradweg | Bicycle lane" src="thumbs/20100501_1356-52.jpg" /></a>
 
-  <a href="slides/20100501_1549-65.jpg" data-sub-html="Der Koening | The King"><img class="thumb" src="thumbs/20100501_1549-65.jpg" /></a>
+  <a href="slides/20100501_1549-65.jpg" data-sub-html="Der Koening | The King"><img class="thumb" alt="Der Koening | The King" src="thumbs/20100501_1549-65.jpg" /></a>
 
-  <a href="slides/20100501_1903-71.jpg" data-sub-html="Mandy"><img class="thumb" src="thumbs/20100501_1903-71.jpg" /></a>
+  <a href="slides/20100501_1903-71.jpg" data-sub-html="Mandy"><img class="thumb" alt="Mandy" src="thumbs/20100501_1903-71.jpg" /></a>
 
-  <a href="slides/20100502_1332-87.jpg" data-sub-html="Typ | Dude"><img class="thumb" src="thumbs/20100502_1332-87.jpg" /></a>
+  <a href="slides/20100502_1332-87.jpg" data-sub-html="Typ | Dude"><img class="thumb" alt="Typ | Dude" src="thumbs/20100502_1332-87.jpg" /></a>
 
-  <a href="slides/20100502_1743-184.jpg" data-sub-html="Moench und Soldat | Monk and Soldier"><img class="thumb" src="thumbs/20100502_1743-184.jpg" /></a>
+  <a href="slides/20100502_1743-184.jpg" data-sub-html="Moench und Soldat | Monk and Soldier"><img class="thumb" alt="Moench und Soldat | Monk and Soldier" src="thumbs/20100502_1743-184.jpg" /></a>
 
-  <a href="slides/20100502_1757-192.jpg" data-sub-html="Schild | Sign"><img class="thumb" src="thumbs/20100502_1757-192.jpg" /></a>
+  <a href="slides/20100502_1757-192.jpg" data-sub-html="Schild | Sign"><img class="thumb" alt="Schild | Sign" src="thumbs/20100502_1757-192.jpg" /></a>
 
-  <a href="slides/20100502_1800-195.jpg" data-sub-html="Der ... Buddha der Welt | The ... Buddha in the World"><img class="thumb" src="thumbs/20100502_1800-195.jpg" /></a>
+  <a href="slides/20100502_1800-195.jpg" data-sub-html="Der ... Buddha der Welt | The ... Buddha in the World"><img class="thumb" alt="Der ... Buddha der Welt | The ... Buddha in the World" src="thumbs/20100502_1800-195.jpg" /></a>
 
-  <a href="slides/20100502_1848-224.jpg" data-sub-html="Mandy"><img class="thumb" src="thumbs/20100502_1848-224.jpg" /></a>
+  <a href="slides/20100502_1848-224.jpg" data-sub-html="Mandy"><img class="thumb" alt="Mandy" src="thumbs/20100502_1848-224.jpg" /></a>
 
-  <a href="slides/20100502_1942-244.jpg" data-sub-html="Mandy"><img class="thumb" src="thumbs/20100502_1942-244.jpg" /></a>
+  <a href="slides/20100502_1942-244.jpg" data-sub-html="Mandy"><img class="thumb" alt="Mandy" src="thumbs/20100502_1942-244.jpg" /></a>
 
-  <a href="slides/20100503_1631-257.jpg" data-sub-html="Tote Babies | Dead Babies"><img class="thumb" src="thumbs/20100503_1631-257.jpg" /></a>
+  <a href="slides/20100503_1631-257.jpg" data-sub-html="Tote Babies | Dead Babies"><img class="thumb" alt="Tote Babies | Dead Babies" src="thumbs/20100503_1631-257.jpg" /></a>
 
-  <a href="slides/20100503_1643-260.jpg" data-sub-html="Findet Nemo | Finding Nemo"><img class="thumb" src="thumbs/20100503_1643-260.jpg" /></a>
+  <a href="slides/20100503_1643-260.jpg" data-sub-html="Findet Nemo | Finding Nemo"><img class="thumb" alt="Findet Nemo | Finding Nemo" src="thumbs/20100503_1643-260.jpg" /></a>
 
-  <a href="slides/20100503_1657-263.jpg" data-sub-html="Ich | Me"><img class="thumb" src="thumbs/20100503_1657-263.jpg" /></a>
+  <a href="slides/20100503_1657-263.jpg" data-sub-html="Ich | Me"><img class="thumb" alt="Ich | Me" src="thumbs/20100503_1657-263.jpg" /></a>
 
-  <a href="slides/20100503_1756-334.jpg" data-sub-html="Mandy"><img class="thumb" src="thumbs/20100503_1756-334.jpg" /></a>
+  <a href="slides/20100503_1756-334.jpg" data-sub-html="Mandy"><img class="thumb" alt="Mandy" src="thumbs/20100503_1756-334.jpg" /></a>
 
-  <a href="slides/20100503_1758-337.jpg" data-sub-html="Ich | Me"><img class="thumb" src="thumbs/20100503_1758-337.jpg" /></a>
+  <a href="slides/20100503_1758-337.jpg" data-sub-html="Ich | Me"><img class="thumb" alt="Ich | Me" src="thumbs/20100503_1758-337.jpg" /></a>
 
-  <a href="slides/20100503_1811-370.jpg" data-sub-html="Sonne &amp; Temple | Sun &amp; Temple"><img class="thumb" src="thumbs/20100503_1811-370.jpg" /></a>
+  <a href="slides/20100503_1811-370.jpg" data-sub-html="Sonne &amp; Temple | Sun &amp; Temple"><img class="thumb" alt="Sonne &amp; Temple | Sun &amp; Temple" src="thumbs/20100503_1811-370.jpg" /></a>
 
-  <a href="slides/20100503_1818-380.jpg" data-sub-html="Tempel | Temple"><img class="thumb" src="thumbs/20100503_1818-380.jpg" /></a>
+  <a href="slides/20100503_1818-380.jpg" data-sub-html="Tempel | Temple"><img class="thumb" alt="Tempel | Temple" src="thumbs/20100503_1818-380.jpg" /></a>
 
-  <a href="slides/20100503_1843-390.jpg" data-sub-html="Mandy &amp; Coke"><img class="thumb" src="thumbs/20100503_1843-390.jpg" /></a>
+  <a href="slides/20100503_1843-390.jpg" data-sub-html="Mandy &amp; Coke"><img class="thumb" alt="Mandy &amp; Coke" src="thumbs/20100503_1843-390.jpg" /></a>
 
-  <a href="slides/20100503_2141-391.jpg" data-sub-html="Kick Boxer | Kick Boxers"><img class="thumb" src="thumbs/20100503_2141-391.jpg" /></a>
+  <a href="slides/20100503_2141-391.jpg" data-sub-html="Kick Boxer | Kick Boxers"><img class="thumb" alt="Kick Boxer | Kick Boxers" src="thumbs/20100503_2141-391.jpg" /></a>
 
-  <a href="slides/20100503_2236-433.jpg" data-sub-html="Kick Boxen | Kick Boxing"><img class="thumb" src="thumbs/20100503_2236-433.jpg" /></a>
+  <a href="slides/20100503_2236-433.jpg" data-sub-html="Kick Boxen | Kick Boxing"><img class="thumb" alt="Kick Boxen | Kick Boxing" src="thumbs/20100503_2236-433.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

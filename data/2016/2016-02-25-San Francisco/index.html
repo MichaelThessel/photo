@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2016-02-25-San Francisco</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,98 +85,103 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2016-02-25-San Francisco</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2016</a> &gt;
+<strong>2016-02-25-San Francisco</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20160225_1854-R0002156.jpg" data-sub-html="Flying in"><img class="thumb" src="thumbs/20160225_1854-R0002156.jpg" /></a>
+  <a href="slides/20160225_1854-R0002156.jpg" data-sub-html="Flying in"><img class="thumb" alt="Flying in" src="thumbs/20160225_1854-R0002156.jpg" /></a>
 
-  <a href="slides/20160226_0910-R0002176.jpg" data-sub-html="Pidgin"><img class="thumb" src="thumbs/20160226_0910-R0002176.jpg" /></a>
+  <a href="slides/20160226_0910-R0002176.jpg" data-sub-html="Pidgin"><img class="thumb" alt="Pidgin" src="thumbs/20160226_0910-R0002176.jpg" /></a>
 
-  <a href="slides/20160226_0913-R0002179.jpg" data-sub-html="Wigs"><img class="thumb" src="thumbs/20160226_0913-R0002179.jpg" /></a>
+  <a href="slides/20160226_0913-R0002179.jpg" data-sub-html="Wigs"><img class="thumb" alt="Wigs" src="thumbs/20160226_0913-R0002179.jpg" /></a>
 
-  <a href="slides/20160226_0934-R0002190.jpg" data-sub-html="Love Bird"><img class="thumb" src="thumbs/20160226_0934-R0002190.jpg" /></a>
+  <a href="slides/20160226_0934-R0002190.jpg" data-sub-html="Love Bird"><img class="thumb" alt="Love Bird" src="thumbs/20160226_0934-R0002190.jpg" /></a>
 
-  <a href="slides/20160226_0935-R0002192.jpg" data-sub-html="Flower Vendor"><img class="thumb" src="thumbs/20160226_0935-R0002192.jpg" /></a>
+  <a href="slides/20160226_0935-R0002192.jpg" data-sub-html="Flower Vendor"><img class="thumb" alt="Flower Vendor" src="thumbs/20160226_0935-R0002192.jpg" /></a>
 
-  <a href="slides/20160226_0944-R0002193.jpg" data-sub-html="Devil Child"><img class="thumb" src="thumbs/20160226_0944-R0002193.jpg" /></a>
+  <a href="slides/20160226_0944-R0002193.jpg" data-sub-html="Devil Child"><img class="thumb" alt="Devil Child" src="thumbs/20160226_0944-R0002193.jpg" /></a>
 
-  <a href="slides/20160226_1011-R0002194.jpg" data-sub-html="Checking out the wall"><img class="thumb" src="thumbs/20160226_1011-R0002194.jpg" /></a>
+  <a href="slides/20160226_1011-R0002194.jpg" data-sub-html="Checking out the wall"><img class="thumb" alt="Checking out the wall" src="thumbs/20160226_1011-R0002194.jpg" /></a>
 
-  <a href="slides/20160226_1030-R0002197.jpg" data-sub-html="Wells Fargo is Secure"><img class="thumb" src="thumbs/20160226_1030-R0002197.jpg" /></a>
+  <a href="slides/20160226_1030-R0002197.jpg" data-sub-html="Wells Fargo is Secure"><img class="thumb" alt="Wells Fargo is Secure" src="thumbs/20160226_1030-R0002197.jpg" /></a>
 
-  <a href="slides/20160226_1032-R0002198.jpg" data-sub-html="Dog"><img class="thumb" src="thumbs/20160226_1032-R0002198.jpg" /></a>
+  <a href="slides/20160226_1032-R0002198.jpg" data-sub-html="Dog"><img class="thumb" alt="Dog" src="thumbs/20160226_1032-R0002198.jpg" /></a>
 
-  <a href="slides/20160226_1114-R0002199.jpg" data-sub-html="Listen to this wall."><img class="thumb" src="thumbs/20160226_1114-R0002199.jpg" /></a>
+  <a href="slides/20160226_1114-R0002199.jpg" data-sub-html="Listen to this wall."><img class="thumb" alt="Listen to this wall." src="thumbs/20160226_1114-R0002199.jpg" /></a>
 
-  <a href="slides/20160226_1117-R0002205.jpg" data-sub-html="Purple"><img class="thumb" src="thumbs/20160226_1117-R0002205.jpg" /></a>
+  <a href="slides/20160226_1117-R0002205.jpg" data-sub-html="Purple"><img class="thumb" alt="Purple" src="thumbs/20160226_1117-R0002205.jpg" /></a>
 
-  <a href="slides/20160226_1122-R0002208.jpg" data-sub-html="Hat"><img class="thumb" src="thumbs/20160226_1122-R0002208.jpg" /></a>
+  <a href="slides/20160226_1122-R0002208.jpg" data-sub-html="Hat"><img class="thumb" alt="Hat" src="thumbs/20160226_1122-R0002208.jpg" /></a>
 
-  <a href="slides/20160226_1131-R0002211.jpg" data-sub-html="Chillin&#39;"><img class="thumb" src="thumbs/20160226_1131-R0002211.jpg" /></a>
+  <a href="slides/20160226_1131-R0002211.jpg" data-sub-html="Chillin&#39;"><img class="thumb" alt="Chillin&#39;" src="thumbs/20160226_1131-R0002211.jpg" /></a>
 
-  <a href="slides/20160226_1138-R0002214.jpg" data-sub-html="Fox"><img class="thumb" src="thumbs/20160226_1138-R0002214.jpg" /></a>
+  <a href="slides/20160226_1138-R0002214.jpg" data-sub-html="Fox"><img class="thumb" alt="Fox" src="thumbs/20160226_1138-R0002214.jpg" /></a>
 
-  <a href="slides/20160226_1213-R0002227.jpg" data-sub-html="Coffee"><img class="thumb" src="thumbs/20160226_1213-R0002227.jpg" /></a>
+  <a href="slides/20160226_1213-R0002227.jpg" data-sub-html="Coffee"><img class="thumb" alt="Coffee" src="thumbs/20160226_1213-R0002227.jpg" /></a>
 
-  <a href="slides/20160226_1217-R0002229.jpg" data-sub-html="Hydrant"><img class="thumb" src="thumbs/20160226_1217-R0002229.jpg" /></a>
+  <a href="slides/20160226_1217-R0002229.jpg" data-sub-html="Hydrant"><img class="thumb" alt="Hydrant" src="thumbs/20160226_1217-R0002229.jpg" /></a>
 
-  <a href="slides/20160226_1225-R0002231.jpg" data-sub-html="Eye to Eye"><img class="thumb" src="thumbs/20160226_1225-R0002231.jpg" /></a>
+  <a href="slides/20160226_1225-R0002231.jpg" data-sub-html="Eye to Eye"><img class="thumb" alt="Eye to Eye" src="thumbs/20160226_1225-R0002231.jpg" /></a>
 
-  <a href="slides/20160226_1240-R0002238.jpg" data-sub-html="Macies"><img class="thumb" src="thumbs/20160226_1240-R0002238.jpg" /></a>
+  <a href="slides/20160226_1240-R0002238.jpg" data-sub-html="Macies"><img class="thumb" alt="Macies" src="thumbs/20160226_1240-R0002238.jpg" /></a>
 
-  <a href="slides/20160226_1245-R0002242.jpg" data-sub-html="Checkin&#39;"><img class="thumb" src="thumbs/20160226_1245-R0002242.jpg" /></a>
+  <a href="slides/20160226_1245-R0002242.jpg" data-sub-html="Checkin&#39;"><img class="thumb" alt="Checkin&#39;" src="thumbs/20160226_1245-R0002242.jpg" /></a>
 
-  <a href="slides/20160226_1314-R0002243.jpg" data-sub-html="Checkin&#39;"><img class="thumb" src="thumbs/20160226_1314-R0002243.jpg" /></a>
+  <a href="slides/20160226_1314-R0002243.jpg" data-sub-html="Checkin&#39;"><img class="thumb" alt="Checkin&#39;" src="thumbs/20160226_1314-R0002243.jpg" /></a>
 
-  <a href="slides/20160227_0827-R0002272.jpg" data-sub-html="Tannin&#39;"><img class="thumb" src="thumbs/20160227_0827-R0002272.jpg" /></a>
+  <a href="slides/20160227_0827-R0002272.jpg" data-sub-html="Tannin&#39;"><img class="thumb" alt="Tannin&#39;" src="thumbs/20160227_0827-R0002272.jpg" /></a>
 
-  <a href="slides/20160227_1129-R0002288.jpg" data-sub-html="Chillin&#39;"><img class="thumb" src="thumbs/20160227_1129-R0002288.jpg" /></a>
+  <a href="slides/20160227_1129-R0002288.jpg" data-sub-html="Chillin&#39;"><img class="thumb" alt="Chillin&#39;" src="thumbs/20160227_1129-R0002288.jpg" /></a>
 
-  <a href="slides/20160227_1154-R0002294.jpg" data-sub-html="WTF!?"><img class="thumb" src="thumbs/20160227_1154-R0002294.jpg" /></a>
+  <a href="slides/20160227_1154-R0002294.jpg" data-sub-html="WTF!?"><img class="thumb" alt="WTF!?" src="thumbs/20160227_1154-R0002294.jpg" /></a>
 
-  <a href="slides/20160227_1212-R0002297.jpg" data-sub-html="Photo time"><img class="thumb" src="thumbs/20160227_1212-R0002297.jpg" /></a>
+  <a href="slides/20160227_1212-R0002297.jpg" data-sub-html="Photo time"><img class="thumb" alt="Photo time" src="thumbs/20160227_1212-R0002297.jpg" /></a>
 
-  <a href="slides/20160227_1318-R0002316.jpg" data-sub-html="Bridge"><img class="thumb" src="thumbs/20160227_1318-R0002316.jpg" /></a>
+  <a href="slides/20160227_1318-R0002316.jpg" data-sub-html="Bridge"><img class="thumb" alt="Bridge" src="thumbs/20160227_1318-R0002316.jpg" /></a>
 
-  <a href="slides/20160227_1319-R0002318.jpg" data-sub-html="Bridge"><img class="thumb" src="thumbs/20160227_1319-R0002318.jpg" /></a>
+  <a href="slides/20160227_1319-R0002318.jpg" data-sub-html="Bridge"><img class="thumb" alt="Bridge" src="thumbs/20160227_1319-R0002318.jpg" /></a>
 
-  <a href="slides/20160227_1327-R0002324.jpg" data-sub-html="Bridges"><img class="thumb" src="thumbs/20160227_1327-R0002324.jpg" /></a>
+  <a href="slides/20160227_1327-R0002324.jpg" data-sub-html="Bridges"><img class="thumb" alt="Bridges" src="thumbs/20160227_1327-R0002324.jpg" /></a>
 
-  <a href="slides/20160227_1426-R0002350.jpg" data-sub-html="A place that needs fixin&#39;"><img class="thumb" src="thumbs/20160227_1426-R0002350.jpg" /></a>
+  <a href="slides/20160227_1426-R0002350.jpg" data-sub-html="A place that needs fixin&#39;"><img class="thumb" alt="A place that needs fixin&#39;" src="thumbs/20160227_1426-R0002350.jpg" /></a>
 
-  <a href="slides/20160227_1427-R0002352.jpg" data-sub-html="&#39;Merica"><img class="thumb" src="thumbs/20160227_1427-R0002352.jpg" /></a>
+  <a href="slides/20160227_1427-R0002352.jpg" data-sub-html="&#39;Merica"><img class="thumb" alt="&#39;Merica" src="thumbs/20160227_1427-R0002352.jpg" /></a>
 
-  <a href="slides/20160227_1436-R0002360.jpg" data-sub-html="Photo time"><img class="thumb" src="thumbs/20160227_1436-R0002360.jpg" /></a>
+  <a href="slides/20160227_1436-R0002360.jpg" data-sub-html="Photo time"><img class="thumb" alt="Photo time" src="thumbs/20160227_1436-R0002360.jpg" /></a>
 
-  <a href="slides/20160227_1821-R0002368.jpg" data-sub-html="@Lolo&#39;s"><img class="thumb" src="thumbs/20160227_1821-R0002368.jpg" /></a>
+  <a href="slides/20160227_1821-R0002368.jpg" data-sub-html="@Lolo&#39;s"><img class="thumb" alt="@Lolo&#39;s" src="thumbs/20160227_1821-R0002368.jpg" /></a>
 
-  <a href="slides/20160228_1143-R0002378.jpg" data-sub-html="Cityscape"><img class="thumb" src="thumbs/20160228_1143-R0002378.jpg" /></a>
+  <a href="slides/20160228_1143-R0002378.jpg" data-sub-html="Cityscape"><img class="thumb" alt="Cityscape" src="thumbs/20160228_1143-R0002378.jpg" /></a>
 
-  <a href="slides/20160228_1218-R0002382.jpg" data-sub-html="Pedestrian crossing"><img class="thumb" src="thumbs/20160228_1218-R0002382.jpg" /></a>
+  <a href="slides/20160228_1218-R0002382.jpg" data-sub-html="Pedestrian crossing"><img class="thumb" alt="Pedestrian crossing" src="thumbs/20160228_1218-R0002382.jpg" /></a>
 
-  <a href="slides/20160228_1359-R0002392.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20160228_1359-R0002392.jpg" /></a>
+  <a href="slides/20160228_1359-R0002392.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20160228_1359-R0002392.jpg" /></a>
 
-  <a href="slides/20160228_1501-R0002403.jpg" data-sub-html="Preacher"><img class="thumb" src="thumbs/20160228_1501-R0002403.jpg" /></a>
+  <a href="slides/20160228_1501-R0002403.jpg" data-sub-html="Preacher"><img class="thumb" alt="Preacher" src="thumbs/20160228_1501-R0002403.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

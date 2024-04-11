@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2009-08-23-Nagen Wedding</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,100 +85,105 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2009-08-23-Nagen Wedding</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2009</a> &gt;
+<strong>2009-08-23-Nagen Wedding</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/_DSC0013.jpg" data-sub-html="Hochzeitshalle | Wdding hall"><img class="thumb" src="thumbs/_DSC0013.jpg" /></a>
+  <a href="slides/_DSC0013.jpg" data-sub-html="Hochzeitshalle | Wdding hall"><img class="thumb" alt="Hochzeitshalle | Wdding hall" src="thumbs/_DSC0013.jpg" /></a>
 
-  <a href="slides/_DSC0016.jpg" data-sub-html="Tische | Tables"><img class="thumb" src="thumbs/_DSC0016.jpg" /></a>
+  <a href="slides/_DSC0016.jpg" data-sub-html="Tische | Tables"><img class="thumb" alt="Tische | Tables" src="thumbs/_DSC0016.jpg" /></a>
 
-  <a href="slides/_DSC0037.jpg" data-sub-html="Beine | Legs"><img class="thumb" src="thumbs/_DSC0037.jpg" /></a>
+  <a href="slides/_DSC0037.jpg" data-sub-html="Beine | Legs"><img class="thumb" alt="Beine | Legs" src="thumbs/_DSC0037.jpg" /></a>
 
-  <a href="slides/_DSC0042.jpg" data-sub-html="Reis | Rice"><img class="thumb" src="thumbs/_DSC0042.jpg" /></a>
+  <a href="slides/_DSC0042.jpg" data-sub-html="Reis | Rice"><img class="thumb" alt="Reis | Rice" src="thumbs/_DSC0042.jpg" /></a>
 
-  <a href="slides/_DSC0044.jpg" data-sub-html="Ganesha"><img class="thumb" src="thumbs/_DSC0044.jpg" /></a>
+  <a href="slides/_DSC0044.jpg" data-sub-html="Ganesha"><img class="thumb" alt="Ganesha" src="thumbs/_DSC0044.jpg" /></a>
 
-  <a href="slides/_DSC0045.jpg" data-sub-html="Shafina"><img class="thumb" src="thumbs/_DSC0045.jpg" /></a>
+  <a href="slides/_DSC0045.jpg" data-sub-html="Shafina"><img class="thumb" alt="Shafina" src="thumbs/_DSC0045.jpg" /></a>
 
-  <a href="slides/_DSC0049.jpg" data-sub-html="Nagen &amp; Prakash"><img class="thumb" src="thumbs/_DSC0049.jpg" /></a>
+  <a href="slides/_DSC0049.jpg" data-sub-html="Nagen &amp; Prakash"><img class="thumb" alt="Nagen &amp; Prakash" src="thumbs/_DSC0049.jpg" /></a>
 
-  <a href="slides/_DSC0058.jpg" data-sub-html="Shafina &amp; Nagen"><img class="thumb" src="thumbs/_DSC0058.jpg" /></a>
+  <a href="slides/_DSC0058.jpg" data-sub-html="Shafina &amp; Nagen"><img class="thumb" alt="Shafina &amp; Nagen" src="thumbs/_DSC0058.jpg" /></a>
 
-  <a href="slides/_DSC0070.jpg" data-sub-html="Hochzeitsgaeste | Wedding guests"><img class="thumb" src="thumbs/_DSC0070.jpg" /></a>
+  <a href="slides/_DSC0070.jpg" data-sub-html="Hochzeitsgaeste | Wedding guests"><img class="thumb" alt="Hochzeitsgaeste | Wedding guests" src="thumbs/_DSC0070.jpg" /></a>
 
-  <a href="slides/_DSC0105.jpg" data-sub-html="Nagens Zeremonie | Nagens ceremonial"><img class="thumb" src="thumbs/_DSC0105.jpg" /></a>
+  <a href="slides/_DSC0105.jpg" data-sub-html="Nagens Zeremonie | Nagens ceremonial"><img class="thumb" alt="Nagens Zeremonie | Nagens ceremonial" src="thumbs/_DSC0105.jpg" /></a>
 
-  <a href="slides/_DSC0116.jpg" data-sub-html="Kind | Kid"><img class="thumb" src="thumbs/_DSC0116.jpg" /></a>
+  <a href="slides/_DSC0116.jpg" data-sub-html="Kind | Kid"><img class="thumb" alt="Kind | Kid" src="thumbs/_DSC0116.jpg" /></a>
 
-  <a href="slides/_DSC0127.jpg" data-sub-html="Braut kommt in den Saal | Bride enters the hall"><img class="thumb" src="thumbs/_DSC0127.jpg" /></a>
+  <a href="slides/_DSC0127.jpg" data-sub-html="Braut kommt in den Saal | Bride enters the hall"><img class="thumb" alt="Braut kommt in den Saal | Bride enters the hall" src="thumbs/_DSC0127.jpg" /></a>
 
-  <a href="slides/_DSC0135.jpg" data-sub-html="Anderes Kind | Another kid"><img class="thumb" src="thumbs/_DSC0135.jpg" /></a>
+  <a href="slides/_DSC0135.jpg" data-sub-html="Anderes Kind | Another kid"><img class="thumb" alt="Anderes Kind | Another kid" src="thumbs/_DSC0135.jpg" /></a>
 
-  <a href="slides/_DSC0145.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" src="thumbs/_DSC0145.jpg" /></a>
+  <a href="slides/_DSC0145.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" alt="Parimalas Zeremonie | Parimalas ceremonial" src="thumbs/_DSC0145.jpg" /></a>
 
-  <a href="slides/_DSC0159.jpg" data-sub-html="Hotzeitshalle | Wedding hall"><img class="thumb" src="thumbs/_DSC0159.jpg" /></a>
+  <a href="slides/_DSC0159.jpg" data-sub-html="Hotzeitshalle | Wedding hall"><img class="thumb" alt="Hotzeitshalle | Wedding hall" src="thumbs/_DSC0159.jpg" /></a>
 
-  <a href="slides/_DSC0168.jpg" data-sub-html="Schwester und Braut | Sister and Bride"><img class="thumb" src="thumbs/_DSC0168.jpg" /></a>
+  <a href="slides/_DSC0168.jpg" data-sub-html="Schwester und Braut | Sister and Bride"><img class="thumb" alt="Schwester und Braut | Sister and Bride" src="thumbs/_DSC0168.jpg" /></a>
 
-  <a href="slides/_DSC0175.jpg" data-sub-html="Tisch | Table"><img class="thumb" src="thumbs/_DSC0175.jpg" /></a>
+  <a href="slides/_DSC0175.jpg" data-sub-html="Tisch | Table"><img class="thumb" alt="Tisch | Table" src="thumbs/_DSC0175.jpg" /></a>
 
-  <a href="slides/_DSC0177.jpg" data-sub-html="Nagen und Bruder | Nagen and Brother"><img class="thumb" src="thumbs/_DSC0177.jpg" /></a>
+  <a href="slides/_DSC0177.jpg" data-sub-html="Nagen und Bruder | Nagen and Brother"><img class="thumb" alt="Nagen und Bruder | Nagen and Brother" src="thumbs/_DSC0177.jpg" /></a>
 
-  <a href="slides/_DSC0181.jpg" data-sub-html="Nagen und Bruder | Nagen and Brother"><img class="thumb" src="thumbs/_DSC0181.jpg" /></a>
+  <a href="slides/_DSC0181.jpg" data-sub-html="Nagen und Bruder | Nagen and Brother"><img class="thumb" alt="Nagen und Bruder | Nagen and Brother" src="thumbs/_DSC0181.jpg" /></a>
 
-  <a href="slides/_DSC0184.jpg" data-sub-html="Familie | Family"><img class="thumb" src="thumbs/_DSC0184.jpg" /></a>
+  <a href="slides/_DSC0184.jpg" data-sub-html="Familie | Family"><img class="thumb" alt="Familie | Family" src="thumbs/_DSC0184.jpg" /></a>
 
-  <a href="slides/_DSC0188.jpg" data-sub-html="Fuss Ritual | Foot ritual"><img class="thumb" src="thumbs/_DSC0188.jpg" /></a>
+  <a href="slides/_DSC0188.jpg" data-sub-html="Fuss Ritual | Foot ritual"><img class="thumb" alt="Fuss Ritual | Foot ritual" src="thumbs/_DSC0188.jpg" /></a>
 
-  <a href="slides/_DSC0213.jpg" data-sub-html="Glatze | Bald"><img class="thumb" src="thumbs/_DSC0213.jpg" /></a>
+  <a href="slides/_DSC0213.jpg" data-sub-html="Glatze | Bald"><img class="thumb" alt="Glatze | Bald" src="thumbs/_DSC0213.jpg" /></a>
 
-  <a href="slides/_DSC0215.jpg" data-sub-html="Food"><img class="thumb" src="thumbs/_DSC0215.jpg" /></a>
+  <a href="slides/_DSC0215.jpg" data-sub-html="Food"><img class="thumb" alt="Food" src="thumbs/_DSC0215.jpg" /></a>
 
-  <a href="slides/_DSC0233.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" src="thumbs/_DSC0233.jpg" /></a>
+  <a href="slides/_DSC0233.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" alt="Parimalas Zeremonie | Parimalas ceremonial" src="thumbs/_DSC0233.jpg" /></a>
 
-  <a href="slides/_DSC0242.jpg" data-sub-html="Parimalas Vater | Parimalas dad"><img class="thumb" src="thumbs/_DSC0242.jpg" /></a>
+  <a href="slides/_DSC0242.jpg" data-sub-html="Parimalas Vater | Parimalas dad"><img class="thumb" alt="Parimalas Vater | Parimalas dad" src="thumbs/_DSC0242.jpg" /></a>
 
-  <a href="slides/_DSC0244.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" src="thumbs/_DSC0244.jpg" /></a>
+  <a href="slides/_DSC0244.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" alt="Parimalas Zeremonie | Parimalas ceremonial" src="thumbs/_DSC0244.jpg" /></a>
 
-  <a href="slides/_DSC0253.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" src="thumbs/_DSC0253.jpg" /></a>
+  <a href="slides/_DSC0253.jpg" data-sub-html="Parimalas Zeremonie | Parimalas ceremonial"><img class="thumb" alt="Parimalas Zeremonie | Parimalas ceremonial" src="thumbs/_DSC0253.jpg" /></a>
 
-  <a href="slides/_DSC0263.jpg" data-sub-html="Kind | Kid"><img class="thumb" src="thumbs/_DSC0263.jpg" /></a>
+  <a href="slides/_DSC0263.jpg" data-sub-html="Kind | Kid"><img class="thumb" alt="Kind | Kid" src="thumbs/_DSC0263.jpg" /></a>
 
-  <a href="slides/_DSC0268.jpg" data-sub-html="Die Vater | The dads"><img class="thumb" src="thumbs/_DSC0268.jpg" /></a>
+  <a href="slides/_DSC0268.jpg" data-sub-html="Die Vater | The dads"><img class="thumb" alt="Die Vater | The dads" src="thumbs/_DSC0268.jpg" /></a>
 
-  <a href="slides/_DSC0275.jpg" data-sub-html="Reis | Rice"><img class="thumb" src="thumbs/_DSC0275.jpg" /></a>
+  <a href="slides/_DSC0275.jpg" data-sub-html="Reis | Rice"><img class="thumb" alt="Reis | Rice" src="thumbs/_DSC0275.jpg" /></a>
 
-  <a href="slides/_DSC0292.jpg" data-sub-html="Einsamer Gast | Lonely guest"><img class="thumb" src="thumbs/_DSC0292.jpg" /></a>
+  <a href="slides/_DSC0292.jpg" data-sub-html="Einsamer Gast | Lonely guest"><img class="thumb" alt="Einsamer Gast | Lonely guest" src="thumbs/_DSC0292.jpg" /></a>
 
-  <a href="slides/_DSC0294.jpg" data-sub-html="Essen | Food"><img class="thumb" src="thumbs/_DSC0294.jpg" /></a>
+  <a href="slides/_DSC0294.jpg" data-sub-html="Essen | Food"><img class="thumb" alt="Essen | Food" src="thumbs/_DSC0294.jpg" /></a>
 
-  <a href="slides/_DSC0297.jpg" data-sub-html="Gruppen Fotos | Photo session"><img class="thumb" src="thumbs/_DSC0297.jpg" /></a>
+  <a href="slides/_DSC0297.jpg" data-sub-html="Gruppen Fotos | Photo session"><img class="thumb" alt="Gruppen Fotos | Photo session" src="thumbs/_DSC0297.jpg" /></a>
 
-  <a href="slides/_DSC0320.jpg" data-sub-html="Gratulieren | Congratilations"><img class="thumb" src="thumbs/_DSC0320.jpg" /></a>
+  <a href="slides/_DSC0320.jpg" data-sub-html="Gratulieren | Congratilations"><img class="thumb" alt="Gratulieren | Congratilations" src="thumbs/_DSC0320.jpg" /></a>
 
-  <a href="slides/_DSC0353.jpg" data-sub-html="Brautpaar | Couple"><img class="thumb" src="thumbs/_DSC0353.jpg" /></a>
+  <a href="slides/_DSC0353.jpg" data-sub-html="Brautpaar | Couple"><img class="thumb" alt="Brautpaar | Couple" src="thumbs/_DSC0353.jpg" /></a>
 
-  <a href="slides/_DSC0369.jpg" data-sub-html="Familentafel | Family table"><img class="thumb" src="thumbs/_DSC0369.jpg" /></a>
+  <a href="slides/_DSC0369.jpg" data-sub-html="Familentafel | Family table"><img class="thumb" alt="Familentafel | Family table" src="thumbs/_DSC0369.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

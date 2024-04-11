@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2009-08-24-Penang</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,56 +85,61 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2009-08-24-Penang</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2009</a> &gt;
+<strong>2009-08-24-Penang</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/_DSC0050.jpg" data-sub-html="Drachen | Dragon"><img class="thumb" src="thumbs/_DSC0050.jpg" /></a>
+  <a href="slides/_DSC0050.jpg" data-sub-html="Drachen | Dragon"><img class="thumb" alt="Drachen | Dragon" src="thumbs/_DSC0050.jpg" /></a>
 
-  <a href="slides/_DSC0059.jpg" data-sub-html="Ventilator | Fan"><img class="thumb" src="thumbs/_DSC0059.jpg" /></a>
+  <a href="slides/_DSC0059.jpg" data-sub-html="Ventilator | Fan"><img class="thumb" alt="Ventilator | Fan" src="thumbs/_DSC0059.jpg" /></a>
 
-  <a href="slides/_DSC0071.jpg" data-sub-html="Haus | House"><img class="thumb" src="thumbs/_DSC0071.jpg" /></a>
+  <a href="slides/_DSC0071.jpg" data-sub-html="Haus | House"><img class="thumb" alt="Haus | House" src="thumbs/_DSC0071.jpg" /></a>
 
-  <a href="slides/_DSC0091.jpg" data-sub-html="Da hat wohl wer ein paar Goetter verwechselt | Confusion of lords"><img class="thumb" src="thumbs/_DSC0091.jpg" /></a>
+  <a href="slides/_DSC0091.jpg" data-sub-html="Da hat wohl wer ein paar Goetter verwechselt | Confusion of lords"><img class="thumb" alt="Da hat wohl wer ein paar Goetter verwechselt | Confusion of lords" src="thumbs/_DSC0091.jpg" /></a>
 
-  <a href="slides/_DSC0092.jpg" data-sub-html="Saree Laden | Saree shop"><img class="thumb" src="thumbs/_DSC0092.jpg" /></a>
+  <a href="slides/_DSC0092.jpg" data-sub-html="Saree Laden | Saree shop"><img class="thumb" alt="Saree Laden | Saree shop" src="thumbs/_DSC0092.jpg" /></a>
 
-  <a href="slides/_DSC0097.jpg" data-sub-html="Moped | Motorbike"><img class="thumb" src="thumbs/_DSC0097.jpg" /></a>
+  <a href="slides/_DSC0097.jpg" data-sub-html="Moped | Motorbike"><img class="thumb" alt="Moped | Motorbike" src="thumbs/_DSC0097.jpg" /></a>
 
-  <a href="slides/_DSC0114.jpg" data-sub-html="Angeketteter Bonsai | Chained Bonsai"><img class="thumb" src="thumbs/_DSC0114.jpg" /></a>
+  <a href="slides/_DSC0114.jpg" data-sub-html="Angeketteter Bonsai | Chained Bonsai"><img class="thumb" alt="Angeketteter Bonsai | Chained Bonsai" src="thumbs/_DSC0114.jpg" /></a>
 
-  <a href="slides/_DSC0136.jpg" data-sub-html="Dame hinter Gittern | Lady behind iron bars"><img class="thumb" src="thumbs/_DSC0136.jpg" /></a>
+  <a href="slides/_DSC0136.jpg" data-sub-html="Dame hinter Gittern | Lady behind iron bars"><img class="thumb" alt="Dame hinter Gittern | Lady behind iron bars" src="thumbs/_DSC0136.jpg" /></a>
 
-  <a href="slides/_DSC0139.jpg" data-sub-html="Moschee | Mosque"><img class="thumb" src="thumbs/_DSC0139.jpg" /></a>
+  <a href="slides/_DSC0139.jpg" data-sub-html="Moschee | Mosque"><img class="thumb" alt="Moschee | Mosque" src="thumbs/_DSC0139.jpg" /></a>
 
-  <a href="slides/_DSC0167.jpg" data-sub-html="Waesche | Laundry"><img class="thumb" src="thumbs/_DSC0167.jpg" /></a>
+  <a href="slides/_DSC0167.jpg" data-sub-html="Waesche | Laundry"><img class="thumb" alt="Waesche | Laundry" src="thumbs/_DSC0167.jpg" /></a>
 
-  <a href="slides/_DSC0232.jpg" data-sub-html="Briefkasten | Letter box"><img class="thumb" src="thumbs/_DSC0232.jpg" /></a>
+  <a href="slides/_DSC0232.jpg" data-sub-html="Briefkasten | Letter box"><img class="thumb" alt="Briefkasten | Letter box" src="thumbs/_DSC0232.jpg" /></a>
 
-  <a href="slides/_DSC0265.jpg" data-sub-html="Auf der Faehre | On the ferry"><img class="thumb" src="thumbs/_DSC0265.jpg" /></a>
+  <a href="slides/_DSC0265.jpg" data-sub-html="Auf der Faehre | On the ferry"><img class="thumb" alt="Auf der Faehre | On the ferry" src="thumbs/_DSC0265.jpg" /></a>
 
-  <a href="slides/_DSC0271.jpg" data-sub-html="Penang Bridge"><img class="thumb" src="thumbs/_DSC0271.jpg" /></a>
+  <a href="slides/_DSC0271.jpg" data-sub-html="Penang Bridge"><img class="thumb" alt="Penang Bridge" src="thumbs/_DSC0271.jpg" /></a>
 
-  <a href="slides/_DSC0284.jpg" data-sub-html="Shell"><img class="thumb" src="thumbs/_DSC0284.jpg" /></a>
+  <a href="slides/_DSC0284.jpg" data-sub-html="Shell"><img class="thumb" alt="Shell" src="thumbs/_DSC0284.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

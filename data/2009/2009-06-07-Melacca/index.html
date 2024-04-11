@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2009-06-07-Melacca</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,88 +85,93 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2009-06-07-Melacca</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2009</a> &gt;
+<strong>2009-06-07-Melacca</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/_DSC0107.jpg" data-sub-html="Tobi und das verdammte Flugzeugspiel | Tobi and the damn plane game"><img class="thumb" src="thumbs/_DSC0107.jpg" /></a>
+  <a href="slides/_DSC0107.jpg" data-sub-html="Tobi und das verdammte Flugzeugspiel | Tobi and the damn plane game"><img class="thumb" alt="Tobi und das verdammte Flugzeugspiel | Tobi and the damn plane game" src="thumbs/_DSC0107.jpg" /></a>
 
-  <a href="slides/_DSC0113.jpg" data-sub-html="Tobi und Hannah | Tobi and Hannah"><img class="thumb" src="thumbs/_DSC0113.jpg" /></a>
+  <a href="slides/_DSC0113.jpg" data-sub-html="Tobi und Hannah | Tobi and Hannah"><img class="thumb" alt="Tobi und Hannah | Tobi and Hannah" src="thumbs/_DSC0113.jpg" /></a>
 
-  <a href="slides/_DSC0124.jpg" data-sub-html="Priatenschiff | Pirate boat"><img class="thumb" src="thumbs/_DSC0124.jpg" /></a>
+  <a href="slides/_DSC0124.jpg" data-sub-html="Priatenschiff | Pirate boat"><img class="thumb" alt="Priatenschiff | Pirate boat" src="thumbs/_DSC0124.jpg" /></a>
 
-  <a href="slides/_DSC0145.jpg" data-sub-html="Lady in Pink"><img class="thumb" src="thumbs/_DSC0145.jpg" /></a>
+  <a href="slides/_DSC0145.jpg" data-sub-html="Lady in Pink"><img class="thumb" alt="Lady in Pink" src="thumbs/_DSC0145.jpg" /></a>
 
-  <a href="slides/_DSC0166.jpg" data-sub-html="Bomba"><img class="thumb" src="thumbs/_DSC0166.jpg" /></a>
+  <a href="slides/_DSC0166.jpg" data-sub-html="Bomba"><img class="thumb" alt="Bomba" src="thumbs/_DSC0166.jpg" /></a>
 
-  <a href="slides/_DSC0189.jpg" data-sub-html="Chicken Rice Ball Eating Challenge"><img class="thumb" src="thumbs/_DSC0189.jpg" /></a>
+  <a href="slides/_DSC0189.jpg" data-sub-html="Chicken Rice Ball Eating Challenge"><img class="thumb" alt="Chicken Rice Ball Eating Challenge" src="thumbs/_DSC0189.jpg" /></a>
 
-  <a href="slides/_DSC0195.jpg" data-sub-html="Haus | House"><img class="thumb" src="thumbs/_DSC0195.jpg" /></a>
+  <a href="slides/_DSC0195.jpg" data-sub-html="Haus | House"><img class="thumb" alt="Haus | House" src="thumbs/_DSC0195.jpg" /></a>
 
-  <a href="slides/_DSC0251.jpg" data-sub-html="Mhh Reis | Yum rice"><img class="thumb" src="thumbs/_DSC0251.jpg" /></a>
+  <a href="slides/_DSC0251.jpg" data-sub-html="Mhh Reis | Yum rice"><img class="thumb" alt="Mhh Reis | Yum rice" src="thumbs/_DSC0251.jpg" /></a>
 
-  <a href="slides/_DSC0266.jpg" data-sub-html="Mhh Teigtaschen | Yum Dumplings"><img class="thumb" src="thumbs/_DSC0266.jpg" /></a>
+  <a href="slides/_DSC0266.jpg" data-sub-html="Mhh Teigtaschen | Yum Dumplings"><img class="thumb" alt="Mhh Teigtaschen | Yum Dumplings" src="thumbs/_DSC0266.jpg" /></a>
 
-  <a href="slides/_DSC0294.jpg" data-sub-html="Tobi und Hannah | Tobi and Hannah"><img class="thumb" src="thumbs/_DSC0294.jpg" /></a>
+  <a href="slides/_DSC0294.jpg" data-sub-html="Tobi und Hannah | Tobi and Hannah"><img class="thumb" alt="Tobi und Hannah | Tobi and Hannah" src="thumbs/_DSC0294.jpg" /></a>
 
-  <a href="slides/_DSC0308.jpg" data-sub-html="Rickshaw"><img class="thumb" src="thumbs/_DSC0308.jpg" /></a>
+  <a href="slides/_DSC0308.jpg" data-sub-html="Rickshaw"><img class="thumb" alt="Rickshaw" src="thumbs/_DSC0308.jpg" /></a>
 
-  <a href="slides/_DSC0396.jpg" data-sub-html="Rickshaw mit Fahrer | Rickshaw with driver"><img class="thumb" src="thumbs/_DSC0396.jpg" /></a>
+  <a href="slides/_DSC0396.jpg" data-sub-html="Rickshaw mit Fahrer | Rickshaw with driver"><img class="thumb" alt="Rickshaw mit Fahrer | Rickshaw with driver" src="thumbs/_DSC0396.jpg" /></a>
 
-  <a href="slides/_DSC0407.jpg" data-sub-html="Riesenrad und Boot | Ferris wheel and boat"><img class="thumb" src="thumbs/_DSC0407.jpg" /></a>
+  <a href="slides/_DSC0407.jpg" data-sub-html="Riesenrad und Boot | Ferris wheel and boat"><img class="thumb" alt="Riesenrad und Boot | Ferris wheel and boat" src="thumbs/_DSC0407.jpg" /></a>
 
-  <a href="slides/_DSC0425.jpg" data-sub-html="Alte Kirche | Old church"><img class="thumb" src="thumbs/_DSC0425.jpg" /></a>
+  <a href="slides/_DSC0425.jpg" data-sub-html="Alte Kirche | Old church"><img class="thumb" alt="Alte Kirche | Old church" src="thumbs/_DSC0425.jpg" /></a>
 
-  <a href="slides/_DSC0428.jpg" data-sub-html="St. Paul"><img class="thumb" src="thumbs/_DSC0428.jpg" /></a>
+  <a href="slides/_DSC0428.jpg" data-sub-html="St. Paul"><img class="thumb" alt="St. Paul" src="thumbs/_DSC0428.jpg" /></a>
 
-  <a href="slides/_DSC0441.jpg" data-sub-html="Maedchen | Girl"><img class="thumb" src="thumbs/_DSC0441.jpg" /></a>
+  <a href="slides/_DSC0441.jpg" data-sub-html="Maedchen | Girl"><img class="thumb" alt="Maedchen | Girl" src="thumbs/_DSC0441.jpg" /></a>
 
-  <a href="slides/_DSC0465.jpg" data-sub-html="Katzen | Cats"><img class="thumb" src="thumbs/_DSC0465.jpg" /></a>
+  <a href="slides/_DSC0465.jpg" data-sub-html="Katzen | Cats"><img class="thumb" alt="Katzen | Cats" src="thumbs/_DSC0465.jpg" /></a>
 
-  <a href="slides/_DSC0507.jpg" data-sub-html="Haeuser | Hauses"><img class="thumb" src="thumbs/_DSC0507.jpg" /></a>
+  <a href="slides/_DSC0507.jpg" data-sub-html="Haeuser | Hauses"><img class="thumb" alt="Haeuser | Hauses" src="thumbs/_DSC0507.jpg" /></a>
 
-  <a href="slides/_DSC0516.jpg" data-sub-html="Radfahrer | Cyclists"><img class="thumb" src="thumbs/_DSC0516.jpg" /></a>
+  <a href="slides/_DSC0516.jpg" data-sub-html="Radfahrer | Cyclists"><img class="thumb" alt="Radfahrer | Cyclists" src="thumbs/_DSC0516.jpg" /></a>
 
-  <a href="slides/_DSC0534.jpg" data-sub-html="Haus und Boot | House and boat"><img class="thumb" src="thumbs/_DSC0534.jpg" /></a>
+  <a href="slides/_DSC0534.jpg" data-sub-html="Haus und Boot | House and boat"><img class="thumb" alt="Haus und Boot | House and boat" src="thumbs/_DSC0534.jpg" /></a>
 
-  <a href="slides/_DSC0541.jpg" data-sub-html="Auto | Car"><img class="thumb" src="thumbs/_DSC0541.jpg" /></a>
+  <a href="slides/_DSC0541.jpg" data-sub-html="Auto | Car"><img class="thumb" alt="Auto | Car" src="thumbs/_DSC0541.jpg" /></a>
 
-  <a href="slides/_DSC0552.jpg" data-sub-html="Mopped faahn | Scooters"><img class="thumb" src="thumbs/_DSC0552.jpg" /></a>
+  <a href="slides/_DSC0552.jpg" data-sub-html="Mopped faahn | Scooters"><img class="thumb" alt="Mopped faahn | Scooters" src="thumbs/_DSC0552.jpg" /></a>
 
-  <a href="slides/_DSC0569.jpg" data-sub-html="Weg | Path"><img class="thumb" src="thumbs/_DSC0569.jpg" /></a>
+  <a href="slides/_DSC0569.jpg" data-sub-html="Weg | Path"><img class="thumb" alt="Weg | Path" src="thumbs/_DSC0569.jpg" /></a>
 
-  <a href="slides/_DSC0579.jpg" data-sub-html="Kind | Kid"><img class="thumb" src="thumbs/_DSC0579.jpg" /></a>
+  <a href="slides/_DSC0579.jpg" data-sub-html="Kind | Kid"><img class="thumb" alt="Kind | Kid" src="thumbs/_DSC0579.jpg" /></a>
 
-  <a href="slides/_DSC0582.jpg" data-sub-html="Tee set | Tea set"><img class="thumb" src="thumbs/_DSC0582.jpg" /></a>
+  <a href="slides/_DSC0582.jpg" data-sub-html="Tee set | Tea set"><img class="thumb" alt="Tee set | Tea set" src="thumbs/_DSC0582.jpg" /></a>
 
-  <a href="slides/_DSC0593.jpg" data-sub-html="Betrunkene Mopedfahrer | Drunk scooter drivers"><img class="thumb" src="thumbs/_DSC0593.jpg" /></a>
+  <a href="slides/_DSC0593.jpg" data-sub-html="Betrunkene Mopedfahrer | Drunk scooter drivers"><img class="thumb" alt="Betrunkene Mopedfahrer | Drunk scooter drivers" src="thumbs/_DSC0593.jpg" /></a>
 
-  <a href="slides/_DSC0606.jpg" data-sub-html="Tobi"><img class="thumb" src="thumbs/_DSC0606.jpg" /></a>
+  <a href="slides/_DSC0606.jpg" data-sub-html="Tobi"><img class="thumb" alt="Tobi" src="thumbs/_DSC0606.jpg" /></a>
 
-  <a href="slides/_DSC0608.jpg" data-sub-html="Ich | me"><img class="thumb" src="thumbs/_DSC0608.jpg" /></a>
+  <a href="slides/_DSC0608.jpg" data-sub-html="Ich | me"><img class="thumb" alt="Ich | me" src="thumbs/_DSC0608.jpg" /></a>
 
-  <a href="slides/_DSC0618.jpg" data-sub-html="Rickshaw II"><img class="thumb" src="thumbs/_DSC0618.jpg" /></a>
+  <a href="slides/_DSC0618.jpg" data-sub-html="Rickshaw II"><img class="thumb" alt="Rickshaw II" src="thumbs/_DSC0618.jpg" /></a>
 
-  <a href="slides/_DSC0629.jpg" data-sub-html="Weihnachtsdekoration | Christmas decoration"><img class="thumb" src="thumbs/_DSC0629.jpg" /></a>
+  <a href="slides/_DSC0629.jpg" data-sub-html="Weihnachtsdekoration | Christmas decoration"><img class="thumb" alt="Weihnachtsdekoration | Christmas decoration" src="thumbs/_DSC0629.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

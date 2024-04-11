@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2012</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,65 +85,274 @@ a, a:visited, a:hover {
   <body>
 
 
+<a href="../../index.html">Home</a> &gt;
+<strong>2012</strong>
+<br /><br />
 
-<a href="2012-01-29-Night%20Out/index.html">2012-01-29-Night Out</a><br />
+<div class="folder">
 
-<a href="2012-02-04-Manning%20Park/index.html">2012-02-04-Manning Park</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-01-29-Night%20Out/index.html">
+        <img src="2012-01-29-Night%20Out/thumb.jpg" alt="" />
+        <strong class="title">2012-01-29-Night Out</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-02-18-Elfin%20Lakes/index.html">2012-02-18-Elfin Lakes</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-02-04-Manning%20Park/index.html">
+        <img src="2012-02-04-Manning%20Park/thumb.jpg" alt="" />
+        <strong class="title">2012-02-04-Manning Park</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-03-11-Shark%20Attack/index.html">2012-03-11-Shark Attack</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-02-18-Elfin%20Lakes/index.html">
+        <img src="2012-02-18-Elfin%20Lakes/thumb.jpg" alt="" />
+        <strong class="title">2012-02-18-Elfin Lakes</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-03-31-Richmond%20Seawall/index.html">2012-03-31-Richmond Seawall</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-03-11-Shark%20Attack/index.html">
+        <img src="2012-03-11-Shark%20Attack/thumb.jpg" alt="" />
+        <strong class="title">2012-03-11-Shark Attack</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-04-06-Tofino/index.html">2012-04-06-Tofino</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-03-31-Richmond%20Seawall/index.html">
+        <img src="2012-03-31-Richmond%20Seawall/thumb.jpg" alt="" />
+        <strong class="title">2012-03-31-Richmond Seawall</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-05-07-Quadra%20Island/index.html">2012-05-07-Quadra Island</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-04-06-Tofino/index.html">
+        <img src="2012-04-06-Tofino/thumb.jpg" alt="" />
+        <strong class="title">2012-04-06-Tofino</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-05-19-Jericho%20Beach/index.html">2012-05-19-Jericho Beach</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-05-07-Quadra%20Island/index.html">
+        <img src="2012-05-07-Quadra%20Island/thumb.jpg" alt="" />
+        <strong class="title">2012-05-07-Quadra Island</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-05-23-Summer%20Days/index.html">2012-05-23-Summer Days</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-05-19-Jericho%20Beach/index.html">
+        <img src="2012-05-19-Jericho%20Beach/thumb.jpg" alt="" />
+        <strong class="title">2012-05-19-Jericho Beach</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-06-02-Victoria%20House%20Warming/index.html">2012-06-02-Victoria House Warming</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-05-23-Summer%20Days/index.html">
+        <img src="2012-05-23-Summer%20Days/thumb.jpg" alt="" />
+        <strong class="title">2012-05-23-Summer Days</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-06-09-Couch/index.html">2012-06-09-Couch</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-06-02-Victoria%20House%20Warming/index.html">
+        <img src="2012-06-02-Victoria%20House%20Warming/thumb.jpg" alt="" />
+        <strong class="title">2012-06-02-Victoria House Warming</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-06-14-Convocation/index.html">2012-06-14-Convocation</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-06-09-Couch/index.html">
+        <img src="2012-06-09-Couch/thumb.jpg" alt="" />
+        <strong class="title">2012-06-09-Couch</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-06-23-Bellingham/index.html">2012-06-23-Bellingham</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-06-14-Convocation/index.html">
+        <img src="2012-06-14-Convocation/thumb.jpg" alt="" />
+        <strong class="title">2012-06-14-Convocation</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-06-29-Salt%20Spring%20Island/index.html">2012-06-29-Salt Spring Island</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-06-23-Bellingham/index.html">
+        <img src="2012-06-23-Bellingham/thumb.jpg" alt="" />
+        <strong class="title">2012-06-23-Bellingham</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-07-06-Salt%20Spring%20Wedding/index.html">2012-07-06-Salt Spring Wedding</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-06-29-Salt%20Spring%20Island/index.html">
+        <img src="2012-06-29-Salt%20Spring%20Island/thumb.jpg" alt="" />
+        <strong class="title">2012-06-29-Salt Spring Island</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-07-21-Illuminaris/index.html">2012-07-21-Illuminaris</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-07-06-Salt%20Spring%20Wedding/index.html">
+        <img src="2012-07-06-Salt%20Spring%20Wedding/thumb.jpg" alt="" />
+        <strong class="title">2012-07-06-Salt Spring Wedding</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-07-28-Sky%20Pilot%20Mountain/index.html">2012-07-28-Sky Pilot Mountain</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-07-21-Illuminaris/index.html">
+        <img src="2012-07-21-Illuminaris/thumb.jpg" alt="" />
+        <strong class="title">2012-07-21-Illuminaris</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-08-04-Sombrio%20Beach/index.html">2012-08-04-Sombrio Beach</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-07-28-Sky%20Pilot%20Mountain/index.html">
+        <img src="2012-07-28-Sky%20Pilot%20Mountain/thumb.jpg" alt="" />
+        <strong class="title">2012-07-28-Sky Pilot Mountain</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-08-10-Subdued%20Stringband%20Jamboree/index.html">2012-08-10-Subdued Stringband Jamboree</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-08-04-Sombrio%20Beach/index.html">
+        <img src="2012-08-04-Sombrio%20Beach/thumb.jpg" alt="" />
+        <strong class="title">2012-08-04-Sombrio Beach</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-08-30-Salt%20Spring/index.html">2012-08-30-Salt Spring</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-08-10-Subdued%20Stringband%20Jamboree/index.html">
+        <img src="2012-08-10-Subdued%20Stringband%20Jamboree/thumb.jpg" alt="" />
+        <strong class="title">2012-08-10-Subdued Stringband Jamboree</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-09-08-Park/index.html">2012-09-08-Park</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-08-30-Salt%20Spring/index.html">
+        <img src="2012-08-30-Salt%20Spring/thumb.jpg" alt="" />
+        <strong class="title">2012-08-30-Salt Spring</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-09-23-Home%20Sweet%20Home%202.0%20Girlfriend%20Edition/index.html">2012-09-23-Home Sweet Home 2.0 Girlfriend Edition</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-09-08-Park/index.html">
+        <img src="2012-09-08-Park/thumb.jpg" alt="" />
+        <strong class="title">2012-09-08-Park</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-09-23-Jericho%20Beach/index.html">2012-09-23-Jericho Beach</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-09-23-Home%20Sweet%20Home%202.0%20Girlfriend%20Edition/index.html">
+        <img src="2012-09-23-Home%20Sweet%20Home%202.0%20Girlfriend%20Edition/thumb.jpg" alt="" />
+        <strong class="title">2012-09-23-Home Sweet Home 2.0 Girlfriend Edition</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-09-26-Good%20ol%27%20Germany/index.html">2012-09-26-Good ol&#39; Germany</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-09-23-Jericho%20Beach/index.html">
+        <img src="2012-09-23-Jericho%20Beach/thumb.jpg" alt="" />
+        <strong class="title">2012-09-23-Jericho Beach</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-10-16-Trailing%20the%20Queeen%20of%20Hearts/index.html">2012-10-16-Trailing the Queeen of Hearts</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-09-26-Good%20ol%27%20Germany/index.html">
+        <img src="2012-09-26-Good%20ol%27%20Germany/thumb.jpg" alt="" />
+        <strong class="title">2012-09-26-Good ol&#39; Germany</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-11-10-Dori%20&amp;%20Zoe%20Wedding/index.html">2012-11-10-Dori &amp; Zoe Wedding</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-10-16-Trailing%20the%20Queeen%20of%20Hearts/index.html">
+        <img src="2012-10-16-Trailing%20the%20Queeen%20of%20Hearts/thumb.jpg" alt="" />
+        <strong class="title">2012-10-16-Trailing the Queeen of Hearts</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-11-10-Dori%20-%20Zoe%20Wedding/index.html">2012-11-10-Dori - Zoe Wedding</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-11-10-Dori%20&amp;%20Zoe%20Wedding/index.html">
+        <img src="2012-11-10-Dori%20&amp;%20Zoe%20Wedding/thumb.jpg" alt="" />
+        <strong class="title">2012-11-10-Dori &amp; Zoe Wedding</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-12-08-Abbotsford/index.html">2012-12-08-Abbotsford</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-11-10-Dori%20-%20Zoe%20Wedding/index.html">
+        <img src="2012-11-10-Dori%20-%20Zoe%20Wedding/thumb.jpg" alt="" />
+        <strong class="title">2012-11-10-Dori - Zoe Wedding</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2012-12-14-Sunshine%20Coast/index.html">2012-12-14-Sunshine Coast</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-12-08-Abbotsford/index.html">
+        <img src="2012-12-08-Abbotsford/thumb.jpg" alt="" />
+        <strong class="title">2012-12-08-Abbotsford</strong>
+      </a>
+    </div>
+  </div>
 
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2012-12-14-Sunshine%20Coast/index.html">
+        <img src="2012-12-14-Sunshine%20Coast/thumb.jpg" alt="" />
+        <strong class="title">2012-12-14-Sunshine Coast</strong>
+      </a>
+    </div>
+  </div>
+
+</div>
 
 
   </body>

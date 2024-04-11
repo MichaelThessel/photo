@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2015-10-04-Gun Show</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,86 +85,91 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2015-10-04-Gun Show</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2015</a> &gt;
+<strong>2015-10-04-Gun Show</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20151004_1238-R0001130.jpg" data-sub-html="Earl"><img class="thumb" src="thumbs/20151004_1238-R0001130.jpg" /></a>
+  <a href="slides/20151004_1238-R0001130.jpg" data-sub-html="Earl"><img class="thumb" alt="Earl" src="thumbs/20151004_1238-R0001130.jpg" /></a>
 
-  <a href="slides/20151004_1433-R0001253.jpg" data-sub-html="Guns"><img class="thumb" src="thumbs/20151004_1433-R0001253.jpg" /></a>
+  <a href="slides/20151004_1433-R0001253.jpg" data-sub-html="Guns"><img class="thumb" alt="Guns" src="thumbs/20151004_1433-R0001253.jpg" /></a>
 
-  <a href="slides/20151004_1238-R0001131.jpg" data-sub-html="Books"><img class="thumb" src="thumbs/20151004_1238-R0001131.jpg" /></a>
+  <a href="slides/20151004_1238-R0001131.jpg" data-sub-html="Books"><img class="thumb" alt="Books" src="thumbs/20151004_1238-R0001131.jpg" /></a>
 
-  <a href="slides/20151004_1238-R0001132.jpg" data-sub-html="Kid Vendor"><img class="thumb" src="thumbs/20151004_1238-R0001132.jpg" /></a>
+  <a href="slides/20151004_1238-R0001132.jpg" data-sub-html="Kid Vendor"><img class="thumb" alt="Kid Vendor" src="thumbs/20151004_1238-R0001132.jpg" /></a>
 
-  <a href="slides/20151004_1254-R0001147.jpg" data-sub-html="Keeping the family safe"><img class="thumb" src="thumbs/20151004_1254-R0001147.jpg" /></a>
+  <a href="slides/20151004_1254-R0001147.jpg" data-sub-html="Keeping the family safe"><img class="thumb" alt="Keeping the family safe" src="thumbs/20151004_1254-R0001147.jpg" /></a>
 
-  <a href="slides/20151004_1305-R0001148.jpg" data-sub-html="Calibres"><img class="thumb" src="thumbs/20151004_1305-R0001148.jpg" /></a>
+  <a href="slides/20151004_1305-R0001148.jpg" data-sub-html="Calibres"><img class="thumb" alt="Calibres" src="thumbs/20151004_1305-R0001148.jpg" /></a>
 
-  <a href="slides/20151004_1307-R0001153.jpg" data-sub-html="Uncle Sam"><img class="thumb" src="thumbs/20151004_1307-R0001153.jpg" /></a>
+  <a href="slides/20151004_1307-R0001153.jpg" data-sub-html="Uncle Sam"><img class="thumb" alt="Uncle Sam" src="thumbs/20151004_1307-R0001153.jpg" /></a>
 
-  <a href="slides/20151004_1309-R0001155.jpg" data-sub-html="Vet"><img class="thumb" src="thumbs/20151004_1309-R0001155.jpg" /></a>
+  <a href="slides/20151004_1309-R0001155.jpg" data-sub-html="Vet"><img class="thumb" alt="Vet" src="thumbs/20151004_1309-R0001155.jpg" /></a>
 
-  <a href="slides/20151004_1326-R0001184.jpg" data-sub-html="Defend the second, so that you can defend yourself"><img class="thumb" src="thumbs/20151004_1326-R0001184.jpg" /></a>
+  <a href="slides/20151004_1326-R0001184.jpg" data-sub-html="Defend the second, so that you can defend yourself"><img class="thumb" alt="Defend the second, so that you can defend yourself" src="thumbs/20151004_1326-R0001184.jpg" /></a>
 
-  <a href="slides/20151004_1330-R0001187.jpg" data-sub-html="Mini War"><img class="thumb" src="thumbs/20151004_1330-R0001187.jpg" /></a>
+  <a href="slides/20151004_1330-R0001187.jpg" data-sub-html="Mini War"><img class="thumb" alt="Mini War" src="thumbs/20151004_1330-R0001187.jpg" /></a>
 
-  <a href="slides/20151004_1331-R0001189.jpg" data-sub-html="Vendor"><img class="thumb" src="thumbs/20151004_1331-R0001189.jpg" /></a>
+  <a href="slides/20151004_1331-R0001189.jpg" data-sub-html="Vendor"><img class="thumb" alt="Vendor" src="thumbs/20151004_1331-R0001189.jpg" /></a>
 
-  <a href="slides/20151004_1334-R0001193.jpg" data-sub-html="Bullets"><img class="thumb" src="thumbs/20151004_1334-R0001193.jpg" /></a>
+  <a href="slides/20151004_1334-R0001193.jpg" data-sub-html="Bullets"><img class="thumb" alt="Bullets" src="thumbs/20151004_1334-R0001193.jpg" /></a>
 
-  <a href="slides/20151004_1354-R0001201.jpg" data-sub-html="For the aspiring gun owner"><img class="thumb" src="thumbs/20151004_1354-R0001201.jpg" /></a>
+  <a href="slides/20151004_1354-R0001201.jpg" data-sub-html="For the aspiring gun owner"><img class="thumb" alt="For the aspiring gun owner" src="thumbs/20151004_1354-R0001201.jpg" /></a>
 
-  <a href="slides/20151004_1355-R0001203.jpg" data-sub-html="Patches"><img class="thumb" src="thumbs/20151004_1355-R0001203.jpg" /></a>
+  <a href="slides/20151004_1355-R0001203.jpg" data-sub-html="Patches"><img class="thumb" alt="Patches" src="thumbs/20151004_1355-R0001203.jpg" /></a>
 
-  <a href="slides/20151004_1357-R0001204.jpg" data-sub-html="Banana for scale"><img class="thumb" src="thumbs/20151004_1357-R0001204.jpg" /></a>
+  <a href="slides/20151004_1357-R0001204.jpg" data-sub-html="Banana for scale"><img class="thumb" alt="Banana for scale" src="thumbs/20151004_1357-R0001204.jpg" /></a>
 
-  <a href="slides/20151004_1401-R0001209.jpg" data-sub-html="1945"><img class="thumb" src="thumbs/20151004_1401-R0001209.jpg" /></a>
+  <a href="slides/20151004_1401-R0001209.jpg" data-sub-html="1945"><img class="thumb" alt="1945" src="thumbs/20151004_1401-R0001209.jpg" /></a>
 
-  <a href="slides/20151004_1401-R0001210.jpg" data-sub-html="Jackets"><img class="thumb" src="thumbs/20151004_1401-R0001210.jpg" /></a>
+  <a href="slides/20151004_1401-R0001210.jpg" data-sub-html="Jackets"><img class="thumb" alt="Jackets" src="thumbs/20151004_1401-R0001210.jpg" /></a>
 
-  <a href="slides/20151004_1405-R0001214.jpg" data-sub-html="Masks"><img class="thumb" src="thumbs/20151004_1405-R0001214.jpg" /></a>
+  <a href="slides/20151004_1405-R0001214.jpg" data-sub-html="Masks"><img class="thumb" alt="Masks" src="thumbs/20151004_1405-R0001214.jpg" /></a>
 
-  <a href="slides/20151004_1406-R0001215.jpg" data-sub-html="Get Some"><img class="thumb" src="thumbs/20151004_1406-R0001215.jpg" /></a>
+  <a href="slides/20151004_1406-R0001215.jpg" data-sub-html="Get Some"><img class="thumb" alt="Get Some" src="thumbs/20151004_1406-R0001215.jpg" /></a>
 
-  <a href="slides/20151004_1324-R0001182.jpg" data-sub-html="Suicide Gun"><img class="thumb" src="thumbs/20151004_1324-R0001182.jpg" /></a>
+  <a href="slides/20151004_1324-R0001182.jpg" data-sub-html="Suicide Gun"><img class="thumb" alt="Suicide Gun" src="thumbs/20151004_1324-R0001182.jpg" /></a>
 
-  <a href="slides/20151004_1414-R0001221.jpg" data-sub-html="For when the shit hits the fan"><img class="thumb" src="thumbs/20151004_1414-R0001221.jpg" /></a>
+  <a href="slides/20151004_1414-R0001221.jpg" data-sub-html="For when the shit hits the fan"><img class="thumb" alt="For when the shit hits the fan" src="thumbs/20151004_1414-R0001221.jpg" /></a>
 
-  <a href="slides/20151004_1417-R0001227.jpg" data-sub-html="Taking the baby for a stroll"><img class="thumb" src="thumbs/20151004_1417-R0001227.jpg" /></a>
+  <a href="slides/20151004_1417-R0001227.jpg" data-sub-html="Taking the baby for a stroll"><img class="thumb" alt="Taking the baby for a stroll" src="thumbs/20151004_1417-R0001227.jpg" /></a>
 
-  <a href="slides/20151004_1418-R0001230.jpg" data-sub-html="Aiming"><img class="thumb" src="thumbs/20151004_1418-R0001230.jpg" /></a>
+  <a href="slides/20151004_1418-R0001230.jpg" data-sub-html="Aiming"><img class="thumb" alt="Aiming" src="thumbs/20151004_1418-R0001230.jpg" /></a>
 
-  <a href="slides/20151004_1419-R0001231.jpg" data-sub-html="Wild West"><img class="thumb" src="thumbs/20151004_1419-R0001231.jpg" /></a>
+  <a href="slides/20151004_1419-R0001231.jpg" data-sub-html="Wild West"><img class="thumb" alt="Wild West" src="thumbs/20151004_1419-R0001231.jpg" /></a>
 
-  <a href="slides/20151004_1419-R0001234.jpg" data-sub-html="Dining in style with NRA silverware"><img class="thumb" src="thumbs/20151004_1419-R0001234.jpg" /></a>
+  <a href="slides/20151004_1419-R0001234.jpg" data-sub-html="Dining in style with NRA silverware"><img class="thumb" alt="Dining in style with NRA silverware" src="thumbs/20151004_1419-R0001234.jpg" /></a>
 
-  <a href="slides/20151004_1420-R0001235.jpg" data-sub-html="Propaganda"><img class="thumb" src="thumbs/20151004_1420-R0001235.jpg" /></a>
+  <a href="slides/20151004_1420-R0001235.jpg" data-sub-html="Propaganda"><img class="thumb" alt="Propaganda" src="thumbs/20151004_1420-R0001235.jpg" /></a>
 
-  <a href="slides/20151004_1421-R0001238.jpg" data-sub-html="Family outing"><img class="thumb" src="thumbs/20151004_1421-R0001238.jpg" /></a>
+  <a href="slides/20151004_1421-R0001238.jpg" data-sub-html="Family outing"><img class="thumb" alt="Family outing" src="thumbs/20151004_1421-R0001238.jpg" /></a>
 
-  <a href="slides/20151004_1428-R0001246.jpg" data-sub-html="Wild West"><img class="thumb" src="thumbs/20151004_1428-R0001246.jpg" /></a>
+  <a href="slides/20151004_1428-R0001246.jpg" data-sub-html="Wild West"><img class="thumb" alt="Wild West" src="thumbs/20151004_1428-R0001246.jpg" /></a>
 
-  <a href="slides/20151004_1428-R0001247.jpg" data-sub-html="Circles &amp; Cups"><img class="thumb" src="thumbs/20151004_1428-R0001247.jpg" /></a>
+  <a href="slides/20151004_1428-R0001247.jpg" data-sub-html="Circles &amp; Cups"><img class="thumb" alt="Circles &amp; Cups" src="thumbs/20151004_1428-R0001247.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

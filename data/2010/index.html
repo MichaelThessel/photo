@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2010</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,109 +85,472 @@ a, a:visited, a:hover {
   <body>
 
 
+<a href="../../index.html">Home</a> &gt;
+<strong>2010</strong>
+<br /><br />
 
-<a href="2010-01-08-Ken%20Stringfellow/index.html">2010-01-08-Ken Stringfellow</a><br />
+<div class="folder">
 
-<a href="2010-01-10-Pudu%20Market/index.html">2010-01-10-Pudu Market</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-01-08-Ken%20Stringfellow/index.html">
+        <img src="2010-01-08-Ken%20Stringfellow/thumb.jpg" alt="" />
+        <strong class="title">2010-01-08-Ken Stringfellow</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-01-16-Broga%20Hill/index.html">2010-01-16-Broga Hill</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-01-10-Pudu%20Market/index.html">
+        <img src="2010-01-10-Pudu%20Market/thumb.jpg" alt="" />
+        <strong class="title">2010-01-10-Pudu Market</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-01-24-KL%20Streets/index.html">2010-01-24-KL Streets</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-01-16-Broga%20Hill/index.html">
+        <img src="2010-01-16-Broga%20Hill/thumb.jpg" alt="" />
+        <strong class="title">2010-01-16-Broga Hill</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-02-04-Annexe/index.html">2010-02-04-Annexe</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-01-24-KL%20Streets/index.html">
+        <img src="2010-01-24-KL%20Streets/thumb.jpg" alt="" />
+        <strong class="title">2010-01-24-KL Streets</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-02-09-China%20Town/index.html">2010-02-09-China Town</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-02-04-Annexe/index.html">
+        <img src="2010-02-04-Annexe/thumb.jpg" alt="" />
+        <strong class="title">2010-02-04-Annexe</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-02-10-Damansara%20Heights/index.html">2010-02-10-Damansara Heights</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-02-09-China%20Town/index.html">
+        <img src="2010-02-09-China%20Town/thumb.jpg" alt="" />
+        <strong class="title">2010-02-09-China Town</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-02-13-Penang/index.html">2010-02-13-Penang</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-02-10-Damansara%20Heights/index.html">
+        <img src="2010-02-10-Damansara%20Heights/thumb.jpg" alt="" />
+        <strong class="title">2010-02-10-Damansara Heights</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-02-19-Stravaganza/index.html">2010-02-19-Stravaganza</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-02-13-Penang/index.html">
+        <img src="2010-02-13-Penang/thumb.jpg" alt="" />
+        <strong class="title">2010-02-13-Penang</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-02-28-Pulau%20Ketam/index.html">2010-02-28-Pulau Ketam</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-02-19-Stravaganza/index.html">
+        <img src="2010-02-19-Stravaganza/thumb.jpg" alt="" />
+        <strong class="title">2010-02-19-Stravaganza</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-03-04-BB%20Monorail/index.html">2010-03-04-BB Monorail</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-02-28-Pulau%20Ketam/index.html">
+        <img src="2010-02-28-Pulau%20Ketam/thumb.jpg" alt="" />
+        <strong class="title">2010-02-28-Pulau Ketam</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-03-21-Hot%20Air%20Balloon%20Festival/index.html">2010-03-21-Hot Air Balloon Festival</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-03-04-BB%20Monorail/index.html">
+        <img src="2010-03-04-BB%20Monorail/thumb.jpg" alt="" />
+        <strong class="title">2010-03-04-BB Monorail</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-03-27-Singapore/index.html">2010-03-27-Singapore</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-03-21-Hot%20Air%20Balloon%20Festival/index.html">
+        <img src="2010-03-21-Hot%20Air%20Balloon%20Festival/thumb.jpg" alt="" />
+        <strong class="title">2010-03-21-Hot Air Balloon Festival</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-03-31-Deporn/index.html">2010-03-31-Deporn</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-03-27-Singapore/index.html">
+        <img src="2010-03-27-Singapore/thumb.jpg" alt="" />
+        <strong class="title">2010-03-27-Singapore</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-04-03-F1%20Sepang%20Cirquit/index.html">2010-04-03-F1 Sepang Cirquit</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-03-31-Deporn/index.html">
+        <img src="2010-03-31-Deporn/thumb.jpg" alt="" />
+        <strong class="title">2010-03-31-Deporn</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-04-03-Mig%2029/index.html">2010-04-03-Mig 29</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-04-03-F1%20Sepang%20Cirquit/index.html">
+        <img src="2010-04-03-F1%20Sepang%20Cirquit/thumb.jpg" alt="" />
+        <strong class="title">2010-04-03-F1 Sepang Cirquit</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-04-31-Bangkok/index.html">2010-04-31-Bangkok</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-04-03-Mig%2029/index.html">
+        <img src="2010-04-03-Mig%2029/thumb.jpg" alt="" />
+        <strong class="title">2010-04-03-Mig 29</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-04-31-Bangkok%20Dangerous/index.html">2010-04-31-Bangkok Dangerous</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-04-31-Bangkok/index.html">
+        <img src="2010-04-31-Bangkok/thumb.jpg" alt="" />
+        <strong class="title">2010-04-31-Bangkok</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-05-13-Hong%20Kong/index.html">2010-05-13-Hong Kong</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-04-31-Bangkok%20Dangerous/index.html">
+        <img src="2010-04-31-Bangkok%20Dangerous/thumb.jpg" alt="" />
+        <strong class="title">2010-04-31-Bangkok Dangerous</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-05-20-KL%20Photo%20Awards/index.html">2010-05-20-KL Photo Awards</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-05-13-Hong%20Kong/index.html">
+        <img src="2010-05-13-Hong%20Kong/thumb.jpg" alt="" />
+        <strong class="title">2010-05-13-Hong Kong</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-05-23-Bukit%20Bintang/index.html">2010-05-23-Bukit Bintang</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-05-20-KL%20Photo%20Awards/index.html">
+        <img src="2010-05-20-KL%20Photo%20Awards/thumb.jpg" alt="" />
+        <strong class="title">2010-05-20-KL Photo Awards</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-05-28-Wesak%20Day/index.html">2010-05-28-Wesak Day</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-05-23-Bukit%20Bintang/index.html">
+        <img src="2010-05-23-Bukit%20Bintang/thumb.jpg" alt="" />
+        <strong class="title">2010-05-23-Bukit Bintang</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-06-06-Central%20Market/index.html">2010-06-06-Central Market</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-05-28-Wesak%20Day/index.html">
+        <img src="2010-05-28-Wesak%20Day/thumb.jpg" alt="" />
+        <strong class="title">2010-05-28-Wesak Day</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-06-14-Istanbul/index.html">2010-06-14-Istanbul</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-06-06-Central%20Market/index.html">
+        <img src="2010-06-06-Central%20Market/thumb.jpg" alt="" />
+        <strong class="title">2010-06-06-Central Market</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-06-19-Tarlabasi/index.html">2010-06-19-Tarlabasi</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-06-14-Istanbul/index.html">
+        <img src="2010-06-14-Istanbul/thumb.jpg" alt="" />
+        <strong class="title">2010-06-14-Istanbul</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-07-09-Malacca/index.html">2010-07-09-Malacca</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-06-19-Tarlabasi/index.html">
+        <img src="2010-06-19-Tarlabasi/thumb.jpg" alt="" />
+        <strong class="title">2010-06-19-Tarlabasi</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-07-12-Objects%20of%20Desire/index.html">2010-07-12-Objects of Desire</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-07-09-Malacca/index.html">
+        <img src="2010-07-09-Malacca/thumb.jpg" alt="" />
+        <strong class="title">2010-07-09-Malacca</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-07-13-Going%20Out/index.html">2010-07-13-Going Out</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-07-12-Objects%20of%20Desire/index.html">
+        <img src="2010-07-12-Objects%20of%20Desire/thumb.jpg" alt="" />
+        <strong class="title">2010-07-12-Objects of Desire</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-07-14-Sushi%20Bar/index.html">2010-07-14-Sushi Bar</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-07-13-Going%20Out/index.html">
+        <img src="2010-07-13-Going%20Out/thumb.jpg" alt="" />
+        <strong class="title">2010-07-13-Going Out</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-07-17-Solaris%20Dutamas/index.html">2010-07-17-Solaris Dutamas</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-07-14-Sushi%20Bar/index.html">
+        <img src="2010-07-14-Sushi%20Bar/thumb.jpg" alt="" />
+        <strong class="title">2010-07-14-Sushi Bar</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-07-24-Worldwide%20Photowalk/index.html">2010-07-24-Worldwide Photowalk</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-07-17-Solaris%20Dutamas/index.html">
+        <img src="2010-07-17-Solaris%20Dutamas/thumb.jpg" alt="" />
+        <strong class="title">2010-07-17-Solaris Dutamas</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-07-27-Kuala%20Lumpur/index.html">2010-07-27-Kuala Lumpur</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-07-24-Worldwide%20Photowalk/index.html">
+        <img src="2010-07-24-Worldwide%20Photowalk/thumb.jpg" alt="" />
+        <strong class="title">2010-07-24-Worldwide Photowalk</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-08-14-Kampung%20Baru/index.html">2010-08-14-Kampung Baru</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-07-27-Kuala%20Lumpur/index.html">
+        <img src="2010-07-27-Kuala%20Lumpur/thumb.jpg" alt="" />
+        <strong class="title">2010-07-27-Kuala Lumpur</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-08-21-Lake%20Gardens/index.html">2010-08-21-Lake Gardens</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-08-14-Kampung%20Baru/index.html">
+        <img src="2010-08-14-Kampung%20Baru/thumb.jpg" alt="" />
+        <strong class="title">2010-08-14-Kampung Baru</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-08-28-Malacca/index.html">2010-08-28-Malacca</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-08-21-Lake%20Gardens/index.html">
+        <img src="2010-08-21-Lake%20Gardens/thumb.jpg" alt="" />
+        <strong class="title">2010-08-21-Lake Gardens</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-09-04-Penang/index.html">2010-09-04-Penang</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-08-28-Malacca/index.html">
+        <img src="2010-08-28-Malacca/thumb.jpg" alt="" />
+        <strong class="title">2010-08-28-Malacca</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-09-19-Kula%20Selangor/index.html">2010-09-19-Kula Selangor</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-09-04-Penang/index.html">
+        <img src="2010-09-04-Penang/thumb.jpg" alt="" />
+        <strong class="title">2010-09-04-Penang</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-10-09-Frasers%20Hill/index.html">2010-10-09-Frasers Hill</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-09-19-Kula%20Selangor/index.html">
+        <img src="2010-09-19-Kula%20Selangor/thumb.jpg" alt="" />
+        <strong class="title">2010-09-19-Kula Selangor</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-10-10-KL%20Aquaria/index.html">2010-10-10-KL Aquaria</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-10-09-Frasers%20Hill/index.html">
+        <img src="2010-10-09-Frasers%20Hill/thumb.jpg" alt="" />
+        <strong class="title">2010-10-09-Frasers Hill</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-10-17-Pulau%20Ketam/index.html">2010-10-17-Pulau Ketam</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-10-10-KL%20Aquaria/index.html">
+        <img src="2010-10-10-KL%20Aquaria/thumb.jpg" alt="" />
+        <strong class="title">2010-10-10-KL Aquaria</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-10-23-Vietnam/index.html">2010-10-23-Vietnam</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-10-17-Pulau%20Ketam/index.html">
+        <img src="2010-10-17-Pulau%20Ketam/thumb.jpg" alt="" />
+        <strong class="title">2010-10-17-Pulau Ketam</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-11-06-KLCC/index.html">2010-11-06-KLCC</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-10-23-Vietnam/index.html">
+        <img src="2010-10-23-Vietnam/thumb.jpg" alt="" />
+        <strong class="title">2010-10-23-Vietnam</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-11-13-Kuala%20Lumpur/index.html">2010-11-13-Kuala Lumpur</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-11-06-KLCC/index.html">
+        <img src="2010-11-06-KLCC/thumb.jpg" alt="" />
+        <strong class="title">2010-11-06-KLCC</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-11-14-Berembun/index.html">2010-11-14-Berembun</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-11-13-Kuala%20Lumpur/index.html">
+        <img src="2010-11-13-Kuala%20Lumpur/thumb.jpg" alt="" />
+        <strong class="title">2010-11-13-Kuala Lumpur</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-11-20-KL%20Lake%20Gardens/index.html">2010-11-20-KL Lake Gardens</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-11-14-Berembun/index.html">
+        <img src="2010-11-14-Berembun/thumb.jpg" alt="" />
+        <strong class="title">2010-11-14-Berembun</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-11-25-Cambodia/index.html">2010-11-25-Cambodia</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-11-20-KL%20Lake%20Gardens/index.html">
+        <img src="2010-11-20-KL%20Lake%20Gardens/thumb.jpg" alt="" />
+        <strong class="title">2010-11-20-KL Lake Gardens</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-11-25-Cambodia%20%28Phone%29/index.html">2010-11-25-Cambodia (Phone)</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-11-25-Cambodia/index.html">
+        <img src="2010-11-25-Cambodia/thumb.jpg" alt="" />
+        <strong class="title">2010-11-25-Cambodia</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-12-04-Kul%20Sign/index.html">2010-12-04-Kul Sign</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-11-25-Cambodia%20%28Phone%29/index.html">
+        <img src="2010-11-25-Cambodia%20%28Phone%29/thumb.jpg" alt="" />
+        <strong class="title">2010-11-25-Cambodia (Phone)</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-12-11-Sri%20Petaling/index.html">2010-12-11-Sri Petaling</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-12-04-Kul%20Sign/index.html">
+        <img src="2010-12-04-Kul%20Sign/thumb.jpg" alt="" />
+        <strong class="title">2010-12-04-Kul Sign</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-12-19-Kuala%20Lumpur/index.html">2010-12-19-Kuala Lumpur</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-12-11-Sri%20Petaling/index.html">
+        <img src="2010-12-11-Sri%20Petaling/thumb.jpg" alt="" />
+        <strong class="title">2010-12-11-Sri Petaling</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2010-12-23-Bali/index.html">2010-12-23-Bali</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-12-19-Kuala%20Lumpur/index.html">
+        <img src="2010-12-19-Kuala%20Lumpur/thumb.jpg" alt="" />
+        <strong class="title">2010-12-19-Kuala Lumpur</strong>
+      </a>
+    </div>
+  </div>
 
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2010-12-23-Bali/index.html">
+        <img src="2010-12-23-Bali/thumb.jpg" alt="" />
+        <strong class="title">2010-12-23-Bali</strong>
+      </a>
+    </div>
+  </div>
+
+</div>
 
 
   </body>

@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2016-09-17-Stewart River</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,110 +85,115 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2016-09-17-Stewart River</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2016</a> &gt;
+<strong>2016-09-17-Stewart River</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20160917_0529-_GWR4560.jpg" data-sub-html="Joe"><img class="thumb" src="thumbs/20160917_0529-_GWR4560.jpg" /></a>
+  <a href="slides/20160917_0529-_GWR4560.jpg" data-sub-html="Joe"><img class="thumb" alt="Joe" src="thumbs/20160917_0529-_GWR4560.jpg" /></a>
 
-  <a href="slides/20160917_0809-_GWR4570.jpg" data-sub-html="Lianne &amp; Joe"><img class="thumb" src="thumbs/20160917_0809-_GWR4570.jpg" /></a>
+  <a href="slides/20160917_0809-_GWR4570.jpg" data-sub-html="Lianne &amp; Joe"><img class="thumb" alt="Lianne &amp; Joe" src="thumbs/20160917_0809-_GWR4570.jpg" /></a>
 
-  <a href="slides/20160917_0824-_GWR4574.jpg" data-sub-html="Fog"><img class="thumb" src="thumbs/20160917_0824-_GWR4574.jpg" /></a>
+  <a href="slides/20160917_0824-_GWR4574.jpg" data-sub-html="Fog"><img class="thumb" alt="Fog" src="thumbs/20160917_0824-_GWR4574.jpg" /></a>
 
-  <a href="slides/20160917_0824-_GWR4575.jpg" data-sub-html="First boat in"><img class="thumb" src="thumbs/20160917_0824-_GWR4575.jpg" /></a>
+  <a href="slides/20160917_0824-_GWR4575.jpg" data-sub-html="First boat in"><img class="thumb" alt="First boat in" src="thumbs/20160917_0824-_GWR4575.jpg" /></a>
 
-  <a href="slides/20160917_0833-_GWR4580.jpg" data-sub-html="Slough"><img class="thumb" src="thumbs/20160917_0833-_GWR4580.jpg" /></a>
+  <a href="slides/20160917_0833-_GWR4580.jpg" data-sub-html="Slough"><img class="thumb" alt="Slough" src="thumbs/20160917_0833-_GWR4580.jpg" /></a>
 
-  <a href="slides/20160917_0836-_GWR4583.jpg" data-sub-html="Calling the Moose"><img class="thumb" src="thumbs/20160917_0836-_GWR4583.jpg" /></a>
+  <a href="slides/20160917_0836-_GWR4583.jpg" data-sub-html="Calling the Moose"><img class="thumb" alt="Calling the Moose" src="thumbs/20160917_0836-_GWR4583.jpg" /></a>
 
-  <a href="slides/20160917_0837-_GWR4584.jpg" data-sub-html="Paul"><img class="thumb" src="thumbs/20160917_0837-_GWR4584.jpg" /></a>
+  <a href="slides/20160917_0837-_GWR4584.jpg" data-sub-html="Paul"><img class="thumb" alt="Paul" src="thumbs/20160917_0837-_GWR4584.jpg" /></a>
 
-  <a href="slides/20160917_0842-_GWR4587.jpg" data-sub-html="Calling"><img class="thumb" src="thumbs/20160917_0842-_GWR4587.jpg" /></a>
+  <a href="slides/20160917_0842-_GWR4587.jpg" data-sub-html="Calling"><img class="thumb" alt="Calling" src="thumbs/20160917_0842-_GWR4587.jpg" /></a>
 
-  <a href="slides/20160917_0909-_GWR4593.jpg" data-sub-html="Scouting"><img class="thumb" src="thumbs/20160917_0909-_GWR4593.jpg" /></a>
+  <a href="slides/20160917_0909-_GWR4593.jpg" data-sub-html="Scouting"><img class="thumb" alt="Scouting" src="thumbs/20160917_0909-_GWR4593.jpg" /></a>
 
-  <a href="slides/20160917_1116-_GWR4605.jpg" data-sub-html="IMCD (Improvised Moose Calling Device)"><img class="thumb" src="thumbs/20160917_1116-_GWR4605.jpg" /></a>
+  <a href="slides/20160917_1116-_GWR4605.jpg" data-sub-html="IMCD (Improvised Moose Calling Device)"><img class="thumb" alt="IMCD (Improvised Moose Calling Device)" src="thumbs/20160917_1116-_GWR4605.jpg" /></a>
 
-  <a href="slides/20160917_1149-_GWR4613.jpg" data-sub-html="Bank"><img class="thumb" src="thumbs/20160917_1149-_GWR4613.jpg" /></a>
+  <a href="slides/20160917_1149-_GWR4613.jpg" data-sub-html="Bank"><img class="thumb" alt="Bank" src="thumbs/20160917_1149-_GWR4613.jpg" /></a>
 
-  <a href="slides/20160917_1253-_GWR4616.jpg" data-sub-html="Gun"><img class="thumb" src="thumbs/20160917_1253-_GWR4616.jpg" /></a>
+  <a href="slides/20160917_1253-_GWR4616.jpg" data-sub-html="Gun"><img class="thumb" alt="Gun" src="thumbs/20160917_1253-_GWR4616.jpg" /></a>
 
-  <a href="slides/20160917_1322-_GWR4626.jpg" data-sub-html="Moose Island"><img class="thumb" src="thumbs/20160917_1322-_GWR4626.jpg" /></a>
+  <a href="slides/20160917_1322-_GWR4626.jpg" data-sub-html="Moose Island"><img class="thumb" alt="Moose Island" src="thumbs/20160917_1322-_GWR4626.jpg" /></a>
 
-  <a href="slides/20160917_1421-_GWR4641.jpg" data-sub-html="Snack time"><img class="thumb" src="thumbs/20160917_1421-_GWR4641.jpg" /></a>
+  <a href="slides/20160917_1421-_GWR4641.jpg" data-sub-html="Snack time"><img class="thumb" alt="Snack time" src="thumbs/20160917_1421-_GWR4641.jpg" /></a>
 
-  <a href="slides/20160917_1447-_GWR4643.jpg" data-sub-html="Scouting"><img class="thumb" src="thumbs/20160917_1447-_GWR4643.jpg" /></a>
+  <a href="slides/20160917_1447-_GWR4643.jpg" data-sub-html="Scouting"><img class="thumb" alt="Scouting" src="thumbs/20160917_1447-_GWR4643.jpg" /></a>
 
-  <a href="slides/20160917_1453-_GWR4649.jpg" data-sub-html="Calling from the boat"><img class="thumb" src="thumbs/20160917_1453-_GWR4649.jpg" /></a>
+  <a href="slides/20160917_1453-_GWR4649.jpg" data-sub-html="Calling from the boat"><img class="thumb" alt="Calling from the boat" src="thumbs/20160917_1453-_GWR4649.jpg" /></a>
 
-  <a href="slides/20160917_1511-_GWR4654.jpg" data-sub-html="Paul"><img class="thumb" src="thumbs/20160917_1511-_GWR4654.jpg" /></a>
+  <a href="slides/20160917_1511-_GWR4654.jpg" data-sub-html="Paul"><img class="thumb" alt="Paul" src="thumbs/20160917_1511-_GWR4654.jpg" /></a>
 
-  <a href="slides/20160917_1648-_GWR4664.jpg" data-sub-html="Drifting"><img class="thumb" src="thumbs/20160917_1648-_GWR4664.jpg" /></a>
+  <a href="slides/20160917_1648-_GWR4664.jpg" data-sub-html="Drifting"><img class="thumb" alt="Drifting" src="thumbs/20160917_1648-_GWR4664.jpg" /></a>
 
-  <a href="slides/20160917_1649-R0003663.jpg" data-sub-html="Drifting past moose island"><img class="thumb" src="thumbs/20160917_1649-R0003663.jpg" /></a>
+  <a href="slides/20160917_1649-R0003663.jpg" data-sub-html="Drifting past moose island"><img class="thumb" alt="Drifting past moose island" src="thumbs/20160917_1649-R0003663.jpg" /></a>
 
-  <a href="slides/20160917_1703-R0003665.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20160917_1703-R0003665.jpg" /></a>
+  <a href="slides/20160917_1703-R0003665.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20160917_1703-R0003665.jpg" /></a>
 
-  <a href="slides/20160917_1703-_GWR4670.jpg" data-sub-html="Calling"><img class="thumb" src="thumbs/20160917_1703-_GWR4670.jpg" /></a>
+  <a href="slides/20160917_1703-_GWR4670.jpg" data-sub-html="Calling"><img class="thumb" alt="Calling" src="thumbs/20160917_1703-_GWR4670.jpg" /></a>
 
-  <a href="slides/20160917_1709-_GWR4671.jpg" data-sub-html="Calling"><img class="thumb" src="thumbs/20160917_1709-_GWR4671.jpg" /></a>
+  <a href="slides/20160917_1709-_GWR4671.jpg" data-sub-html="Calling"><img class="thumb" alt="Calling" src="thumbs/20160917_1709-_GWR4671.jpg" /></a>
 
-  <a href="slides/20160917_1711-R0003668.jpg" data-sub-html="Track"><img class="thumb" src="thumbs/20160917_1711-R0003668.jpg" /></a>
+  <a href="slides/20160917_1711-R0003668.jpg" data-sub-html="Track"><img class="thumb" alt="Track" src="thumbs/20160917_1711-R0003668.jpg" /></a>
 
-  <a href="slides/20160917_1711-_GWR4673.jpg" data-sub-html="Tracks"><img class="thumb" src="thumbs/20160917_1711-_GWR4673.jpg" /></a>
+  <a href="slides/20160917_1711-_GWR4673.jpg" data-sub-html="Tracks"><img class="thumb" alt="Tracks" src="thumbs/20160917_1711-_GWR4673.jpg" /></a>
 
-  <a href="slides/20160917_1712-_GWR4675.jpg" data-sub-html="Calling"><img class="thumb" src="thumbs/20160917_1712-_GWR4675.jpg" /></a>
+  <a href="slides/20160917_1712-_GWR4675.jpg" data-sub-html="Calling"><img class="thumb" alt="Calling" src="thumbs/20160917_1712-_GWR4675.jpg" /></a>
 
-  <a href="slides/20160917_1713-_GWR4676.jpg" data-sub-html="Exploring Moose Island"><img class="thumb" src="thumbs/20160917_1713-_GWR4676.jpg" /></a>
+  <a href="slides/20160917_1713-_GWR4676.jpg" data-sub-html="Exploring Moose Island"><img class="thumb" alt="Exploring Moose Island" src="thumbs/20160917_1713-_GWR4676.jpg" /></a>
 
-  <a href="slides/20160917_1726-_GWR4685.jpg" data-sub-html="Sunset"><img class="thumb" src="thumbs/20160917_1726-_GWR4685.jpg" /></a>
+  <a href="slides/20160917_1726-_GWR4685.jpg" data-sub-html="Sunset"><img class="thumb" alt="Sunset" src="thumbs/20160917_1726-_GWR4685.jpg" /></a>
 
-  <a href="slides/20160917_1758-_GWR4699.jpg" data-sub-html="Coming back in"><img class="thumb" src="thumbs/20160917_1758-_GWR4699.jpg" /></a>
+  <a href="slides/20160917_1758-_GWR4699.jpg" data-sub-html="Coming back in"><img class="thumb" alt="Coming back in" src="thumbs/20160917_1758-_GWR4699.jpg" /></a>
 
-  <a href="slides/20160917_1807-_GWR4705.jpg" data-sub-html="Walking home"><img class="thumb" src="thumbs/20160917_1807-_GWR4705.jpg" /></a>
+  <a href="slides/20160917_1807-_GWR4705.jpg" data-sub-html="Walking home"><img class="thumb" alt="Walking home" src="thumbs/20160917_1807-_GWR4705.jpg" /></a>
 
-  <a href="slides/20160918_0539-_GWR4707.jpg" data-sub-html="Next morning"><img class="thumb" src="thumbs/20160918_0539-_GWR4707.jpg" /></a>
+  <a href="slides/20160918_0539-_GWR4707.jpg" data-sub-html="Next morning"><img class="thumb" alt="Next morning" src="thumbs/20160918_0539-_GWR4707.jpg" /></a>
 
-  <a href="slides/20160918_0540-_GWR4710.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20160918_0540-_GWR4710.jpg" /></a>
+  <a href="slides/20160918_0540-_GWR4710.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20160918_0540-_GWR4710.jpg" /></a>
 
-  <a href="slides/20160918_0542-_GWR4712.jpg" data-sub-html="Paul"><img class="thumb" src="thumbs/20160918_0542-_GWR4712.jpg" /></a>
+  <a href="slides/20160918_0542-_GWR4712.jpg" data-sub-html="Paul"><img class="thumb" alt="Paul" src="thumbs/20160918_0542-_GWR4712.jpg" /></a>
 
-  <a href="slides/20160918_0548-_GWR4714.jpg" data-sub-html="Takeoff"><img class="thumb" src="thumbs/20160918_0548-_GWR4714.jpg" /></a>
+  <a href="slides/20160918_0548-_GWR4714.jpg" data-sub-html="Takeoff"><img class="thumb" alt="Takeoff" src="thumbs/20160918_0548-_GWR4714.jpg" /></a>
 
-  <a href="slides/20160918_0607-_GWR4718.jpg" data-sub-html="Joe &amp; Lianne"><img class="thumb" src="thumbs/20160918_0607-_GWR4718.jpg" /></a>
+  <a href="slides/20160918_0607-_GWR4718.jpg" data-sub-html="Joe &amp; Lianne"><img class="thumb" alt="Joe &amp; Lianne" src="thumbs/20160918_0607-_GWR4718.jpg" /></a>
 
-  <a href="slides/20160918_0629-R0003670.jpg" data-sub-html="Fungi"><img class="thumb" src="thumbs/20160918_0629-R0003670.jpg" /></a>
+  <a href="slides/20160918_0629-R0003670.jpg" data-sub-html="Fungi"><img class="thumb" alt="Fungi" src="thumbs/20160918_0629-R0003670.jpg" /></a>
 
-  <a href="slides/20160918_0819-R0003676.jpg" data-sub-html="Drifting"><img class="thumb" src="thumbs/20160918_0819-R0003676.jpg" /></a>
+  <a href="slides/20160918_0819-R0003676.jpg" data-sub-html="Drifting"><img class="thumb" alt="Drifting" src="thumbs/20160918_0819-R0003676.jpg" /></a>
 
-  <a href="slides/20160918_1312-_GWR4725.jpg" data-sub-html="Little Joe"><img class="thumb" src="thumbs/20160918_1312-_GWR4725.jpg" /></a>
+  <a href="slides/20160918_1312-_GWR4725.jpg" data-sub-html="Little Joe"><img class="thumb" alt="Little Joe" src="thumbs/20160918_1312-_GWR4725.jpg" /></a>
 
-  <a href="slides/20160918_1320-R0003683.jpg" data-sub-html="Little &amp; Big Joe"><img class="thumb" src="thumbs/20160918_1320-R0003683.jpg" /></a>
+  <a href="slides/20160918_1320-R0003683.jpg" data-sub-html="Little &amp; Big Joe"><img class="thumb" alt="Little &amp; Big Joe" src="thumbs/20160918_1320-R0003683.jpg" /></a>
 
-  <a href="slides/20160918_1445-_GWR4735.jpg" data-sub-html="Grouse"><img class="thumb" src="thumbs/20160918_1445-_GWR4735.jpg" /></a>
+  <a href="slides/20160918_1445-_GWR4735.jpg" data-sub-html="Grouse"><img class="thumb" alt="Grouse" src="thumbs/20160918_1445-_GWR4735.jpg" /></a>
 
-  <a href="slides/20160918_1446-_GWR4741.jpg" data-sub-html="Grouse Intestines"><img class="thumb" src="thumbs/20160918_1446-_GWR4741.jpg" /></a>
+  <a href="slides/20160918_1446-_GWR4741.jpg" data-sub-html="Grouse Intestines"><img class="thumb" alt="Grouse Intestines" src="thumbs/20160918_1446-_GWR4741.jpg" /></a>
 
-  <a href="slides/20160918_1648-_GWR4749.jpg" data-sub-html="Pelly Crossing"><img class="thumb" src="thumbs/20160918_1648-_GWR4749.jpg" /></a>
+  <a href="slides/20160918_1648-_GWR4749.jpg" data-sub-html="Pelly Crossing"><img class="thumb" alt="Pelly Crossing" src="thumbs/20160918_1648-_GWR4749.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

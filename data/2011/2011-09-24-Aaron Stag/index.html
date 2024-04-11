@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2011-09-24-Aaron Stag</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,92 +85,97 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2011-09-24-Aaron Stag</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2011</a> &gt;
+<strong>2011-09-24-Aaron Stag</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20110925_0501-DSC_0005.jpg" data-sub-html="Luke"><img class="thumb" src="thumbs/20110925_0501-DSC_0005.jpg" /></a>
+  <a href="slides/20110925_0501-DSC_0005.jpg" data-sub-html="Luke"><img class="thumb" alt="Luke" src="thumbs/20110925_0501-DSC_0005.jpg" /></a>
 
-  <a href="slides/20110925_0502-DSC_0006.jpg" data-sub-html="Aaron"><img class="thumb" src="thumbs/20110925_0502-DSC_0006.jpg" /></a>
+  <a href="slides/20110925_0502-DSC_0006.jpg" data-sub-html="Aaron"><img class="thumb" alt="Aaron" src="thumbs/20110925_0502-DSC_0006.jpg" /></a>
 
-  <a href="slides/Aaron%27s%20stag.jpg" data-sub-html="Getting into his wrestling stockings"><img class="thumb" src="thumbs/Aaron%27s%20stag.jpg" /></a>
+  <a href="slides/Aaron%27s%20stag.jpg" data-sub-html="Getting into his wrestling stockings"><img class="thumb" alt="Getting into his wrestling stockings" src="thumbs/Aaron%27s%20stag.jpg" /></a>
 
-  <a href="slides/20110925_0530-DSC_0032.jpg" data-sub-html="Ready"><img class="thumb" src="thumbs/20110925_0530-DSC_0032.jpg" /></a>
+  <a href="slides/20110925_0530-DSC_0032.jpg" data-sub-html="Ready"><img class="thumb" alt="Ready" src="thumbs/20110925_0530-DSC_0032.jpg" /></a>
 
-  <a href="slides/20110925_0532-DSC_0040.jpg" data-sub-html="Gelly"><img class="thumb" src="thumbs/20110925_0532-DSC_0040.jpg" /></a>
+  <a href="slides/20110925_0532-DSC_0040.jpg" data-sub-html="Gelly"><img class="thumb" alt="Gelly" src="thumbs/20110925_0532-DSC_0040.jpg" /></a>
 
-  <a href="slides/20110925_0535-DSC_0063.jpg" data-sub-html="Fight is on"><img class="thumb" src="thumbs/20110925_0535-DSC_0063.jpg" /></a>
+  <a href="slides/20110925_0535-DSC_0063.jpg" data-sub-html="Fight is on"><img class="thumb" alt="Fight is on" src="thumbs/20110925_0535-DSC_0063.jpg" /></a>
 
-  <a href="slides/20110925_0537-DSC_0084.jpg" data-sub-html="Bum"><img class="thumb" src="thumbs/20110925_0537-DSC_0084.jpg" /></a>
+  <a href="slides/20110925_0537-DSC_0084.jpg" data-sub-html="Bum"><img class="thumb" alt="Bum" src="thumbs/20110925_0537-DSC_0084.jpg" /></a>
 
-  <a href="slides/20110925_0542-DSC_0107.jpg" data-sub-html="Slap"><img class="thumb" src="thumbs/20110925_0542-DSC_0107.jpg" /></a>
+  <a href="slides/20110925_0542-DSC_0107.jpg" data-sub-html="Slap"><img class="thumb" alt="Slap" src="thumbs/20110925_0542-DSC_0107.jpg" /></a>
 
-  <a href="slides/20110925_0542-DSC_0111.jpg" data-sub-html="Pre-greasing"><img class="thumb" src="thumbs/20110925_0542-DSC_0111.jpg" /></a>
+  <a href="slides/20110925_0542-DSC_0111.jpg" data-sub-html="Pre-greasing"><img class="thumb" alt="Pre-greasing" src="thumbs/20110925_0542-DSC_0111.jpg" /></a>
 
-  <a href="slides/20110925_0543-DSC_0114.jpg" data-sub-html="Reday"><img class="thumb" src="thumbs/20110925_0543-DSC_0114.jpg" /></a>
+  <a href="slides/20110925_0543-DSC_0114.jpg" data-sub-html="Reday"><img class="thumb" alt="Reday" src="thumbs/20110925_0543-DSC_0114.jpg" /></a>
 
-  <a href="slides/20110925_0547-DSC_0137.jpg" data-sub-html="Aaron 1 - Girls 0"><img class="thumb" src="thumbs/20110925_0547-DSC_0137.jpg" /></a>
+  <a href="slides/20110925_0547-DSC_0137.jpg" data-sub-html="Aaron 1 - Girls 0"><img class="thumb" alt="Aaron 1 - Girls 0" src="thumbs/20110925_0547-DSC_0137.jpg" /></a>
 
-  <a href="slides/20110925_0553-DSC_0163.jpg" data-sub-html="Nailed her"><img class="thumb" src="thumbs/20110925_0553-DSC_0163.jpg" /></a>
+  <a href="slides/20110925_0553-DSC_0163.jpg" data-sub-html="Nailed her"><img class="thumb" alt="Nailed her" src="thumbs/20110925_0553-DSC_0163.jpg" /></a>
 
-  <a href="slides/20110925_0553-DSC_0169.jpg" data-sub-html="Triumph"><img class="thumb" src="thumbs/20110925_0553-DSC_0169.jpg" /></a>
+  <a href="slides/20110925_0553-DSC_0169.jpg" data-sub-html="Triumph"><img class="thumb" alt="Triumph" src="thumbs/20110925_0553-DSC_0169.jpg" /></a>
 
-  <a href="slides/20110925_0554-DSC_0182.jpg" data-sub-html="Luke"><img class="thumb" src="thumbs/20110925_0554-DSC_0182.jpg" /></a>
+  <a href="slides/20110925_0554-DSC_0182.jpg" data-sub-html="Luke"><img class="thumb" alt="Luke" src="thumbs/20110925_0554-DSC_0182.jpg" /></a>
 
-  <a href="slides/20110925_0606-DSC_0245.jpg" data-sub-html="Yeah"><img class="thumb" src="thumbs/20110925_0606-DSC_0245.jpg" /></a>
+  <a href="slides/20110925_0606-DSC_0245.jpg" data-sub-html="Yeah"><img class="thumb" alt="Yeah" src="thumbs/20110925_0606-DSC_0245.jpg" /></a>
 
-  <a href="slides/20110925_0607-DSC_0249.jpg" data-sub-html="Sticky fingers"><img class="thumb" src="thumbs/20110925_0607-DSC_0249.jpg" /></a>
+  <a href="slides/20110925_0607-DSC_0249.jpg" data-sub-html="Sticky fingers"><img class="thumb" alt="Sticky fingers" src="thumbs/20110925_0607-DSC_0249.jpg" /></a>
 
-  <a href="slides/20110925_0608-DSC_0258.jpg" data-sub-html="Tynan &amp; Luke"><img class="thumb" src="thumbs/20110925_0608-DSC_0258.jpg" /></a>
+  <a href="slides/20110925_0608-DSC_0258.jpg" data-sub-html="Tynan &amp; Luke"><img class="thumb" alt="Tynan &amp; Luke" src="thumbs/20110925_0608-DSC_0258.jpg" /></a>
 
-  <a href="slides/20110925_0610-DSC_0274.jpg" data-sub-html="Shower"><img class="thumb" src="thumbs/20110925_0610-DSC_0274.jpg" /></a>
+  <a href="slides/20110925_0610-DSC_0274.jpg" data-sub-html="Shower"><img class="thumb" alt="Shower" src="thumbs/20110925_0610-DSC_0274.jpg" /></a>
 
-  <a href="slides/20110925_0610-DSC_0279.jpg" data-sub-html="Washing off the jello"><img class="thumb" src="thumbs/20110925_0610-DSC_0279.jpg" /></a>
+  <a href="slides/20110925_0610-DSC_0279.jpg" data-sub-html="Washing off the jello"><img class="thumb" alt="Washing off the jello" src="thumbs/20110925_0610-DSC_0279.jpg" /></a>
 
-  <a href="slides/20110925_0613-DSC_0287.jpg" data-sub-html="Damaged pool"><img class="thumb" src="thumbs/20110925_0613-DSC_0287.jpg" /></a>
+  <a href="slides/20110925_0613-DSC_0287.jpg" data-sub-html="Damaged pool"><img class="thumb" alt="Damaged pool" src="thumbs/20110925_0613-DSC_0287.jpg" /></a>
 
-  <a href="slides/20110925_0626-DSC_0303.jpg" data-sub-html="Cycle gang"><img class="thumb" src="thumbs/20110925_0626-DSC_0303.jpg" /></a>
+  <a href="slides/20110925_0626-DSC_0303.jpg" data-sub-html="Cycle gang"><img class="thumb" alt="Cycle gang" src="thumbs/20110925_0626-DSC_0303.jpg" /></a>
 
-  <a href="slides/20110925_0630-DSC_0328.jpg" data-sub-html="I see angels"><img class="thumb" src="thumbs/20110925_0630-DSC_0328.jpg" /></a>
+  <a href="slides/20110925_0630-DSC_0328.jpg" data-sub-html="I see angels"><img class="thumb" alt="I see angels" src="thumbs/20110925_0630-DSC_0328.jpg" /></a>
 
-  <a href="slides/20110925_0634-DSC_0341.jpg" data-sub-html="Foot"><img class="thumb" src="thumbs/20110925_0634-DSC_0341.jpg" /></a>
+  <a href="slides/20110925_0634-DSC_0341.jpg" data-sub-html="Foot"><img class="thumb" alt="Foot" src="thumbs/20110925_0634-DSC_0341.jpg" /></a>
 
-  <a href="slides/20110925_0635-DSC_0344.jpg" data-sub-html="Loren"><img class="thumb" src="thumbs/20110925_0635-DSC_0344.jpg" /></a>
+  <a href="slides/20110925_0635-DSC_0344.jpg" data-sub-html="Loren"><img class="thumb" alt="Loren" src="thumbs/20110925_0635-DSC_0344.jpg" /></a>
 
-  <a href="slides/20110925_0707-DSC_0358.jpg" data-sub-html="Tynan &amp; Aaron"><img class="thumb" src="thumbs/20110925_0707-DSC_0358.jpg" /></a>
+  <a href="slides/20110925_0707-DSC_0358.jpg" data-sub-html="Tynan &amp; Aaron"><img class="thumb" alt="Tynan &amp; Aaron" src="thumbs/20110925_0707-DSC_0358.jpg" /></a>
 
-  <a href="slides/20110925_0718-DSC_0366.jpg" data-sub-html="Leash"><img class="thumb" src="thumbs/20110925_0718-DSC_0366.jpg" /></a>
+  <a href="slides/20110925_0718-DSC_0366.jpg" data-sub-html="Leash"><img class="thumb" alt="Leash" src="thumbs/20110925_0718-DSC_0366.jpg" /></a>
 
-  <a href="slides/20110925_0727-DSC_0377.jpg" data-sub-html="Bow"><img class="thumb" src="thumbs/20110925_0727-DSC_0377.jpg" /></a>
+  <a href="slides/20110925_0727-DSC_0377.jpg" data-sub-html="Bow"><img class="thumb" alt="Bow" src="thumbs/20110925_0727-DSC_0377.jpg" /></a>
 
-  <a href="slides/20110925_0738-DSC_0392.jpg" data-sub-html="Aaron&#39;s"><img class="thumb" src="thumbs/20110925_0738-DSC_0392.jpg" /></a>
+  <a href="slides/20110925_0738-DSC_0392.jpg" data-sub-html="Aaron&#39;s"><img class="thumb" alt="Aaron&#39;s" src="thumbs/20110925_0738-DSC_0392.jpg" /></a>
 
-  <a href="slides/20110925_0847-DSC_0408.jpg" data-sub-html="Fishnets"><img class="thumb" src="thumbs/20110925_0847-DSC_0408.jpg" /></a>
+  <a href="slides/20110925_0847-DSC_0408.jpg" data-sub-html="Fishnets"><img class="thumb" alt="Fishnets" src="thumbs/20110925_0847-DSC_0408.jpg" /></a>
 
-  <a href="slides/20110925_1038-DSC_0418.jpg" data-sub-html="The stag party"><img class="thumb" src="thumbs/20110925_1038-DSC_0418.jpg" /></a>
+  <a href="slides/20110925_1038-DSC_0418.jpg" data-sub-html="The stag party"><img class="thumb" alt="The stag party" src="thumbs/20110925_1038-DSC_0418.jpg" /></a>
 
-  <a href="slides/20110925_1213-DSC_0429.jpg" data-sub-html="Aaron and the 16 year olds"><img class="thumb" src="thumbs/20110925_1213-DSC_0429.jpg" /></a>
+  <a href="slides/20110925_1213-DSC_0429.jpg" data-sub-html="Aaron and the 16 year olds"><img class="thumb" alt="Aaron and the 16 year olds" src="thumbs/20110925_1213-DSC_0429.jpg" /></a>
 
-  <a href="slides/20110925_1214-DSC_0435.jpg" data-sub-html="Listen ..."><img class="thumb" src="thumbs/20110925_1214-DSC_0435.jpg" /></a>
+  <a href="slides/20110925_1214-DSC_0435.jpg" data-sub-html="Listen ..."><img class="thumb" alt="Listen ..." src="thumbs/20110925_1214-DSC_0435.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

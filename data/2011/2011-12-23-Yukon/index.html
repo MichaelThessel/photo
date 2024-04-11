@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2011-12-23-Yukon</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,122 +85,127 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2011-12-23-Yukon</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2011</a> &gt;
+<strong>2011-12-23-Yukon</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20111223_1529-IMG_0621.jpg" data-sub-html="Airport Taxidermy"><img class="thumb" src="thumbs/20111223_1529-IMG_0621.jpg" /></a>
+  <a href="slides/20111223_1529-IMG_0621.jpg" data-sub-html="Airport Taxidermy"><img class="thumb" alt="Airport Taxidermy" src="thumbs/20111223_1529-IMG_0621.jpg" /></a>
 
-  <a href="slides/20111224_0506-DSC_0050.jpg" data-sub-html="Home Taxidermy"><img class="thumb" src="thumbs/20111224_0506-DSC_0050.jpg" /></a>
+  <a href="slides/20111224_0506-DSC_0050.jpg" data-sub-html="Home Taxidermy"><img class="thumb" alt="Home Taxidermy" src="thumbs/20111224_0506-DSC_0050.jpg" /></a>
 
-  <a href="slides/20111224_0539-DSC_0053.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20111224_0539-DSC_0053.jpg" /></a>
+  <a href="slides/20111224_0539-DSC_0053.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20111224_0539-DSC_0053.jpg" /></a>
 
-  <a href="slides/20111224_0716-DSC_0059.jpg" data-sub-html="Winter Bike"><img class="thumb" src="thumbs/20111224_0716-DSC_0059.jpg" /></a>
+  <a href="slides/20111224_0716-DSC_0059.jpg" data-sub-html="Winter Bike"><img class="thumb" alt="Winter Bike" src="thumbs/20111224_0716-DSC_0059.jpg" /></a>
 
-  <a href="slides/20111224_0904-DSC_0068.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20111224_0904-DSC_0068.jpg" /></a>
+  <a href="slides/20111224_0904-DSC_0068.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20111224_0904-DSC_0068.jpg" /></a>
 
-  <a href="slides/20111224_1134-DSC_0092.jpg" data-sub-html="My first Walmart"><img class="thumb" src="thumbs/20111224_1134-DSC_0092.jpg" /></a>
+  <a href="slides/20111224_1134-DSC_0092.jpg" data-sub-html="My first Walmart"><img class="thumb" alt="My first Walmart" src="thumbs/20111224_1134-DSC_0092.jpg" /></a>
 
-  <a href="slides/20111224_1307-DSC_0101.jpg" data-sub-html="?"><img class="thumb" src="thumbs/20111224_1307-DSC_0101.jpg" /></a>
+  <a href="slides/20111224_1307-DSC_0101.jpg" data-sub-html="?"><img class="thumb" alt="?" src="thumbs/20111224_1307-DSC_0101.jpg" /></a>
 
-  <a href="slides/20111224_1501-DSC_0114.jpg" data-sub-html="Whitehorse"><img class="thumb" src="thumbs/20111224_1501-DSC_0114.jpg" /></a>
+  <a href="slides/20111224_1501-DSC_0114.jpg" data-sub-html="Whitehorse"><img class="thumb" alt="Whitehorse" src="thumbs/20111224_1501-DSC_0114.jpg" /></a>
 
-  <a href="slides/20111224_1626-DSC_0119.jpg" data-sub-html="Kaitlyn"><img class="thumb" src="thumbs/20111224_1626-DSC_0119.jpg" /></a>
+  <a href="slides/20111224_1626-DSC_0119.jpg" data-sub-html="Kaitlyn"><img class="thumb" alt="Kaitlyn" src="thumbs/20111224_1626-DSC_0119.jpg" /></a>
 
-  <a href="slides/20111225_1426-DSC_0134.jpg" data-sub-html="Bear Spray"><img class="thumb" src="thumbs/20111225_1426-DSC_0134.jpg" /></a>
+  <a href="slides/20111225_1426-DSC_0134.jpg" data-sub-html="Bear Spray"><img class="thumb" alt="Bear Spray" src="thumbs/20111225_1426-DSC_0134.jpg" /></a>
 
-  <a href="slides/20111225_1427-DSC_0138.jpg" data-sub-html="Testing the old school snow shoes"><img class="thumb" src="thumbs/20111225_1427-DSC_0138.jpg" /></a>
+  <a href="slides/20111225_1427-DSC_0138.jpg" data-sub-html="Testing the old school snow shoes"><img class="thumb" alt="Testing the old school snow shoes" src="thumbs/20111225_1427-DSC_0138.jpg" /></a>
 
-  <a href="slides/20111226_1008-IMG_0657.jpg" data-sub-html="Beard and Hat"><img class="thumb" src="thumbs/20111226_1008-IMG_0657.jpg" /></a>
+  <a href="slides/20111226_1008-IMG_0657.jpg" data-sub-html="Beard and Hat"><img class="thumb" alt="Beard and Hat" src="thumbs/20111226_1008-IMG_0657.jpg" /></a>
 
-  <a href="slides/20111226_1842-DSC_0163.jpg" data-sub-html="Alaska Highway"><img class="thumb" src="thumbs/20111226_1842-DSC_0163.jpg" /></a>
+  <a href="slides/20111226_1842-DSC_0163.jpg" data-sub-html="Alaska Highway"><img class="thumb" alt="Alaska Highway" src="thumbs/20111226_1842-DSC_0163.jpg" /></a>
 
-  <a href="slides/20111226_1842-DSC_0164.jpg" data-sub-html="Kaitlyn"><img class="thumb" src="thumbs/20111226_1842-DSC_0164.jpg" /></a>
+  <a href="slides/20111226_1842-DSC_0164.jpg" data-sub-html="Kaitlyn"><img class="thumb" alt="Kaitlyn" src="thumbs/20111226_1842-DSC_0164.jpg" /></a>
 
-  <a href="slides/20111226_2256-DSC_0174.jpg" data-sub-html="Fox"><img class="thumb" src="thumbs/20111226_2256-DSC_0174.jpg" /></a>
+  <a href="slides/20111226_2256-DSC_0174.jpg" data-sub-html="Fox"><img class="thumb" alt="Fox" src="thumbs/20111226_2256-DSC_0174.jpg" /></a>
 
-  <a href="slides/20111227_1024-IMG_0667.jpg" data-sub-html="Bingo, BINGO,BINGOOOOOOO!!!"><img class="thumb" src="thumbs/20111227_1024-IMG_0667.jpg" /></a>
+  <a href="slides/20111227_1024-IMG_0667.jpg" data-sub-html="Bingo, BINGO,BINGOOOOOOO!!!"><img class="thumb" alt="Bingo, BINGO,BINGOOOOOOO!!!" src="thumbs/20111227_1024-IMG_0667.jpg" /></a>
 
-  <a href="slides/20111227_1257-DSC_0195.jpg" data-sub-html="Plugged in RCMP Cruiser"><img class="thumb" src="thumbs/20111227_1257-DSC_0195.jpg" /></a>
+  <a href="slides/20111227_1257-DSC_0195.jpg" data-sub-html="Plugged in RCMP Cruiser"><img class="thumb" alt="Plugged in RCMP Cruiser" src="thumbs/20111227_1257-DSC_0195.jpg" /></a>
 
-  <a href="slides/20111227_1318-DSC_0200.jpg" data-sub-html="Breakfast"><img class="thumb" src="thumbs/20111227_1318-DSC_0200.jpg" /></a>
+  <a href="slides/20111227_1318-DSC_0200.jpg" data-sub-html="Breakfast"><img class="thumb" alt="Breakfast" src="thumbs/20111227_1318-DSC_0200.jpg" /></a>
 
-  <a href="slides/20111227_1336-DSC_0206.jpg" data-sub-html="Houses and Hills"><img class="thumb" src="thumbs/20111227_1336-DSC_0206.jpg" /></a>
+  <a href="slides/20111227_1336-DSC_0206.jpg" data-sub-html="Houses and Hills"><img class="thumb" alt="Houses and Hills" src="thumbs/20111227_1336-DSC_0206.jpg" /></a>
 
-  <a href="slides/20111227_1443-DSC_0242.jpg" data-sub-html="Tagish Lake"><img class="thumb" src="thumbs/20111227_1443-DSC_0242.jpg" /></a>
+  <a href="slides/20111227_1443-DSC_0242.jpg" data-sub-html="Tagish Lake"><img class="thumb" alt="Tagish Lake" src="thumbs/20111227_1443-DSC_0242.jpg" /></a>
 
-  <a href="slides/20111227_1448-DSC_0257.jpg" data-sub-html="Tagish Lake"><img class="thumb" src="thumbs/20111227_1448-DSC_0257.jpg" /></a>
+  <a href="slides/20111227_1448-DSC_0257.jpg" data-sub-html="Tagish Lake"><img class="thumb" alt="Tagish Lake" src="thumbs/20111227_1448-DSC_0257.jpg" /></a>
 
-  <a href="slides/20111227_1456-DSC_0274.jpg" data-sub-html="Skater"><img class="thumb" src="thumbs/20111227_1456-DSC_0274.jpg" /></a>
+  <a href="slides/20111227_1456-DSC_0274.jpg" data-sub-html="Skater"><img class="thumb" alt="Skater" src="thumbs/20111227_1456-DSC_0274.jpg" /></a>
 
-  <a href="slides/20111227_1505-DSC_0287.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20111227_1505-DSC_0287.jpg" /></a>
+  <a href="slides/20111227_1505-DSC_0287.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20111227_1505-DSC_0287.jpg" /></a>
 
-  <a href="slides/20111227_1500-DSC_0282.jpg" data-sub-html="Lianne &amp; Kaitlyn"><img class="thumb" src="thumbs/20111227_1500-DSC_0282.jpg" /></a>
+  <a href="slides/20111227_1500-DSC_0282.jpg" data-sub-html="Lianne &amp; Kaitlyn"><img class="thumb" alt="Lianne &amp; Kaitlyn" src="thumbs/20111227_1500-DSC_0282.jpg" /></a>
 
-  <a href="slides/20111227_1555-DSC_0325.jpg" data-sub-html="Carcross"><img class="thumb" src="thumbs/20111227_1555-DSC_0325.jpg" /></a>
+  <a href="slides/20111227_1555-DSC_0325.jpg" data-sub-html="Carcross"><img class="thumb" alt="Carcross" src="thumbs/20111227_1555-DSC_0325.jpg" /></a>
 
-  <a href="slides/20111227_1555-DSC_0326.jpg" data-sub-html="Mountain and River"><img class="thumb" src="thumbs/20111227_1555-DSC_0326.jpg" /></a>
+  <a href="slides/20111227_1555-DSC_0326.jpg" data-sub-html="Mountain and River"><img class="thumb" alt="Mountain and River" src="thumbs/20111227_1555-DSC_0326.jpg" /></a>
 
-  <a href="slides/20111227_1615-DSC_0344.jpg" data-sub-html="Montana Services"><img class="thumb" src="thumbs/20111227_1615-DSC_0344.jpg" /></a>
+  <a href="slides/20111227_1615-DSC_0344.jpg" data-sub-html="Montana Services"><img class="thumb" alt="Montana Services" src="thumbs/20111227_1615-DSC_0344.jpg" /></a>
 
-  <a href="slides/20111227_1652-DSC_0353.jpg" data-sub-html="Being tailed"><img class="thumb" src="thumbs/20111227_1652-DSC_0353.jpg" /></a>
+  <a href="slides/20111227_1652-DSC_0353.jpg" data-sub-html="Being tailed"><img class="thumb" alt="Being tailed" src="thumbs/20111227_1652-DSC_0353.jpg" /></a>
 
-  <a href="slides/20111228_1533-DSC_0376.jpg" data-sub-html="The 6 Wheeler and its Crew"><img class="thumb" src="thumbs/20111228_1533-DSC_0376.jpg" /></a>
+  <a href="slides/20111228_1533-DSC_0376.jpg" data-sub-html="The 6 Wheeler and its Crew"><img class="thumb" alt="The 6 Wheeler and its Crew" src="thumbs/20111228_1533-DSC_0376.jpg" /></a>
 
-  <a href="slides/20111228_1550-DSC_0379.jpg" data-sub-html="Howl"><img class="thumb" src="thumbs/20111228_1550-DSC_0379.jpg" /></a>
+  <a href="slides/20111228_1550-DSC_0379.jpg" data-sub-html="Howl"><img class="thumb" alt="Howl" src="thumbs/20111228_1550-DSC_0379.jpg" /></a>
 
-  <a href="slides/20111228_1553-DSC_0381.jpg" data-sub-html="Me in hardcore winter gear"><img class="thumb" src="thumbs/20111228_1553-DSC_0381.jpg" /></a>
+  <a href="slides/20111228_1553-DSC_0381.jpg" data-sub-html="Me in hardcore winter gear"><img class="thumb" alt="Me in hardcore winter gear" src="thumbs/20111228_1553-DSC_0381.jpg" /></a>
 
-  <a href="slides/20111228_1604-DSC_0382.jpg" data-sub-html="Helicopter"><img class="thumb" src="thumbs/20111228_1604-DSC_0382.jpg" /></a>
+  <a href="slides/20111228_1604-DSC_0382.jpg" data-sub-html="Helicopter"><img class="thumb" alt="Helicopter" src="thumbs/20111228_1604-DSC_0382.jpg" /></a>
 
-  <a href="slides/20111229_1037-DSC_0395.jpg" data-sub-html="Trees and Yukon River"><img class="thumb" src="thumbs/20111229_1037-DSC_0395.jpg" /></a>
+  <a href="slides/20111229_1037-DSC_0395.jpg" data-sub-html="Trees and Yukon River"><img class="thumb" alt="Trees and Yukon River" src="thumbs/20111229_1037-DSC_0395.jpg" /></a>
 
-  <a href="slides/20111229_1038-IMG_0695.jpg" data-sub-html="Hunter"><img class="thumb" src="thumbs/20111229_1038-IMG_0695.jpg" /></a>
+  <a href="slides/20111229_1038-IMG_0695.jpg" data-sub-html="Hunter"><img class="thumb" alt="Hunter" src="thumbs/20111229_1038-IMG_0695.jpg" /></a>
 
-  <a href="slides/20111229_1044-DSC_0410.jpg" data-sub-html="Kaitlyn and Fresca"><img class="thumb" src="thumbs/20111229_1044-DSC_0410.jpg" /></a>
+  <a href="slides/20111229_1044-DSC_0410.jpg" data-sub-html="Kaitlyn and Fresca"><img class="thumb" alt="Kaitlyn and Fresca" src="thumbs/20111229_1044-DSC_0410.jpg" /></a>
 
-  <a href="slides/20111229_1134-DSC_0418.jpg" data-sub-html="Tree"><img class="thumb" src="thumbs/20111229_1134-DSC_0418.jpg" /></a>
+  <a href="slides/20111229_1134-DSC_0418.jpg" data-sub-html="Tree"><img class="thumb" alt="Tree" src="thumbs/20111229_1134-DSC_0418.jpg" /></a>
 
-  <a href="slides/20111229_1135-DSC_0421.jpg" data-sub-html="Ooooch"><img class="thumb" src="thumbs/20111229_1135-DSC_0421.jpg" /></a>
+  <a href="slides/20111229_1135-DSC_0421.jpg" data-sub-html="Ooooch"><img class="thumb" alt="Ooooch" src="thumbs/20111229_1135-DSC_0421.jpg" /></a>
 
-  <a href="slides/20111229_1200-DSC_0427.jpg" data-sub-html="Carmacks city center"><img class="thumb" src="thumbs/20111229_1200-DSC_0427.jpg" /></a>
+  <a href="slides/20111229_1200-DSC_0427.jpg" data-sub-html="Carmacks city center"><img class="thumb" alt="Carmacks city center" src="thumbs/20111229_1200-DSC_0427.jpg" /></a>
 
-  <a href="slides/20111229_1217-DSC_0432.jpg" data-sub-html="Streets"><img class="thumb" src="thumbs/20111229_1217-DSC_0432.jpg" /></a>
+  <a href="slides/20111229_1217-DSC_0432.jpg" data-sub-html="Streets"><img class="thumb" alt="Streets" src="thumbs/20111229_1217-DSC_0432.jpg" /></a>
 
-  <a href="slides/20111229_1312-DSC_0439.jpg" data-sub-html="Drilling a hole for ice fishing"><img class="thumb" src="thumbs/20111229_1312-DSC_0439.jpg" /></a>
+  <a href="slides/20111229_1312-DSC_0439.jpg" data-sub-html="Drilling a hole for ice fishing"><img class="thumb" alt="Drilling a hole for ice fishing" src="thumbs/20111229_1312-DSC_0439.jpg" /></a>
 
-  <a href="slides/20111229_1331-DSC_0470.jpg" data-sub-html="Hole"><img class="thumb" src="thumbs/20111229_1331-DSC_0470.jpg" /></a>
+  <a href="slides/20111229_1331-DSC_0470.jpg" data-sub-html="Hole"><img class="thumb" alt="Hole" src="thumbs/20111229_1331-DSC_0470.jpg" /></a>
 
-  <a href="slides/20111229_1334-DSC_0476.jpg" data-sub-html="Ice fishing"><img class="thumb" src="thumbs/20111229_1334-DSC_0476.jpg" /></a>
+  <a href="slides/20111229_1334-DSC_0476.jpg" data-sub-html="Ice fishing"><img class="thumb" alt="Ice fishing" src="thumbs/20111229_1334-DSC_0476.jpg" /></a>
 
-  <a href="slides/20111229_1328-DSC_0465.jpg" data-sub-html="Fresca"><img class="thumb" src="thumbs/20111229_1328-DSC_0465.jpg" /></a>
+  <a href="slides/20111229_1328-DSC_0465.jpg" data-sub-html="Fresca"><img class="thumb" alt="Fresca" src="thumbs/20111229_1328-DSC_0465.jpg" /></a>
 
-  <a href="slides/20111229_1345-DSC_0494.jpg" data-sub-html="Fox Lake"><img class="thumb" src="thumbs/20111229_1345-DSC_0494.jpg" /></a>
+  <a href="slides/20111229_1345-DSC_0494.jpg" data-sub-html="Fox Lake"><img class="thumb" alt="Fox Lake" src="thumbs/20111229_1345-DSC_0494.jpg" /></a>
 
-  <a href="slides/20111229_1330-DSC_0468.jpg" data-sub-html="Sunset"><img class="thumb" src="thumbs/20111229_1330-DSC_0468.jpg" /></a>
+  <a href="slides/20111229_1330-DSC_0468.jpg" data-sub-html="Sunset"><img class="thumb" alt="Sunset" src="thumbs/20111229_1330-DSC_0468.jpg" /></a>
 
-  <a href="slides/20111231_1431-DSC_0001.jpg" data-sub-html="Whitehorse snow shoeing"><img class="thumb" src="thumbs/20111231_1431-DSC_0001.jpg" /></a>
+  <a href="slides/20111231_1431-DSC_0001.jpg" data-sub-html="Whitehorse snow shoeing"><img class="thumb" alt="Whitehorse snow shoeing" src="thumbs/20111231_1431-DSC_0001.jpg" /></a>
 
-  <a href="slides/20111231_1455-DSC_0017.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20111231_1455-DSC_0017.jpg" /></a>
+  <a href="slides/20111231_1455-DSC_0017.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20111231_1455-DSC_0017.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

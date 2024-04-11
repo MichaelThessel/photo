@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2013-05-25-Tobi - Hannah Wedding</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,128 +85,133 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2013-05-25-Tobi - Hannah Wedding</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2013</a> &gt;
+<strong>2013-05-25-Tobi - Hannah Wedding</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20130525_0126-_GWR1902.jpg" data-sub-html="1"><img class="thumb" src="thumbs/20130525_0126-_GWR1902.jpg" /></a>
+  <a href="slides/20130525_0126-_GWR1902.jpg" data-sub-html="1"><img class="thumb" alt="1" src="thumbs/20130525_0126-_GWR1902.jpg" /></a>
 
-  <a href="slides/20130525_0128-_GWR1903.jpg" data-sub-html="2"><img class="thumb" src="thumbs/20130525_0128-_GWR1903.jpg" /></a>
+  <a href="slides/20130525_0128-_GWR1903.jpg" data-sub-html="2"><img class="thumb" alt="2" src="thumbs/20130525_0128-_GWR1903.jpg" /></a>
 
-  <a href="slides/20130525_0133-_GWR1917.jpg" data-sub-html="3"><img class="thumb" src="thumbs/20130525_0133-_GWR1917.jpg" /></a>
+  <a href="slides/20130525_0133-_GWR1917.jpg" data-sub-html="3"><img class="thumb" alt="3" src="thumbs/20130525_0133-_GWR1917.jpg" /></a>
 
-  <a href="slides/20130525_0137-_GWR1923.jpg" data-sub-html="4"><img class="thumb" src="thumbs/20130525_0137-_GWR1923.jpg" /></a>
+  <a href="slides/20130525_0137-_GWR1923.jpg" data-sub-html="4"><img class="thumb" alt="4" src="thumbs/20130525_0137-_GWR1923.jpg" /></a>
 
-  <a href="slides/20130525_0138-_GWR1926.jpg" data-sub-html="5"><img class="thumb" src="thumbs/20130525_0138-_GWR1926.jpg" /></a>
+  <a href="slides/20130525_0138-_GWR1926.jpg" data-sub-html="5"><img class="thumb" alt="5" src="thumbs/20130525_0138-_GWR1926.jpg" /></a>
 
-  <a href="slides/20130525_0138-_GWR1931.jpg" data-sub-html="6"><img class="thumb" src="thumbs/20130525_0138-_GWR1931.jpg" /></a>
+  <a href="slides/20130525_0138-_GWR1931.jpg" data-sub-html="6"><img class="thumb" alt="6" src="thumbs/20130525_0138-_GWR1931.jpg" /></a>
 
-  <a href="slides/20130525_0141-_GWR1940.jpg" data-sub-html="7"><img class="thumb" src="thumbs/20130525_0141-_GWR1940.jpg" /></a>
+  <a href="slides/20130525_0141-_GWR1940.jpg" data-sub-html="7"><img class="thumb" alt="7" src="thumbs/20130525_0141-_GWR1940.jpg" /></a>
 
-  <a href="slides/20130525_0150-_GWR1971.jpg" data-sub-html="8"><img class="thumb" src="thumbs/20130525_0150-_GWR1971.jpg" /></a>
+  <a href="slides/20130525_0150-_GWR1971.jpg" data-sub-html="8"><img class="thumb" alt="8" src="thumbs/20130525_0150-_GWR1971.jpg" /></a>
 
-  <a href="slides/20130525_0157-_GWR1988.jpg" data-sub-html="9"><img class="thumb" src="thumbs/20130525_0157-_GWR1988.jpg" /></a>
+  <a href="slides/20130525_0157-_GWR1988.jpg" data-sub-html="9"><img class="thumb" alt="9" src="thumbs/20130525_0157-_GWR1988.jpg" /></a>
 
-  <a href="slides/20130525_0201-_GWR2009.jpg" data-sub-html="10"><img class="thumb" src="thumbs/20130525_0201-_GWR2009.jpg" /></a>
+  <a href="slides/20130525_0201-_GWR2009.jpg" data-sub-html="10"><img class="thumb" alt="10" src="thumbs/20130525_0201-_GWR2009.jpg" /></a>
 
-  <a href="slides/20130525_0201-_GWR2016.jpg" data-sub-html="11"><img class="thumb" src="thumbs/20130525_0201-_GWR2016.jpg" /></a>
+  <a href="slides/20130525_0201-_GWR2016.jpg" data-sub-html="11"><img class="thumb" alt="11" src="thumbs/20130525_0201-_GWR2016.jpg" /></a>
 
-  <a href="slides/20130525_0201-_GWR2018-Edit.jpg" data-sub-html="12"><img class="thumb" src="thumbs/20130525_0201-_GWR2018-Edit.jpg" /></a>
+  <a href="slides/20130525_0201-_GWR2018-Edit.jpg" data-sub-html="12"><img class="thumb" alt="12" src="thumbs/20130525_0201-_GWR2018-Edit.jpg" /></a>
 
-  <a href="slides/20130525_0203-_GWR2027.jpg" data-sub-html="13"><img class="thumb" src="thumbs/20130525_0203-_GWR2027.jpg" /></a>
+  <a href="slides/20130525_0203-_GWR2027.jpg" data-sub-html="13"><img class="thumb" alt="13" src="thumbs/20130525_0203-_GWR2027.jpg" /></a>
 
-  <a href="slides/20130525_0207-_GWR2039.jpg" data-sub-html="14"><img class="thumb" src="thumbs/20130525_0207-_GWR2039.jpg" /></a>
+  <a href="slides/20130525_0207-_GWR2039.jpg" data-sub-html="14"><img class="thumb" alt="14" src="thumbs/20130525_0207-_GWR2039.jpg" /></a>
 
-  <a href="slides/20130525_0215-_GWR2056.jpg" data-sub-html="15"><img class="thumb" src="thumbs/20130525_0215-_GWR2056.jpg" /></a>
+  <a href="slides/20130525_0215-_GWR2056.jpg" data-sub-html="15"><img class="thumb" alt="15" src="thumbs/20130525_0215-_GWR2056.jpg" /></a>
 
-  <a href="slides/20130525_0122-_GWR1894.jpg" data-sub-html="16"><img class="thumb" src="thumbs/20130525_0122-_GWR1894.jpg" /></a>
+  <a href="slides/20130525_0122-_GWR1894.jpg" data-sub-html="16"><img class="thumb" alt="16" src="thumbs/20130525_0122-_GWR1894.jpg" /></a>
 
-  <a href="slides/20130525_0208-_GWR2042.jpg" data-sub-html="17"><img class="thumb" src="thumbs/20130525_0208-_GWR2042.jpg" /></a>
+  <a href="slides/20130525_0208-_GWR2042.jpg" data-sub-html="17"><img class="thumb" alt="17" src="thumbs/20130525_0208-_GWR2042.jpg" /></a>
 
-  <a href="slides/20130525_0241-_GWR2074.jpg" data-sub-html="18"><img class="thumb" src="thumbs/20130525_0241-_GWR2074.jpg" /></a>
+  <a href="slides/20130525_0241-_GWR2074.jpg" data-sub-html="18"><img class="thumb" alt="18" src="thumbs/20130525_0241-_GWR2074.jpg" /></a>
 
-  <a href="slides/20130525_0247-_GWR2079.jpg" data-sub-html="19"><img class="thumb" src="thumbs/20130525_0247-_GWR2079.jpg" /></a>
+  <a href="slides/20130525_0247-_GWR2079.jpg" data-sub-html="19"><img class="thumb" alt="19" src="thumbs/20130525_0247-_GWR2079.jpg" /></a>
 
-  <a href="slides/20130525_0249-_GWR2087.jpg" data-sub-html="20"><img class="thumb" src="thumbs/20130525_0249-_GWR2087.jpg" /></a>
+  <a href="slides/20130525_0249-_GWR2087.jpg" data-sub-html="20"><img class="thumb" alt="20" src="thumbs/20130525_0249-_GWR2087.jpg" /></a>
 
-  <a href="slides/20130525_0351-_GWR2137.jpg" data-sub-html="21"><img class="thumb" src="thumbs/20130525_0351-_GWR2137.jpg" /></a>
+  <a href="slides/20130525_0351-_GWR2137.jpg" data-sub-html="21"><img class="thumb" alt="21" src="thumbs/20130525_0351-_GWR2137.jpg" /></a>
 
-  <a href="slides/20130525_0350-_GWR2136.jpg" data-sub-html="22"><img class="thumb" src="thumbs/20130525_0350-_GWR2136.jpg" /></a>
+  <a href="slides/20130525_0350-_GWR2136.jpg" data-sub-html="22"><img class="thumb" alt="22" src="thumbs/20130525_0350-_GWR2136.jpg" /></a>
 
-  <a href="slides/20130525_0711-_GWR2172.jpg" data-sub-html="23"><img class="thumb" src="thumbs/20130525_0711-_GWR2172.jpg" /></a>
+  <a href="slides/20130525_0711-_GWR2172.jpg" data-sub-html="23"><img class="thumb" alt="23" src="thumbs/20130525_0711-_GWR2172.jpg" /></a>
 
-  <a href="slides/20130525_0659-_GWR2157.jpg" data-sub-html="24"><img class="thumb" src="thumbs/20130525_0659-_GWR2157.jpg" /></a>
+  <a href="slides/20130525_0659-_GWR2157.jpg" data-sub-html="24"><img class="thumb" alt="24" src="thumbs/20130525_0659-_GWR2157.jpg" /></a>
 
-  <a href="slides/20130525_0708-_GWR2162.jpg" data-sub-html="25"><img class="thumb" src="thumbs/20130525_0708-_GWR2162.jpg" /></a>
+  <a href="slides/20130525_0708-_GWR2162.jpg" data-sub-html="25"><img class="thumb" alt="25" src="thumbs/20130525_0708-_GWR2162.jpg" /></a>
 
-  <a href="slides/20130525_0708-_GWR2163.jpg" data-sub-html="26"><img class="thumb" src="thumbs/20130525_0708-_GWR2163.jpg" /></a>
+  <a href="slides/20130525_0708-_GWR2163.jpg" data-sub-html="26"><img class="thumb" alt="26" src="thumbs/20130525_0708-_GWR2163.jpg" /></a>
 
-  <a href="slides/20130525_0718-_GWR2176.jpg" data-sub-html="27"><img class="thumb" src="thumbs/20130525_0718-_GWR2176.jpg" /></a>
+  <a href="slides/20130525_0718-_GWR2176.jpg" data-sub-html="27"><img class="thumb" alt="27" src="thumbs/20130525_0718-_GWR2176.jpg" /></a>
 
-  <a href="slides/20130525_0803-_GWR2208.jpg" data-sub-html="28"><img class="thumb" src="thumbs/20130525_0803-_GWR2208.jpg" /></a>
+  <a href="slides/20130525_0803-_GWR2208.jpg" data-sub-html="28"><img class="thumb" alt="28" src="thumbs/20130525_0803-_GWR2208.jpg" /></a>
 
-  <a href="slides/20130525_0700-_GWR2158.jpg" data-sub-html="29"><img class="thumb" src="thumbs/20130525_0700-_GWR2158.jpg" /></a>
+  <a href="slides/20130525_0700-_GWR2158.jpg" data-sub-html="29"><img class="thumb" alt="29" src="thumbs/20130525_0700-_GWR2158.jpg" /></a>
 
-  <a href="slides/20130525_0930-_GWR2254.jpg" data-sub-html="30"><img class="thumb" src="thumbs/20130525_0930-_GWR2254.jpg" /></a>
+  <a href="slides/20130525_0930-_GWR2254.jpg" data-sub-html="30"><img class="thumb" alt="30" src="thumbs/20130525_0930-_GWR2254.jpg" /></a>
 
-  <a href="slides/20130525_0923-_GWR2250.jpg" data-sub-html="31"><img class="thumb" src="thumbs/20130525_0923-_GWR2250.jpg" /></a>
+  <a href="slides/20130525_0923-_GWR2250.jpg" data-sub-html="31"><img class="thumb" alt="31" src="thumbs/20130525_0923-_GWR2250.jpg" /></a>
 
-  <a href="slides/20130525_0855-_GWR2220.jpg" data-sub-html="32"><img class="thumb" src="thumbs/20130525_0855-_GWR2220.jpg" /></a>
+  <a href="slides/20130525_0855-_GWR2220.jpg" data-sub-html="32"><img class="thumb" alt="32" src="thumbs/20130525_0855-_GWR2220.jpg" /></a>
 
-  <a href="slides/20130525_1013-_GWR2295.jpg" data-sub-html="33"><img class="thumb" src="thumbs/20130525_1013-_GWR2295.jpg" /></a>
+  <a href="slides/20130525_1013-_GWR2295.jpg" data-sub-html="33"><img class="thumb" alt="33" src="thumbs/20130525_1013-_GWR2295.jpg" /></a>
 
-  <a href="slides/20130525_1113-_GWR2335.jpg" data-sub-html="34"><img class="thumb" src="thumbs/20130525_1113-_GWR2335.jpg" /></a>
+  <a href="slides/20130525_1113-_GWR2335.jpg" data-sub-html="34"><img class="thumb" alt="34" src="thumbs/20130525_1113-_GWR2335.jpg" /></a>
 
-  <a href="slides/20130525_1034-_GWR2298.jpg" data-sub-html="35"><img class="thumb" src="thumbs/20130525_1034-_GWR2298.jpg" /></a>
+  <a href="slides/20130525_1034-_GWR2298.jpg" data-sub-html="35"><img class="thumb" alt="35" src="thumbs/20130525_1034-_GWR2298.jpg" /></a>
 
-  <a href="slides/20130525_1041-_GWR2317.jpg" data-sub-html="36"><img class="thumb" src="thumbs/20130525_1041-_GWR2317.jpg" /></a>
+  <a href="slides/20130525_1041-_GWR2317.jpg" data-sub-html="36"><img class="thumb" alt="36" src="thumbs/20130525_1041-_GWR2317.jpg" /></a>
 
-  <a href="slides/20130525_1116-_GWR2348.jpg" data-sub-html="37"><img class="thumb" src="thumbs/20130525_1116-_GWR2348.jpg" /></a>
+  <a href="slides/20130525_1116-_GWR2348.jpg" data-sub-html="37"><img class="thumb" alt="37" src="thumbs/20130525_1116-_GWR2348.jpg" /></a>
 
-  <a href="slides/20130525_1134-_GWR2354.jpg" data-sub-html="38"><img class="thumb" src="thumbs/20130525_1134-_GWR2354.jpg" /></a>
+  <a href="slides/20130525_1134-_GWR2354.jpg" data-sub-html="38"><img class="thumb" alt="38" src="thumbs/20130525_1134-_GWR2354.jpg" /></a>
 
-  <a href="slides/20130525_1145-_GWR2363.jpg" data-sub-html="39"><img class="thumb" src="thumbs/20130525_1145-_GWR2363.jpg" /></a>
+  <a href="slides/20130525_1145-_GWR2363.jpg" data-sub-html="39"><img class="thumb" alt="39" src="thumbs/20130525_1145-_GWR2363.jpg" /></a>
 
-  <a href="slides/20130525_1146-_GWR2365.jpg" data-sub-html="40"><img class="thumb" src="thumbs/20130525_1146-_GWR2365.jpg" /></a>
+  <a href="slides/20130525_1146-_GWR2365.jpg" data-sub-html="40"><img class="thumb" alt="40" src="thumbs/20130525_1146-_GWR2365.jpg" /></a>
 
-  <a href="slides/20130525_1240-_GWR2376.jpg" data-sub-html="41"><img class="thumb" src="thumbs/20130525_1240-_GWR2376.jpg" /></a>
+  <a href="slides/20130525_1240-_GWR2376.jpg" data-sub-html="41"><img class="thumb" alt="41" src="thumbs/20130525_1240-_GWR2376.jpg" /></a>
 
-  <a href="slides/20130525_1319-_GWR2411.jpg" data-sub-html="42"><img class="thumb" src="thumbs/20130525_1319-_GWR2411.jpg" /></a>
+  <a href="slides/20130525_1319-_GWR2411.jpg" data-sub-html="42"><img class="thumb" alt="42" src="thumbs/20130525_1319-_GWR2411.jpg" /></a>
 
-  <a href="slides/20130525_1405-_GWR2422.jpg" data-sub-html="43"><img class="thumb" src="thumbs/20130525_1405-_GWR2422.jpg" /></a>
+  <a href="slides/20130525_1405-_GWR2422.jpg" data-sub-html="43"><img class="thumb" alt="43" src="thumbs/20130525_1405-_GWR2422.jpg" /></a>
 
-  <a href="slides/20130525_1415-_GWR2430.jpg" data-sub-html="44"><img class="thumb" src="thumbs/20130525_1415-_GWR2430.jpg" /></a>
+  <a href="slides/20130525_1415-_GWR2430.jpg" data-sub-html="44"><img class="thumb" alt="44" src="thumbs/20130525_1415-_GWR2430.jpg" /></a>
 
-  <a href="slides/20130525_1416-_GWR2432.jpg" data-sub-html="45"><img class="thumb" src="thumbs/20130525_1416-_GWR2432.jpg" /></a>
+  <a href="slides/20130525_1416-_GWR2432.jpg" data-sub-html="45"><img class="thumb" alt="45" src="thumbs/20130525_1416-_GWR2432.jpg" /></a>
 
-  <a href="slides/20130525_1455-_GWR2551.jpg" data-sub-html="46"><img class="thumb" src="thumbs/20130525_1455-_GWR2551.jpg" /></a>
+  <a href="slides/20130525_1455-_GWR2551.jpg" data-sub-html="46"><img class="thumb" alt="46" src="thumbs/20130525_1455-_GWR2551.jpg" /></a>
 
-  <a href="slides/20130525_1558-IMG_1779.jpg" data-sub-html="47"><img class="thumb" src="thumbs/20130525_1558-IMG_1779.jpg" /></a>
+  <a href="slides/20130525_1558-IMG_1779.jpg" data-sub-html="47"><img class="thumb" alt="47" src="thumbs/20130525_1558-IMG_1779.jpg" /></a>
 
-  <a href="slides/20130525_1605-IMG_1787.jpg" data-sub-html="48"><img class="thumb" src="thumbs/20130525_1605-IMG_1787.jpg" /></a>
+  <a href="slides/20130525_1605-IMG_1787.jpg" data-sub-html="48"><img class="thumb" alt="48" src="thumbs/20130525_1605-IMG_1787.jpg" /></a>
 
-  <a href="slides/20130525_1607-IMG_1794.jpg" data-sub-html="49"><img class="thumb" src="thumbs/20130525_1607-IMG_1794.jpg" /></a>
+  <a href="slides/20130525_1607-IMG_1794.jpg" data-sub-html="49"><img class="thumb" alt="49" src="thumbs/20130525_1607-IMG_1794.jpg" /></a>
 
-  <a href="slides/20130525_0903-_GWR2229.jpg" data-sub-html="50"><img class="thumb" src="thumbs/20130525_0903-_GWR2229.jpg" /></a>
+  <a href="slides/20130525_0903-_GWR2229.jpg" data-sub-html="50"><img class="thumb" alt="50" src="thumbs/20130525_0903-_GWR2229.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

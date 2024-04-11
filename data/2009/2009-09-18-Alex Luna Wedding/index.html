@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2009-09-18-Alex Luna Wedding</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,100 +85,105 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2009-09-18-Alex Luna Wedding</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2009</a> &gt;
+<strong>2009-09-18-Alex Luna Wedding</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/_DSC0044.jpg" data-sub-html="Luna und das Kleid | Luna and the wedding dress"><img class="thumb" src="thumbs/_DSC0044.jpg" /></a>
+  <a href="slides/_DSC0044.jpg" data-sub-html="Luna und das Kleid | Luna and the wedding dress"><img class="thumb" alt="Luna und das Kleid | Luna and the wedding dress" src="thumbs/_DSC0044.jpg" /></a>
 
-  <a href="slides/_DSC0085.jpg" data-sub-html="Luna und Grenada | Luna and Granada"><img class="thumb" src="thumbs/_DSC0085.jpg" /></a>
+  <a href="slides/_DSC0085.jpg" data-sub-html="Luna und Grenada | Luna and Granada"><img class="thumb" alt="Luna und Grenada | Luna and Granada" src="thumbs/_DSC0085.jpg" /></a>
 
-  <a href="slides/_DSC0090.jpg" data-sub-html="Die Fotografen | The photographers"><img class="thumb" src="thumbs/_DSC0090.jpg" /></a>
+  <a href="slides/_DSC0090.jpg" data-sub-html="Die Fotografen | The photographers"><img class="thumb" alt="Die Fotografen | The photographers" src="thumbs/_DSC0090.jpg" /></a>
 
-  <a href="slides/_DSC0094.jpg" data-sub-html="Luna &amp; Immaculada"><img class="thumb" src="thumbs/_DSC0094.jpg" /></a>
+  <a href="slides/_DSC0094.jpg" data-sub-html="Luna &amp; Immaculada"><img class="thumb" alt="Luna &amp; Immaculada" src="thumbs/_DSC0094.jpg" /></a>
 
-  <a href="slides/_DSC0104.jpg" data-sub-html="Christina"><img class="thumb" src="thumbs/_DSC0104.jpg" /></a>
+  <a href="slides/_DSC0104.jpg" data-sub-html="Christina"><img class="thumb" alt="Christina" src="thumbs/_DSC0104.jpg" /></a>
 
-  <a href="slides/_DSC0113.jpg" data-sub-html="Luna &amp; Immaculada"><img class="thumb" src="thumbs/_DSC0113.jpg" /></a>
+  <a href="slides/_DSC0113.jpg" data-sub-html="Luna &amp; Immaculada"><img class="thumb" alt="Luna &amp; Immaculada" src="thumbs/_DSC0113.jpg" /></a>
 
-  <a href="slides/_DSC0120.jpg" data-sub-html="Luna &amp; Immaculada"><img class="thumb" src="thumbs/_DSC0120.jpg" /></a>
+  <a href="slides/_DSC0120.jpg" data-sub-html="Luna &amp; Immaculada"><img class="thumb" alt="Luna &amp; Immaculada" src="thumbs/_DSC0120.jpg" /></a>
 
-  <a href="slides/_DSC0126.jpg" data-sub-html="Alex &amp; Luna"><img class="thumb" src="thumbs/_DSC0126.jpg" /></a>
+  <a href="slides/_DSC0126.jpg" data-sub-html="Alex &amp; Luna"><img class="thumb" alt="Alex &amp; Luna" src="thumbs/_DSC0126.jpg" /></a>
 
-  <a href="slides/_DSC0134.jpg" data-sub-html="Faxen machen | Making fun"><img class="thumb" src="thumbs/_DSC0134.jpg" /></a>
+  <a href="slides/_DSC0134.jpg" data-sub-html="Faxen machen | Making fun"><img class="thumb" alt="Faxen machen | Making fun" src="thumbs/_DSC0134.jpg" /></a>
 
-  <a href="slides/_DSC0145.jpg" data-sub-html="Alex &amp; Luna"><img class="thumb" src="thumbs/_DSC0145.jpg" /></a>
+  <a href="slides/_DSC0145.jpg" data-sub-html="Alex &amp; Luna"><img class="thumb" alt="Alex &amp; Luna" src="thumbs/_DSC0145.jpg" /></a>
 
-  <a href="slides/_DSC0149.jpg" data-sub-html="Fremde wollen auch mal fotografieren | Strangers want to take pictures too"><img class="thumb" src="thumbs/_DSC0149.jpg" /></a>
+  <a href="slides/_DSC0149.jpg" data-sub-html="Fremde wollen auch mal fotografieren | Strangers want to take pictures too"><img class="thumb" alt="Fremde wollen auch mal fotografieren | Strangers want to take pictures too" src="thumbs/_DSC0149.jpg" /></a>
 
-  <a href="slides/_DSC0154.jpg" data-sub-html="Gassi Gehende | Walking the dog"><img class="thumb" src="thumbs/_DSC0154.jpg" /></a>
+  <a href="slides/_DSC0154.jpg" data-sub-html="Gassi Gehende | Walking the dog"><img class="thumb" alt="Gassi Gehende | Walking the dog" src="thumbs/_DSC0154.jpg" /></a>
 
-  <a href="slides/_DSC0171.jpg" data-sub-html="Auf dem Weg | On the way"><img class="thumb" src="thumbs/_DSC0171.jpg" /></a>
+  <a href="slides/_DSC0171.jpg" data-sub-html="Auf dem Weg | On the way"><img class="thumb" alt="Auf dem Weg | On the way" src="thumbs/_DSC0171.jpg" /></a>
 
-  <a href="slides/_DSC0174.jpg" data-sub-html="Im Taxi | In the cab"><img class="thumb" src="thumbs/_DSC0174.jpg" /></a>
+  <a href="slides/_DSC0174.jpg" data-sub-html="Im Taxi | In the cab"><img class="thumb" alt="Im Taxi | In the cab" src="thumbs/_DSC0174.jpg" /></a>
 
-  <a href="slides/_DSC0178.jpg" data-sub-html="Berg | Hill"><img class="thumb" src="thumbs/_DSC0178.jpg" /></a>
+  <a href="slides/_DSC0178.jpg" data-sub-html="Berg | Hill"><img class="thumb" alt="Berg | Hill" src="thumbs/_DSC0178.jpg" /></a>
 
-  <a href="slides/_DSC0185.jpg" data-sub-html="Andrew"><img class="thumb" src="thumbs/_DSC0185.jpg" /></a>
+  <a href="slides/_DSC0185.jpg" data-sub-html="Andrew"><img class="thumb" alt="Andrew" src="thumbs/_DSC0185.jpg" /></a>
 
-  <a href="slides/_DSC0186.jpg" data-sub-html="Penny"><img class="thumb" src="thumbs/_DSC0186.jpg" /></a>
+  <a href="slides/_DSC0186.jpg" data-sub-html="Penny"><img class="thumb" alt="Penny" src="thumbs/_DSC0186.jpg" /></a>
 
-  <a href="slides/_DSC0188.jpg" data-sub-html="Granada"><img class="thumb" src="thumbs/_DSC0188.jpg" /></a>
+  <a href="slides/_DSC0188.jpg" data-sub-html="Granada"><img class="thumb" alt="Granada" src="thumbs/_DSC0188.jpg" /></a>
 
-  <a href="slides/_DSC0233.jpg" data-sub-html="Die Trauung | The ceremony"><img class="thumb" src="thumbs/_DSC0233.jpg" /></a>
+  <a href="slides/_DSC0233.jpg" data-sub-html="Die Trauung | The ceremony"><img class="thumb" alt="Die Trauung | The ceremony" src="thumbs/_DSC0233.jpg" /></a>
 
-  <a href="slides/_DSC0238.jpg" data-sub-html="Ferdsch | Done"><img class="thumb" src="thumbs/_DSC0238.jpg" /></a>
+  <a href="slides/_DSC0238.jpg" data-sub-html="Ferdsch | Done"><img class="thumb" alt="Ferdsch | Done" src="thumbs/_DSC0238.jpg" /></a>
 
-  <a href="slides/_DSC0252.jpg" data-sub-html="Und nun feiern! | And now party!"><img class="thumb" src="thumbs/_DSC0252.jpg" /></a>
+  <a href="slides/_DSC0252.jpg" data-sub-html="Und nun feiern! | And now party!"><img class="thumb" alt="Und nun feiern! | And now party!" src="thumbs/_DSC0252.jpg" /></a>
 
-  <a href="slides/_DSC0270.jpg" data-sub-html="Tafel | Table"><img class="thumb" src="thumbs/_DSC0270.jpg" /></a>
+  <a href="slides/_DSC0270.jpg" data-sub-html="Tafel | Table"><img class="thumb" alt="Tafel | Table" src="thumbs/_DSC0270.jpg" /></a>
 
-  <a href="slides/_DSC0274.jpg" data-sub-html="Andrew, Michael &amp; Kelly"><img class="thumb" src="thumbs/_DSC0274.jpg" /></a>
+  <a href="slides/_DSC0274.jpg" data-sub-html="Andrew, Michael &amp; Kelly"><img class="thumb" alt="Andrew, Michael &amp; Kelly" src="thumbs/_DSC0274.jpg" /></a>
 
-  <a href="slides/_DSC0279.jpg" data-sub-html="Door"><img class="thumb" src="thumbs/_DSC0279.jpg" /></a>
+  <a href="slides/_DSC0279.jpg" data-sub-html="Door"><img class="thumb" alt="Door" src="thumbs/_DSC0279.jpg" /></a>
 
-  <a href="slides/_DSC0294.jpg" data-sub-html="Granada"><img class="thumb" src="thumbs/_DSC0294.jpg" /></a>
+  <a href="slides/_DSC0294.jpg" data-sub-html="Granada"><img class="thumb" alt="Granada" src="thumbs/_DSC0294.jpg" /></a>
 
-  <a href="slides/_DSC0304.jpg" data-sub-html="Tanzen | Dancing"><img class="thumb" src="thumbs/_DSC0304.jpg" /></a>
+  <a href="slides/_DSC0304.jpg" data-sub-html="Tanzen | Dancing"><img class="thumb" alt="Tanzen | Dancing" src="thumbs/_DSC0304.jpg" /></a>
 
-  <a href="slides/_DSC0360.jpg" data-sub-html="In der Disco | In the discotheque"><img class="thumb" src="thumbs/_DSC0360.jpg" /></a>
+  <a href="slides/_DSC0360.jpg" data-sub-html="In der Disco | In the discotheque"><img class="thumb" alt="In der Disco | In the discotheque" src="thumbs/_DSC0360.jpg" /></a>
 
-  <a href="slides/_DSC0365.jpg" data-sub-html="Luna &amp; Alex"><img class="thumb" src="thumbs/_DSC0365.jpg" /></a>
+  <a href="slides/_DSC0365.jpg" data-sub-html="Luna &amp; Alex"><img class="thumb" alt="Luna &amp; Alex" src="thumbs/_DSC0365.jpg" /></a>
 
-  <a href="slides/_DSC0392.jpg" data-sub-html="In der Disco | In the discotheque"><img class="thumb" src="thumbs/_DSC0392.jpg" /></a>
+  <a href="slides/_DSC0392.jpg" data-sub-html="In der Disco | In the discotheque"><img class="thumb" alt="In der Disco | In the discotheque" src="thumbs/_DSC0392.jpg" /></a>
 
-  <a href="slides/_DSC0404.jpg" data-sub-html="bar"><img class="thumb" src="thumbs/_DSC0404.jpg" /></a>
+  <a href="slides/_DSC0404.jpg" data-sub-html="bar"><img class="thumb" alt="bar" src="thumbs/_DSC0404.jpg" /></a>
 
-  <a href="slides/_DSC0455.jpg" data-sub-html="Andrew &amp; Isa"><img class="thumb" src="thumbs/_DSC0455.jpg" /></a>
+  <a href="slides/_DSC0455.jpg" data-sub-html="Andrew &amp; Isa"><img class="thumb" alt="Andrew &amp; Isa" src="thumbs/_DSC0455.jpg" /></a>
 
-  <a href="slides/_DSC0482.jpg" data-sub-html="Alex &amp; Luna"><img class="thumb" src="thumbs/_DSC0482.jpg" /></a>
+  <a href="slides/_DSC0482.jpg" data-sub-html="Alex &amp; Luna"><img class="thumb" alt="Alex &amp; Luna" src="thumbs/_DSC0482.jpg" /></a>
 
-  <a href="slides/_DSC0511.jpg" data-sub-html="Kelly &amp; Luna"><img class="thumb" src="thumbs/_DSC0511.jpg" /></a>
+  <a href="slides/_DSC0511.jpg" data-sub-html="Kelly &amp; Luna"><img class="thumb" alt="Kelly &amp; Luna" src="thumbs/_DSC0511.jpg" /></a>
 
-  <a href="slides/_DSC0535.jpg" data-sub-html="In der Disco | In the discotheque"><img class="thumb" src="thumbs/_DSC0535.jpg" /></a>
+  <a href="slides/_DSC0535.jpg" data-sub-html="In der Disco | In the discotheque"><img class="thumb" alt="In der Disco | In the discotheque" src="thumbs/_DSC0535.jpg" /></a>
 
-  <a href="slides/_DSC0580.jpg" data-sub-html="Tschuess auf Spanish | Bye in Spanish"><img class="thumb" src="thumbs/_DSC0580.jpg" /></a>
+  <a href="slides/_DSC0580.jpg" data-sub-html="Tschuess auf Spanish | Bye in Spanish"><img class="thumb" alt="Tschuess auf Spanish | Bye in Spanish" src="thumbs/_DSC0580.jpg" /></a>
 
-  <a href="slides/_DSC0586.jpg" data-sub-html="The End"><img class="thumb" src="thumbs/_DSC0586.jpg" /></a>
+  <a href="slides/_DSC0586.jpg" data-sub-html="The End"><img class="thumb" alt="The End" src="thumbs/_DSC0586.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 

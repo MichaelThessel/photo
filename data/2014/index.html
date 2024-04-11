@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2014</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,61 +85,256 @@ a, a:visited, a:hover {
   <body>
 
 
+<a href="../../index.html">Home</a> &gt;
+<strong>2014</strong>
+<br /><br />
 
-<a href="2014-01-12-Kailua%20Beach/index.html">2014-01-12-Kailua Beach</a><br />
+<div class="folder">
 
-<a href="2014-01-16-Waikiki/index.html">2014-01-16-Waikiki</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-01-12-Kailua%20Beach/index.html">
+        <img src="2014-01-12-Kailua%20Beach/thumb.jpg" alt="" />
+        <strong class="title">2014-01-12-Kailua Beach</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-01-19-Karaoke/index.html">2014-01-19-Karaoke</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-01-16-Waikiki/index.html">
+        <img src="2014-01-16-Waikiki/thumb.jpg" alt="" />
+        <strong class="title">2014-01-16-Waikiki</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-01-21-Shop/index.html">2014-01-21-Shop</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-01-19-Karaoke/index.html">
+        <img src="2014-01-19-Karaoke/thumb.jpg" alt="" />
+        <strong class="title">2014-01-19-Karaoke</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-02-01-%60Iolani%20Palace/index.html">2014-02-01-`Iolani Palace</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-01-21-Shop/index.html">
+        <img src="2014-01-21-Shop/thumb.jpg" alt="" />
+        <strong class="title">2014-01-21-Shop</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-02-02-North%20Shore/index.html">2014-02-02-North Shore</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-02-01-%60Iolani%20Palace/index.html">
+        <img src="2014-02-01-%60Iolani%20Palace/thumb.jpg" alt="" />
+        <strong class="title">2014-02-01-`Iolani Palace</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-02-13-Kaka%27ako%20Graffiti/index.html">2014-02-13-Kaka&#39;ako Graffiti</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-02-02-North%20Shore/index.html">
+        <img src="2014-02-02-North%20Shore/thumb.jpg" alt="" />
+        <strong class="title">2014-02-02-North Shore</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-02-23-Oahu%20Flight/index.html">2014-02-23-Oahu Flight</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-02-13-Kaka%27ako%20Graffiti/index.html">
+        <img src="2014-02-13-Kaka%27ako%20Graffiti/thumb.jpg" alt="" />
+        <strong class="title">2014-02-13-Kaka&#39;ako Graffiti</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-03-14-Parents%20in%20Honolulu/index.html">2014-03-14-Parents in Honolulu</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-02-23-Oahu%20Flight/index.html">
+        <img src="2014-02-23-Oahu%20Flight/thumb.jpg" alt="" />
+        <strong class="title">2014-02-23-Oahu Flight</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-04-25-Parents%2060.%20Birthday/index.html">2014-04-25-Parents 60. Birthday</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-03-14-Parents%20in%20Honolulu/index.html">
+        <img src="2014-03-14-Parents%20in%20Honolulu/thumb.jpg" alt="" />
+        <strong class="title">2014-03-14-Parents in Honolulu</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-04-27-%27lil%20lilly/index.html">2014-04-27-&#39;lil lilly</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-04-25-Parents%2060.%20Birthday/index.html">
+        <img src="2014-04-25-Parents%2060.%20Birthday/thumb.jpg" alt="" />
+        <strong class="title">2014-04-25-Parents 60. Birthday</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-05-15%20Lilly%27s%202nd%20Birthday/index.html">2014-05-15 Lilly&#39;s 2nd Birthday</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-04-27-%27lil%20lilly/index.html">
+        <img src="2014-04-27-%27lil%20lilly/thumb.jpg" alt="" />
+        <strong class="title">2014-04-27-&#39;lil lilly</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-06-07-Victoria/index.html">2014-06-07-Victoria</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-05-15%20Lilly%27s%202nd%20Birthday/index.html">
+        <img src="2014-05-15%20Lilly%27s%202nd%20Birthday/thumb.jpg" alt="" />
+        <strong class="title">2014-05-15 Lilly&#39;s 2nd Birthday</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-06-10-Gina%20Jonah%20Baby%20Bump/index.html">2014-06-10-Gina Jonah Baby Bump</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-06-07-Victoria/index.html">
+        <img src="2014-06-07-Victoria/thumb.jpg" alt="" />
+        <strong class="title">2014-06-07-Victoria</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-06-20-Cowichan%20Lake/index.html">2014-06-20-Cowichan Lake</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-06-10-Gina%20Jonah%20Baby%20Bump/index.html">
+        <img src="2014-06-10-Gina%20Jonah%20Baby%20Bump/thumb.jpg" alt="" />
+        <strong class="title">2014-06-10-Gina Jonah Baby Bump</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-06-28-Vancouver/index.html">2014-06-28-Vancouver</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-06-20-Cowichan%20Lake/index.html">
+        <img src="2014-06-20-Cowichan%20Lake/thumb.jpg" alt="" />
+        <strong class="title">2014-06-20-Cowichan Lake</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-06-29-Salt%20Spring%20Island/index.html">2014-06-29-Salt Spring Island</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-06-28-Vancouver/index.html">
+        <img src="2014-06-28-Vancouver/thumb.jpg" alt="" />
+        <strong class="title">2014-06-28-Vancouver</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-07-21-Yukon/index.html">2014-07-21-Yukon</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-06-29-Salt%20Spring%20Island/index.html">
+        <img src="2014-06-29-Salt%20Spring%20Island/thumb.jpg" alt="" />
+        <strong class="title">2014-06-29-Salt Spring Island</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-07-25-Dawson%20City/index.html">2014-07-25-Dawson City</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-07-21-Yukon/index.html">
+        <img src="2014-07-21-Yukon/thumb.jpg" alt="" />
+        <strong class="title">2014-07-21-Yukon</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-07-29-Shooting%20Range/index.html">2014-07-29-Shooting Range</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-07-25-Dawson%20City/index.html">
+        <img src="2014-07-25-Dawson%20City/thumb.jpg" alt="" />
+        <strong class="title">2014-07-25-Dawson City</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-08-01-Big%20Salmon/index.html">2014-08-01-Big Salmon</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-07-29-Shooting%20Range/index.html">
+        <img src="2014-07-29-Shooting%20Range/thumb.jpg" alt="" />
+        <strong class="title">2014-07-29-Shooting Range</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-08-08-Atlin/index.html">2014-08-08-Atlin</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-08-01-Big%20Salmon/index.html">
+        <img src="2014-08-01-Big%20Salmon/thumb.jpg" alt="" />
+        <strong class="title">2014-08-01-Big Salmon</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-08-16-Lake%20Lovely%20Water/index.html">2014-08-16-Lake Lovely Water</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-08-08-Atlin/index.html">
+        <img src="2014-08-08-Atlin/thumb.jpg" alt="" />
+        <strong class="title">2014-08-08-Atlin</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-08-30-Maui/index.html">2014-08-30-Maui</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-08-16-Lake%20Lovely%20Water/index.html">
+        <img src="2014-08-16-Lake%20Lovely%20Water/thumb.jpg" alt="" />
+        <strong class="title">2014-08-16-Lake Lovely Water</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-09-13-Makua%20Valley%20Mural/index.html">2014-09-13-Makua Valley Mural</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-08-30-Maui/index.html">
+        <img src="2014-08-30-Maui/thumb.jpg" alt="" />
+        <strong class="title">2014-08-30-Maui</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-11-22-China%20Town/index.html">2014-11-22-China Town</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-09-13-Makua%20Valley%20Mural/index.html">
+        <img src="2014-09-13-Makua%20Valley%20Mural/thumb.jpg" alt="" />
+        <strong class="title">2014-09-13-Makua Valley Mural</strong>
+      </a>
+    </div>
+  </div>
 
-<a href="2014-12-24-Victoria/index.html">2014-12-24-Victoria</a><br />
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-11-22-China%20Town/index.html">
+        <img src="2014-11-22-China%20Town/thumb.jpg" alt="" />
+        <strong class="title">2014-11-22-China Town</strong>
+      </a>
+    </div>
+  </div>
 
+  <div class="album">
+    <div class="album-wrapper">
+      <a href="2014-12-24-Victoria/index.html">
+        <img src="2014-12-24-Victoria/thumb.jpg" alt="" />
+        <strong class="title">2014-12-24-Victoria</strong>
+      </a>
+    </div>
+  </div>
+
+</div>
 
 
   </body>

@@ -6,24 +6,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css" integrity="sha512-CRFv/YVJyElHXTiMgnhWKd2f04Hd/BUJkwcyqYmlpL1ugSYW23nNRazLk960mlz7dugTrETCGGjcsnspPOS6qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-thumbnail.min.css" integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/css/lg-zoom.min.css" integrity="sha512-vIrTyLijDDcUJrQGs1jduUCSVa3+A2DaWpVfNyj4lmXkqURVQJ8LL62nebC388QV3P4yFBSt/ViDX8LRW0U6uw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha512-8dQZtymfQeDiZ4bBCFhrKZhDcZir15MqnEDBRiR6ReIVHLcdnCyJrhPIS0QifLGuMkFZsw9QMNeD9JtiLwieTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/hash/lg-hash.min.js" integrity="sha512-7c9ZgozFwxmWalyapzhmzAChRvi0p7vhxWdrE3OjvFHnxuw6h6DBSOvtO1XytEj8MQI2Jp0Tm2BJwLUU7zAMvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <title>Photos | 2013-12-31-Big Island</title>
   
 <style>
+
 body {
   background: #000;
   color: #FFF;
 }
+
 a, a:visited, a:hover {
   color: #FFF;
+  text-decoration: none;
 }
 
-#lightgallery .thumb {
-  max-width: 250px;
-  border: 2px solid #FFF;
-  border-radius: 5px;
+.folder {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.folder .album-wrapper {
+  margin: 10px;
+  background: #1E1E1E;
+}
+
+.folder .album {
+  width: 50%;
+}
+
+.folder .album a {
+  display: flex;
+}
+
+.folder .album img {
+  max-height: 200px;
+}
+
+.folder .album .title {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+ 
+@media only screen and (max-width: 1200px) {
+  .folder .album {
+    width: 100%;
+  }
+}
+
+ 
+@media only screen and (min-width: 2000px) {
+  .folder .album {
+    width: 33%;
+  }
 }
 </style>
 
@@ -32,114 +85,119 @@ a, a:visited, a:hover {
   <body>
 
 
-<h1>2013-12-31-Big Island</h1>
 
-<a href="../index.html">Go Up</a>
+<a href="../../index.html">Home</a> &gt;
+<a href="../index.html">2013</a> &gt;
+<strong>2013-12-31-Big Island</strong>
+<br /><br />
 
-<div id="lightgallery">
+<div id="album">
 
-  <a href="slides/20131231_2302-_GWR4772.jpg" data-sub-html="Noeau"><img class="thumb" src="thumbs/20131231_2302-_GWR4772.jpg" /></a>
+  <a href="slides/20131231_2302-_GWR4772.jpg" data-sub-html="Noeau"><img class="thumb" alt="Noeau" src="thumbs/20131231_2302-_GWR4772.jpg" /></a>
 
-  <a href="slides/20131231_2306-_GWR4775.jpg" data-sub-html="Star"><img class="thumb" src="thumbs/20131231_2306-_GWR4775.jpg" /></a>
+  <a href="slides/20131231_2306-_GWR4775.jpg" data-sub-html="Star"><img class="thumb" alt="Star" src="thumbs/20131231_2306-_GWR4775.jpg" /></a>
 
-  <a href="slides/20131231_2352-_GWR4785.jpg" data-sub-html="Fog"><img class="thumb" src="thumbs/20131231_2352-_GWR4785.jpg" /></a>
+  <a href="slides/20131231_2352-_GWR4785.jpg" data-sub-html="Fog"><img class="thumb" alt="Fog" src="thumbs/20131231_2352-_GWR4785.jpg" /></a>
 
-  <a href="slides/20140101_2016-_GWR4905.jpg" data-sub-html="Pele"><img class="thumb" src="thumbs/20140101_2016-_GWR4905.jpg" /></a>
+  <a href="slides/20140101_2016-_GWR4905.jpg" data-sub-html="Pele"><img class="thumb" alt="Pele" src="thumbs/20140101_2016-_GWR4905.jpg" /></a>
 
-  <a href="slides/20140101_0004-_GWR4804.jpg" data-sub-html="Party"><img class="thumb" src="thumbs/20140101_0004-_GWR4804.jpg" /></a>
+  <a href="slides/20140101_0004-_GWR4804.jpg" data-sub-html="Party"><img class="thumb" alt="Party" src="thumbs/20140101_0004-_GWR4804.jpg" /></a>
 
-  <a href="slides/20140101_0014-_GWR4815.jpg" data-sub-html="Walkin&#39; around the house"><img class="thumb" src="thumbs/20140101_0014-_GWR4815.jpg" /></a>
+  <a href="slides/20140101_0014-_GWR4815.jpg" data-sub-html="Walkin&#39; around the house"><img class="thumb" alt="Walkin&#39; around the house" src="thumbs/20140101_0014-_GWR4815.jpg" /></a>
 
-  <a href="slides/20140101_0017-_GWR4823.jpg" data-sub-html="Party Location"><img class="thumb" src="thumbs/20140101_0017-_GWR4823.jpg" /></a>
+  <a href="slides/20140101_0017-_GWR4823.jpg" data-sub-html="Party Location"><img class="thumb" alt="Party Location" src="thumbs/20140101_0017-_GWR4823.jpg" /></a>
 
-  <a href="slides/20140101_0125-_GWR4840.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20140101_0125-_GWR4840.jpg" /></a>
+  <a href="slides/20140101_0125-_GWR4840.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20140101_0125-_GWR4840.jpg" /></a>
 
-  <a href="slides/20140101_0125-_GWR4844.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20140101_0125-_GWR4844.jpg" /></a>
+  <a href="slides/20140101_0125-_GWR4844.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20140101_0125-_GWR4844.jpg" /></a>
 
-  <a href="slides/20140101_0146-_GWR4872.jpg" data-sub-html="2014"><img class="thumb" src="thumbs/20140101_0146-_GWR4872.jpg" /></a>
+  <a href="slides/20140101_0146-_GWR4872.jpg" data-sub-html="2014"><img class="thumb" alt="2014" src="thumbs/20140101_0146-_GWR4872.jpg" /></a>
 
-  <a href="slides/20140101_1239-_GWR4876.jpg" data-sub-html="Friends"><img class="thumb" src="thumbs/20140101_1239-_GWR4876.jpg" /></a>
+  <a href="slides/20140101_1239-_GWR4876.jpg" data-sub-html="Friends"><img class="thumb" alt="Friends" src="thumbs/20140101_1239-_GWR4876.jpg" /></a>
 
-  <a href="slides/20140101_1800-_GWR4894.jpg" data-sub-html="Hawaiian Warrior"><img class="thumb" src="thumbs/20140101_1800-_GWR4894.jpg" /></a>
+  <a href="slides/20140101_1800-_GWR4894.jpg" data-sub-html="Hawaiian Warrior"><img class="thumb" alt="Hawaiian Warrior" src="thumbs/20140101_1800-_GWR4894.jpg" /></a>
 
-  <a href="slides/20140102_1557-_GWR4922.jpg" data-sub-html="Friends"><img class="thumb" src="thumbs/20140102_1557-_GWR4922.jpg" /></a>
+  <a href="slides/20140102_1557-_GWR4922.jpg" data-sub-html="Friends"><img class="thumb" alt="Friends" src="thumbs/20140102_1557-_GWR4922.jpg" /></a>
 
-  <a href="slides/20140102_1606-_GWR4934.jpg" data-sub-html="Garden"><img class="thumb" src="thumbs/20140102_1606-_GWR4934.jpg" /></a>
+  <a href="slides/20140102_1606-_GWR4934.jpg" data-sub-html="Garden"><img class="thumb" alt="Garden" src="thumbs/20140102_1606-_GWR4934.jpg" /></a>
 
-  <a href="slides/20140102_1605-_GWR4932.jpg" data-sub-html="Gardening"><img class="thumb" src="thumbs/20140102_1605-_GWR4932.jpg" /></a>
+  <a href="slides/20140102_1605-_GWR4932.jpg" data-sub-html="Gardening"><img class="thumb" alt="Gardening" src="thumbs/20140102_1605-_GWR4932.jpg" /></a>
 
-  <a href="slides/20140102_1608-_GWR4935.jpg" data-sub-html=":)"><img class="thumb" src="thumbs/20140102_1608-_GWR4935.jpg" /></a>
+  <a href="slides/20140102_1608-_GWR4935.jpg" data-sub-html=":)"><img class="thumb" alt=":)" src="thumbs/20140102_1608-_GWR4935.jpg" /></a>
 
-  <a href="slides/20140102_1644-_GWR4985.jpg" data-sub-html="Ocean &amp; Clouds"><img class="thumb" src="thumbs/20140102_1644-_GWR4985.jpg" /></a>
+  <a href="slides/20140102_1644-_GWR4985.jpg" data-sub-html="Ocean &amp; Clouds"><img class="thumb" alt="Ocean &amp; Clouds" src="thumbs/20140102_1644-_GWR4985.jpg" /></a>
 
-  <a href="slides/20140102_1650-_GWR4991.jpg" data-sub-html="Root"><img class="thumb" src="thumbs/20140102_1650-_GWR4991.jpg" /></a>
+  <a href="slides/20140102_1650-_GWR4991.jpg" data-sub-html="Root"><img class="thumb" alt="Root" src="thumbs/20140102_1650-_GWR4991.jpg" /></a>
 
-  <a href="slides/20140102_1652-_GWR4994.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20140102_1652-_GWR4994.jpg" /></a>
+  <a href="slides/20140102_1652-_GWR4994.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20140102_1652-_GWR4994.jpg" /></a>
 
-  <a href="slides/20140102_1755-_GWR5018.jpg" data-sub-html="Flo"><img class="thumb" src="thumbs/20140102_1755-_GWR5018.jpg" /></a>
+  <a href="slides/20140102_1755-_GWR5018.jpg" data-sub-html="Flo"><img class="thumb" alt="Flo" src="thumbs/20140102_1755-_GWR5018.jpg" /></a>
 
-  <a href="slides/20140102_1757-_GWR5021.jpg" data-sub-html="Street"><img class="thumb" src="thumbs/20140102_1757-_GWR5021.jpg" /></a>
+  <a href="slides/20140102_1757-_GWR5021.jpg" data-sub-html="Street"><img class="thumb" alt="Street" src="thumbs/20140102_1757-_GWR5021.jpg" /></a>
 
-  <a href="slides/20140102_1811-_GWR5027.jpg" data-sub-html="Kid"><img class="thumb" src="thumbs/20140102_1811-_GWR5027.jpg" /></a>
+  <a href="slides/20140102_1811-_GWR5027.jpg" data-sub-html="Kid"><img class="thumb" alt="Kid" src="thumbs/20140102_1811-_GWR5027.jpg" /></a>
 
-  <a href="slides/20140103_1601-_GWR5043.jpg" data-sub-html="Kid"><img class="thumb" src="thumbs/20140103_1601-_GWR5043.jpg" /></a>
+  <a href="slides/20140103_1601-_GWR5043.jpg" data-sub-html="Kid"><img class="thumb" alt="Kid" src="thumbs/20140103_1601-_GWR5043.jpg" /></a>
 
-  <a href="slides/20140103_1617-_GWR5053.jpg" data-sub-html="Haley"><img class="thumb" src="thumbs/20140103_1617-_GWR5053.jpg" /></a>
+  <a href="slides/20140103_1617-_GWR5053.jpg" data-sub-html="Haley"><img class="thumb" alt="Haley" src="thumbs/20140103_1617-_GWR5053.jpg" /></a>
 
-  <a href="slides/20140104_0713-_GWR5100.jpg" data-sub-html="Lianne &amp; Sunrise"><img class="thumb" src="thumbs/20140104_0713-_GWR5100.jpg" /></a>
+  <a href="slides/20140104_0713-_GWR5100.jpg" data-sub-html="Lianne &amp; Sunrise"><img class="thumb" alt="Lianne &amp; Sunrise" src="thumbs/20140104_0713-_GWR5100.jpg" /></a>
 
-  <a href="slides/20140104_1035-_GWR5114.jpg" data-sub-html="Offerings"><img class="thumb" src="thumbs/20140104_1035-_GWR5114.jpg" /></a>
+  <a href="slides/20140104_1035-_GWR5114.jpg" data-sub-html="Offerings"><img class="thumb" alt="Offerings" src="thumbs/20140104_1035-_GWR5114.jpg" /></a>
 
-  <a href="slides/20140104_1037-_GWR5117.jpg" data-sub-html="Road"><img class="thumb" src="thumbs/20140104_1037-_GWR5117.jpg" /></a>
+  <a href="slides/20140104_1037-_GWR5117.jpg" data-sub-html="Road"><img class="thumb" alt="Road" src="thumbs/20140104_1037-_GWR5117.jpg" /></a>
 
-  <a href="slides/20140104_1138-_GWR5140.jpg" data-sub-html="Lianne"><img class="thumb" src="thumbs/20140104_1138-_GWR5140.jpg" /></a>
+  <a href="slides/20140104_1138-_GWR5140.jpg" data-sub-html="Lianne"><img class="thumb" alt="Lianne" src="thumbs/20140104_1138-_GWR5140.jpg" /></a>
 
-  <a href="slides/20140104_1157-_GWR5166.jpg" data-sub-html="Friends"><img class="thumb" src="thumbs/20140104_1157-_GWR5166.jpg" /></a>
+  <a href="slides/20140104_1157-_GWR5166.jpg" data-sub-html="Friends"><img class="thumb" alt="Friends" src="thumbs/20140104_1157-_GWR5166.jpg" /></a>
 
-  <a href="slides/20140104_1212-_GWR5171.jpg" data-sub-html="Tree"><img class="thumb" src="thumbs/20140104_1212-_GWR5171.jpg" /></a>
+  <a href="slides/20140104_1212-_GWR5171.jpg" data-sub-html="Tree"><img class="thumb" alt="Tree" src="thumbs/20140104_1212-_GWR5171.jpg" /></a>
 
-  <a href="slides/20140104_1330-_GWR5180.jpg" data-sub-html="Guide"><img class="thumb" src="thumbs/20140104_1330-_GWR5180.jpg" /></a>
+  <a href="slides/20140104_1330-_GWR5180.jpg" data-sub-html="Guide"><img class="thumb" alt="Guide" src="thumbs/20140104_1330-_GWR5180.jpg" /></a>
 
-  <a href="slides/20140104_1356-_GWR5185.jpg" data-sub-html="Drop"><img class="thumb" src="thumbs/20140104_1356-_GWR5185.jpg" /></a>
+  <a href="slides/20140104_1356-_GWR5185.jpg" data-sub-html="Drop"><img class="thumb" alt="Drop" src="thumbs/20140104_1356-_GWR5185.jpg" /></a>
 
-  <a href="slides/20140104_1358-_GWR5188.jpg" data-sub-html="Car"><img class="thumb" src="thumbs/20140104_1358-_GWR5188.jpg" /></a>
+  <a href="slides/20140104_1358-_GWR5188.jpg" data-sub-html="Car"><img class="thumb" alt="Car" src="thumbs/20140104_1358-_GWR5188.jpg" /></a>
 
-  <a href="slides/20140104_1408-_GWR5192.jpg" data-sub-html="Bahh"><img class="thumb" src="thumbs/20140104_1408-_GWR5192.jpg" /></a>
+  <a href="slides/20140104_1408-_GWR5192.jpg" data-sub-html="Bahh"><img class="thumb" alt="Bahh" src="thumbs/20140104_1408-_GWR5192.jpg" /></a>
 
-  <a href="slides/20140104_1412-_GWR5195.jpg" data-sub-html="Flo"><img class="thumb" src="thumbs/20140104_1412-_GWR5195.jpg" /></a>
+  <a href="slides/20140104_1412-_GWR5195.jpg" data-sub-html="Flo"><img class="thumb" alt="Flo" src="thumbs/20140104_1412-_GWR5195.jpg" /></a>
 
-  <a href="slides/20140105_1338-_GWR5205.jpg" data-sub-html="Tundra"><img class="thumb" src="thumbs/20140105_1338-_GWR5205.jpg" /></a>
+  <a href="slides/20140105_1338-_GWR5205.jpg" data-sub-html="Tundra"><img class="thumb" alt="Tundra" src="thumbs/20140105_1338-_GWR5205.jpg" /></a>
 
-  <a href="slides/20140105_1350-_GWR5211.jpg" data-sub-html="tak mor"><img class="thumb" src="thumbs/20140105_1350-_GWR5211.jpg" /></a>
+  <a href="slides/20140105_1350-_GWR5211.jpg" data-sub-html="tak mor"><img class="thumb" alt="tak mor" src="thumbs/20140105_1350-_GWR5211.jpg" /></a>
 
-  <a href="slides/20140105_1352-_GWR5212.jpg" data-sub-html="People"><img class="thumb" src="thumbs/20140105_1352-_GWR5212.jpg" /></a>
+  <a href="slides/20140105_1352-_GWR5212.jpg" data-sub-html="People"><img class="thumb" alt="People" src="thumbs/20140105_1352-_GWR5212.jpg" /></a>
 
-  <a href="slides/20140105_1532-_GWR5247.jpg" data-sub-html="Driver"><img class="thumb" src="thumbs/20140105_1532-_GWR5247.jpg" /></a>
+  <a href="slides/20140105_1532-_GWR5247.jpg" data-sub-html="Driver"><img class="thumb" alt="Driver" src="thumbs/20140105_1532-_GWR5247.jpg" /></a>
 
-  <a href="slides/20140105_1515-_GWR5228.jpg" data-sub-html="Crazy Ride"><img class="thumb" src="thumbs/20140105_1515-_GWR5228.jpg" /></a>
+  <a href="slides/20140105_1515-_GWR5228.jpg" data-sub-html="Crazy Ride"><img class="thumb" alt="Crazy Ride" src="thumbs/20140105_1515-_GWR5228.jpg" /></a>
 
-  <a href="slides/20140105_1521-_GWR5235.jpg" data-sub-html="Person"><img class="thumb" src="thumbs/20140105_1521-_GWR5235.jpg" /></a>
+  <a href="slides/20140105_1521-_GWR5235.jpg" data-sub-html="Person"><img class="thumb" alt="Person" src="thumbs/20140105_1521-_GWR5235.jpg" /></a>
 
-  <a href="slides/20140105_1809-_GWR5252.jpg" data-sub-html="Lianne &amp; Flo"><img class="thumb" src="thumbs/20140105_1809-_GWR5252.jpg" /></a>
+  <a href="slides/20140105_1809-_GWR5252.jpg" data-sub-html="Lianne &amp; Flo"><img class="thumb" alt="Lianne &amp; Flo" src="thumbs/20140105_1809-_GWR5252.jpg" /></a>
 
-  <a href="slides/20140105_1817-_GWR5273.jpg" data-sub-html="Flo"><img class="thumb" src="thumbs/20140105_1817-_GWR5273.jpg" /></a>
+  <a href="slides/20140105_1817-_GWR5273.jpg" data-sub-html="Flo"><img class="thumb" alt="Flo" src="thumbs/20140105_1817-_GWR5273.jpg" /></a>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/lightgallery.min.js" integrity="sha512-jEJ0OA9fwz5wUn6rVfGhAXiiCSGrjYCwtQRUwI/wRGEuWRZxrnxoeDoNc+Pnhx8qwKVHs2BRQrVR9RE6T4UHBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/autoplay/lg-autoplay.min.js" integrity="sha512-1YRlp9jO1ermVx9E3UzfBwoo88ODK0i9l2C2lNoZwCZAzvRdA+O0Lm00bUfkIf/A1esj4OK9yZ3yfgfa+FcYwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/thumbnail/lg-thumbnail.min.js" integrity="sha512-VBbe8aA3uiK90EUKJnZ4iEs0lKXRhzaAXL8CIHWYReUwULzxkOSxlNixn41OLdX0R1KNP23/s76YPyeRhE6P+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.2/plugins/zoom/lg-zoom.min.js" integrity="sha512-BLW2Jrofiqm6m7JhkQDIh2olT0EBI58+hIL/AXWvo8gOXKmsNlU6myJyEkTy6rOAAZjn0032FRk8sl9RgXPYIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
-  galleryElement = document.getElementById('lightgallery');
 
-  gallery = lightGallery(galleryElement, {
-    plugins: [],
-    speed: 500,
-    closable: true,
-    download: true,
-    thumbnail: true,
-    plugins: [ lgThumbnail, lgZoom ]
+jQuery("#album")
+  .justifiedGallery({
+    captions: true,
+    rowHeight: 200,
+    margins: 5
+  })
+  .on("jg.complete", function () {
+    gallery = lightGallery(document.getElementById('album'), {
+      speed: 500,
+      closable: true,
+      download: true,
+      thumbnail: true,
+      customSlideName: true,
+      plugins: [ lgThumbnail, lgZoom, lgHash ]
+    });
   });
 </script>
 
